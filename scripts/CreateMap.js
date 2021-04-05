@@ -1,10 +1,10 @@
 const map = [
-    [, , , , , ,],
-    [, , , , , ,],
-    [, , , , , ,],
-    [, , , , , ,],
-    [, , , , , ,],
-    [, , , , , ,],
+    [, , , , , , ],
+    [, , , , , , ],
+    [, , , , , , ],
+    [, , , , , , ],
+    [, , , , , , ],
+    [, , , , , , ],
 ];
 
 
@@ -18,22 +18,14 @@ const createMap = () => {
             const rowDiv = document.createElement('div');
             rowDiv.classList.add('displayFlex');
 
-            if (i === 0)
-                rowDiv.classList.add('tableHeader');
-            else
-                rowDiv.classList.add('tableRow');
+            rowDiv.classList.add('row');
 
             for (let j = 0; j < row.length; j++) {
 
                 const div = document.createElement('div');
 
-                if (i !== 0) {
-                    div.classList.add('block');
-                    div.id = `block-${i}-${j}`;
-                } else {
-                    div.id = `header-${i}-${j}`;
-                    div.classList.add('header');
-                }
+                div.classList.add('block');
+                div.id = `block-${i}-${j}`;
 
                 rowDiv.appendChild(div);
 
