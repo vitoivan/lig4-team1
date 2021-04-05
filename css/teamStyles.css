@@ -102,7 +102,6 @@ header {
 main {
   width: 100%;
 }
-
 /*BUTTONS*/
 .btn {
   width: var(--button-width);
