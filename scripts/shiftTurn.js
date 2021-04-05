@@ -17,7 +17,8 @@ function getRandomPlayer() {
 
 }; //getRandomPlayer()
 
-function currentPlayer() {
+function getCurrentPlayer() {
+
     if (currentPlayer === undefined) {
         currentPlayer = BLACK_PLAYER;
     }
@@ -27,9 +28,16 @@ function currentPlayer() {
         currentPlayer = BLACK_PLAYER;
     }
 
-    return currentPlayer;
-}; //currentPlayer()
+    const strLogMsg = "==\nAgora é a vez da cor ";
 
-currentPlayer()
+    if (currentPlayer === BLACK_PLAYER)
+        console.log(`${strLogMsg} PRETA`);
+    else
+        console.log(`${strLogMsg} VERMELHA`);
+
+    return currentPlayer;
+}; //getCurrentPlayer()
+
+getCurrentPlayer()
 
 // document.getElementById('container').addEventListener("click", currentPlayer);

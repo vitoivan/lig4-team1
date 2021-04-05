@@ -13,4 +13,4 @@ document.getElementById('container').appendChild(generalDivEl);
  * 
  */
 
-document.getElementById('container').addEventListener("click", currentPlayer);
+document.getElementById('container').addEventListener("click", getCurrentPlayer);
