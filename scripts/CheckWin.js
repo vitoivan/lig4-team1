@@ -8,7 +8,7 @@
     [(i+2, j-3) (i+2, j-2) (i+2, j-1) (i+2, j) (i+2, j+1) (i+2, j+2) (i+2, j+3)]
     [(i+3, j-3) (i+3, j-2) (i+3, j-1) (i+3, j) (i+3, j+1) (i+3, j+2) (i+3, j+3)]
 */
-const diagonalLeftTop = (i, j, p1, p2) => {
+const diagonalLeftTop = (i, j, p1, p2, voidblock) => {
     let k = 0;
     let acumulator1 = 0;
     let acumulator2 = 0;
@@ -24,7 +24,7 @@ const diagonalLeftTop = (i, j, p1, p2) => {
             if(map[posX][posY] === 2){
                 acumulator2++;
             }
-            if(map[posX][posY] === 0){
+            if(map[posX][posY] === voidblock){
                 acumulator1 = 0;
                 acumulator2 = 0;
             }
@@ -41,7 +41,7 @@ const diagonalLeftTop = (i, j, p1, p2) => {
     }
     return false;
 }
-const diagonalRightTop = (i, j, p1, p2) => {
+const diagonalRightTop = (i, j, p1, p2, voidblock) => {
     let k = 0;
     let acumulator1 = 0;
     let acumulator2 = 0;
@@ -56,7 +56,7 @@ const diagonalRightTop = (i, j, p1, p2) => {
             if(map[posX][posY] === 2){
                 acumulator2++;
             }
-            if(map[posX][posY] === 0){
+            if(map[posX][posY] === voidblock){
                 acumulator1 = 0;
                 acumulator2 = 0;
             }
@@ -74,7 +74,7 @@ const diagonalRightTop = (i, j, p1, p2) => {
     }
     return false;
 }
-const diagonalRightBottom = (i, j, p1, p2) => {
+const diagonalRightBottom = (i, j, p1, p2, voidblock) => {
     let k = 0;
     let acumulator1 = 0;
     let acumulator2 = 0;
@@ -89,7 +89,7 @@ const diagonalRightBottom = (i, j, p1, p2) => {
             if(map[posX][posY] === 2){
                 acumulator2++;
             }
-            if(map[posX][posY] === 0){
+            if(map[posX][posY] === voidblock){
                 acumulator1 = 0;
                 acumulator2 = 0;
             }
@@ -107,7 +107,7 @@ const diagonalRightBottom = (i, j, p1, p2) => {
     }
     return false;
 }
-const diagonalLeftBottom = (i, j, p1, p2) => {
+const diagonalLeftBottom = (i, j, p1, p2, voidblock) => {
     let k = 0;
     let acumulator1 = 0;
     let acumulator2 = 0;
@@ -122,7 +122,7 @@ const diagonalLeftBottom = (i, j, p1, p2) => {
             if(map[posX][posY] === 2){
                 acumulator2++;
             }
-            if(map[posX][posY] === 0){
+            if(map[posX][posY] === voidblock){
                 acumulator1 = 0;
                 acumulator2 = 0;
             }
@@ -139,7 +139,7 @@ const diagonalLeftBottom = (i, j, p1, p2) => {
     }
     return false;
 }
-const verticalTop = (i, j, p1, p2) => {
+const verticalTop = (i, j, p1, p2, voidblock) => {
     let k = 0;
     let acumulator1 = 0;
     let acumulator2 = 0;
@@ -153,7 +153,7 @@ const verticalTop = (i, j, p1, p2) => {
             if(map[posX][j] === 2){
                 acumulator2++;
             }
-            if(map[posX][j] === 0){
+            if(map[posX][j] === voidblock){
                 acumulator1 = 0;
                 acumulator2 = 0;
             }
@@ -169,7 +169,7 @@ const verticalTop = (i, j, p1, p2) => {
     }
     return false;
 }
-const verticalBottom = (i, j, p1, p2) => {
+const verticalBottom = (i, j, p1, p2, voidblock) => {
     let k = 0;
     let acumulator1 = 0;
     let acumulator2 = 0;
@@ -183,7 +183,7 @@ const verticalBottom = (i, j, p1, p2) => {
             if(map[posX][j] === 2){
                 acumulator2++;
             }
-            if(map[posX][j] === 0){
+            if(map[posX][j] === voidblock){
                 acumulator1 = 0;
                 acumulator2 = 0;
             }
@@ -203,10 +203,10 @@ const verticalBottom = (i, j, p1, p2) => {
 
 
 
-const checkVertical = (i,j, p1, p2) => {
+const checkVertical = (i,j, p1, p2, voidblock) => {
     
-    const vertTop = verticalTop(i, j, p1, p2);
-    const vertBot = verticalBottom(i, j, p1, p2);
+    const vertTop = verticalTop(i, j, p1, p2, voidblock);
+    const vertBot = verticalBottom(i, j, p1, p2, voidblock);
     if(vertTop !== false){
         return vertTop;
     }
@@ -216,11 +216,11 @@ const checkVertical = (i,j, p1, p2) => {
     return false;
 }
 
-const checkDiagonal = (i,j, p1, p2) => {
-    const dig1 = diagonalLeftTop(i,j, p1, p2);
-    const dig2 = diagonalRightTop(i,j, p1, p2);
-    const dig3 = diagonalRightBottom(i,j, p1, p2);
-    const dig4 = diagonalLeftBottom(i,j, p1, p2);
+const checkDiagonal = (i,j, p1, p2, voidblock) => {
+    const dig1 = diagonalLeftTop(i,j, p1, p2, voidblock);
+    const dig2 = diagonalRightTop(i,j, p1, p2, voidblock);
+    const dig3 = diagonalRightBottom(i,j, p1, p2, voidblock);
+    const dig4 = diagonalLeftBottom(i,j, p1, p2, voidblock);
 
     if(dig1 !== false){
         return dig1;
@@ -236,7 +236,7 @@ const checkDiagonal = (i,j, p1, p2) => {
     }
 }
 
-const checkHorizontal = (p1,p2) => {
+const checkHorizontal = (p1,p2, voidblock) => {
     let acumulator1 = 0;
     let acumulator2 = 0;
     for(let i = 0; i < map.length; i++){
@@ -248,7 +248,7 @@ const checkHorizontal = (p1,p2) => {
             if(map[i][j] === 2){
                 acumulator2++;
             }
-            if(map[i][j] === 0){
+            if(map[i][j] === voidblock){
                 acumulator1 = 0;
                 acumulator2 = 0;
             }
@@ -267,13 +267,12 @@ const checkHorizontal = (p1,p2) => {
 }
 
 const checkWin = (i,j) => {
-    // const i = array[0];
-    // const j = array[1];
-    const player1 = 'Player1';
-    const player2 = 'Player2';
-    const horizontal = checkHorizontal(player1,player2);
-    const vertical = checkVertical(i,j,player1,player2);
-    const diagonal = checkDiagonal(i,j,player1,player2);
+    const voidblock = ' ';
+    const p1 = 'Player';
+    const p2 = 'Player1';
+    const horizontal = checkHorizontal(p1, p2, voidblock);
+    const vertical = checkVertical(i,j, p1, p2, voidblock);
+    const diagonal = checkDiagonal(i,j, p1, p2, voidblock);
 
     if(horizontal !== false){
         return horizontal;
