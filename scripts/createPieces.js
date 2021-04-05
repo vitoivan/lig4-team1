@@ -1,18 +1,21 @@
 // Function to create pieces when individual block is clicked
 const createPieces = () => {
 
-    const blocks = document.getElementsByClassName('block');
+    const blocksListEl = document.getElementsByClassName('block');
 
-    for (let i = 0; i < blocks.length; i++) {
+    for (let i = 0; i < blocksListEl.length; i++) {
 
-        const block = blocks[i]
+        const block = blocksListEl[i];
 
         block.addEventListener('click', function() {
-            const piece = document.createElement('div')
-            piece.classList.add('piece')
-            block.appendChild(piece)
-        })
-    }
-}
 
-createPieces();
+            const piece = document.createElement('div');
+
+            piece.classList.add('piece');
+            block.appendChild(piece);
+
+        });
+    }
+}; // createPieces();
+
+// createPieces();
