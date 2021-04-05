@@ -1,0 +1,172 @@
+/*
+Theme Name: Connect 4
+Author: Kenzie Academy
+Author URI: https://www.kenzie.com.br;
+Co-Author: Marcone Melo Mendonça
+Co-Author URI: https://www.linkedin.com/in/marconemm/
+Co-Author: 
+Co-Author URI: 
+Co-Author: 
+Co-Author URI: 
+Co-Author: 
+Co-Author URI:
+Version: 1.0
+ 
+-----------
+STRUCTURE:
+-----------
+**** @imports
+**** @keyframes
+**** VARABLES DECLARATION
+**** GENREAL CONFIG
+**** BODY
+**** HEADER
+**** HOME PAGE
+**** FOOTER
+**** @media
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+
+@keyframes walk {
+  0% {
+  }
+  50% {
+    
+  }
+  100% {
+  }
+}
+
+/* VARABLES DECLARATION: */
+:root {
+  --color-red0: #d00000;
+  --color-red1: #dc2f02;
+  --color-red2: #6a040f;
+  --color-red3: #370617;
+  --color-texts: #edddd4;
+  --color-yellow: #faa307;
+  --color-RGBA-white: rgba(237, 221, 212, 0.75);
+  --font-family-PermanentMarker: "Permanent Marker", cursive;
+  --font-family-Comfortaa: "Comfortaa", cursive;
+  --transition-time: 150ms;
+  --border-radius: 10px;
+  --button-width: 220px;
+  --button-height: 50px;
+}
+
+/* GENERAL CONFIG: */
+.displayFlex {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+.displayFlex--col {
+  flex-flow: column wrap;
+}
+.displayInherit {
+  display: inherit;
+}
+.displayGrid {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.italic {
+  font-style: italic;
+}
+.hidden {
+  opacity: 0;
+}
+.displayNone{
+  display: none;
+}
+
+/*BODY: */
+body {
+  width: 100vw;
+  min-height: 100vh;
+  height: fit-content;
+  font-family: var(--font-family-Comfortaa);
+  color: var(--color-texts);
+}
+
+/*HEADER:*/
+header {
+  width: 80%;
+}
+
+/*MAIN PAGE: */
+main {
+  width: 100%;
+}
+
+/*BUTTONS*/
+.btn {
+  width: var(--button-width);
+  height: var(--button-height);
+  position: relative;
+  background: var(--color-red3);
+  border: 2px outset var(--color-yellow);
+  border-radius: var(--border-radius);
+  color: var(--color-texts);
+  z-index: 1;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+.btn:active {
+  transform: translateY(2px);
+}
+/****** Hover and Focus: */
+.btn:hover {
+  cursor: pointer;
+  color: var(--color-red0);
+  font-weight: bold;
+  font-style: italic;
+  transition: color var(--transition-time) ease-out;
+}
+.btn:hover::before {
+  transform: scaleX(1);
+}
+.btn--effect::before {
+  content: "";
+  background: var(--color-texts);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  transition: transform var(--transition-time) cubic-bezier(0, 0.79, 1, 1);
+}
+/****** Underline from center modifier: */
+.btn__underLine::before {
+  height: calc(var(--button-height) * 0.15);
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+.btn--underLineCenter::before {
+  transform: scaleX(0);
+}
+
+/*@media: */
+@media only screen and (min-width: 800px) {
+  /* GENERAL CONFIG: */
+  body {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  /*MAIN*/
+}
+
+/*WIDE*/
+@media only screen and (min-width: 1600px) {
+  /* GENERAL CONFIG: */
+  body {
+    width: 90%;
+    margin: 15vh auto;
+  }
+}
