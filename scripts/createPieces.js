@@ -42,10 +42,16 @@ const createPieces = () => {
                 }else{
                     piece.classList.add('red-player')
                 }
-              
-                lastBlock.appendChild(piece)
+                
+               
+                piece.classList.add('falling');
+                lastBlock.appendChild(piece);   
                 getCurrentPlayer()
-                console.log(checkWin(blockXPosition, blockYPosition))
+                const result = checkWin(blockXPosition, blockYPosition);
+               
+                if(result !== false){
+                    console.log(result)
+                }
                 console.log(map)
             }
         })
