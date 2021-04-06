@@ -7,7 +7,8 @@ const createPieces = () => {
 
         const column = columnsList[i];
 
-        column.addEventListener('click', function(event) {
+        column.addEventListener('click', function() {
+            getCurrentPlayer()
 
             let arrayOfBlocks = column.childNodes
 

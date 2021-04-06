@@ -13,5 +13,3 @@ createPieces();
  * EVENT LISTENERS:
  * 
  */
-
-document.getElementById('container').addEventListener("click", getCurrentPlayer);
