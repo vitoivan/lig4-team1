@@ -154,6 +154,7 @@ const isDraw = () => {
 }
 
 const checkWin = (i, j) => {
+    console.log(i, j)
     const voidblock = 0;
     const p1 = 'P1 Won the game';
     const p2 = 'P2 Won the game';
@@ -161,6 +162,10 @@ const checkWin = (i, j) => {
     const vertical = checkVertical(i,j, p1, p2, voidblock);
     const diagonal = checkDiagonal(i,j, p1, p2, voidblock);
     const draw = isDraw(map);
+    console.log('horizontal ' + horizontal)
+    console.log('vertical ' + vertical)
+    console.log('diagonal ' + diagonal)
+    console.log('draw ' + draw)
 
     if(horizontal !== false){
         return horizontal;
