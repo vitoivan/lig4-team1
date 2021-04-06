@@ -7,13 +7,6 @@
     [(i+2, j-3) (i+2, j-2) (i+2, j-1) (i+2, j) (i+2, j+1) (i+2, j+2) (i+2, j+3)]
     [(i+3, j-3) (i+3, j-2) (i+3, j-1) (i+3, j) (i+3, j+1) (i+3, j+2) (i+3, j+3)]
 */
-const transformObjIntoCoordinates = (obj) => {
-    const cordinates = obj.id.split('-');
-    const i = parseInt(cordinates[1]);
-    const j = parseInt(cordinates[2]);
-    return [i, j];
-}
-
 const Side = (i, j, p1, p2, voidblock, dir) => {
 
     let k = 0;
@@ -160,12 +153,10 @@ const isDraw = () => {
     */
 }
 
-const checkWin = (obj) => {
-
-    const [i, j] = transformObjIntoCoordinates(obj);
+const checkWin = (i, j) => {
     const voidblock = 0;
-    const p1 = 'black won the game';
-    const p2 = 'red won the game';
+    const p1 = 'P1 Won the game';
+    const p2 = 'P2 Won the game';
     const horizontal = checkHorizontal(p1, p2, voidblock);
     const vertical = checkVertical(i,j, p1, p2, voidblock);
     const diagonal = checkDiagonal(i,j, p1, p2, voidblock);
