@@ -7,6 +7,12 @@
     [(i+2, j-3) (i+2, j-2) (i+2, j-1) (i+2, j) (i+2, j+1) (i+2, j+2) (i+2, j+3)]
     [(i+3, j-3) (i+3, j-2) (i+3, j-1) (i+3, j) (i+3, j+1) (i+3, j+2) (i+3, j+3)]
 */
+const transformObjIntoCoordinates = (obj) => {
+    const cordinates = obj.id.split('-');
+    const i = parseInt(cordinates[1]);
+    const j = parseInt(cordinates[2]);
+    return [i, j];
+}
 
 const Side = (i, j, p1, p2, voidblock, dir) => {
 
@@ -155,9 +161,8 @@ const isDraw = () => {
 }
 
 const checkWin = (obj) => {
-    const IandJ = obj.id.split('-');
-    const i = IandJ[1];
-    const j = IandJ[2];
+
+    const [i, j] = transformObjIntoCoordinates(obj);
     const voidblock = 0;
     const p1 = 'black won the game';
     const p2 = 'red won the game';
