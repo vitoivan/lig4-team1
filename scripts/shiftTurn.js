@@ -26,10 +26,10 @@ function getCurrentPlayer() {
 
     if (currentPlayer === undefined) {
         currentPlayer = PLAYER1;
-        console.log('ok')
+      
     }
     if (currentPlayer === PLAYER1) {
-        console.log('ok')
+     
         currentPlayer = PLAYER2;
     } else {
         currentPlayer = PLAYER1;
@@ -37,10 +37,10 @@ function getCurrentPlayer() {
 
     const strLogMsg = "==\nAgora é a vez da cor ";
 
-    if (currentPlayer === PLAYER1)
-        console.log(`${strLogMsg} PRETA`);
-    else
-        console.log(`${strLogMsg} VERMELHA`);
+    // if (currentPlayer === PLAYER1)
+    //     console.log(`${strLogMsg} PRETA`);
+    // else
+    //     console.log(`${strLogMsg} VERMELHA`);
 
     return currentPlayer;
 }; //getCurrentPlayer()

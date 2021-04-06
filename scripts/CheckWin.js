@@ -131,7 +131,7 @@ const checkHorizontal = (p1,p2, voidblock) => {
 }
 
 const isDraw = () => {
-    let counter = 0;
+   
     for(let i = 0; i < map.length; i++){
         const row = map[i]
         for(let j = 0; j < row.length; j++){

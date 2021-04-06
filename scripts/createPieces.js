@@ -31,15 +31,15 @@ const createPieces = () => {
 
             if (lastBlock) {
 
-                let blockXPosition = lastBlock.id.split('-')[1]
-                let blockYPosition = lastBlock.id.split('-')[2]
+                let blockXPosition = parseInt(lastBlock.id.split('-')[1])
+                let blockYPosition = parseInt(lastBlock.id.split('-')[2])
 
                 map[blockYPosition][blockXPosition] = currentPlayer
                 
                 getCurrentPlayer()
-                console.log(currentPlayer)
+              
                 lastBlock.appendChild(piece)
-                checkWin(blockXPosition, blockYPosition)
+                console.log(checkWin(blockXPosition, blockYPosition))
             }
         })
     }
