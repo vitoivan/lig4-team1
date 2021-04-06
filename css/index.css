@@ -1,0 +1,72 @@
+/* GENERAL CONFIG: */
+.displayFlex {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .displayFlex--col {
+    flex-flow: column wrap;
+  }
+  .displayInherit {
+    display: inherit;
+  }
+  .displayGrid {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  .italic {
+    font-style: italic;
+  }
+  .hidden {
+    opacity: 0;
+  }
+  .displayNone{
+    display: none;
+  }
+  
+  /*BODY: */
+  body {
+    margin: 0;
+    width: 100vw;
+    min-height: 100vh;
+    height: fit-content;
+    font-family: var(--font-family-Comfortaa);
+    color: var(--color-texts);
+  }
+  
+  /*HEADER:*/
+  header {
+    width: 100%;
+  }
+  h1 {
+      margin: 30px auto 100px;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 60px;
+  }
+  
+  /*MAIN PAGE: */
+  main {
+    width: 80%;
+    margin: auto;
+  }
+  /*BUTTONS*/
+
+  .divButtons {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+    a {
+        margin: auto;
+        width: 100%;
+    }
+        input {
+            width: 70%;
+            height: 50px;
+            margin-bottom: 40px;
+            font-size: 30px;
+            border-radius: 10px;
+        }
