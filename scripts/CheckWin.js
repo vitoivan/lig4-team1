@@ -154,7 +154,10 @@ const isDraw = () => {
     */
 }
 
-const checkWin = (i,j) => {
+const checkWin = (obj) => {
+    const IandJ = obj.id.split('-');
+    const i = IandJ[1];
+    const j = IandJ[2];
     const voidblock = 0;
     const p1 = 'black won the game';
     const p2 = 'red won the game';
