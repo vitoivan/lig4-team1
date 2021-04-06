@@ -29,12 +29,12 @@ const createPieces = () => {
                 if (block.childNodes.length < 1) {
                     const piece = document.createElement('div');
 
-                    if (currentPlayer === PLAYER2) {
-                        piece.classList.add('player-1');
+                    if (currentPlayer === RED_PLAYER) {
+                        piece.classList.add('red-player');
                     }
 
-                    if (currentPlayer === PLAYER1) {
-                        piece.classList.add('player-2');
+                    if (currentPlayer === BLACK_PLAYER) {
+                        piece.classList.add('black-player');
                     }
 
                     piece.classList.add('piece');

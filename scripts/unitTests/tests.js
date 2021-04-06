@@ -32,6 +32,7 @@ for (let i = 0; i < blocksListEl.length; i++) {
     blockEl.addEventListener('click', testAlternatePlayersTurn);
 }
 const testAlternatePlayersTurn = () => {
+    //TODO
 
     hasErros = true;
 }; // testAlternatePlayersTurn()
