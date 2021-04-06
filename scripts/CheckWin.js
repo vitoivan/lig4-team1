@@ -156,8 +156,9 @@ const isDraw = () => {
 
 const checkWin = (obj) => {
     const IandJ = obj.id.split('-');
-    const i = IandJ[1];
-    const j = IandJ[2];
+    const i = parseInt(IandJ[1]);
+    const j = parseInt(IandJ[2]);
+    console.log(i,j)
     const voidblock = 0;
     const p1 = 'black won the game';
     const p2 = 'red won the game';
