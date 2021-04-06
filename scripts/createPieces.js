@@ -30,11 +30,11 @@ const createPieces = () => {
                     const piece = document.createElement('div');
     
                     if (currentPlayer === RED_PLAYER) {
-                        piece.classList.add('player-1');
+                        piece.classList.add('red-player');
                     }
         
                     if (currentPlayer === BLACK_PLAYER) {
-                        piece.classList.add('player-2');
+                        piece.classList.add('black-player');
                     }
         
                     piece.classList.add('piece');
