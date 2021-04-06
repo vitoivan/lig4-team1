@@ -1,39 +1,33 @@
 const map = [
-    [3, 3, 3, 3, 3, 3, 3],
-    [, , , , , , , ],
-    [, , , , , , , ],
-    [, , , , , , , ],
-    [, , , , , , , ],
-    [, , , , , , , ],
-    [, , , , , , , ],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0]
 ];
+
 
 const createMap = () => {
 
         const generalDiv = document.createElement('div');
+        generalDiv.classList.add('game-wrapper')
 
         for (let i = 0; i < map.length; i++) {
 
             const row = map[i];
             const rowDiv = document.createElement('div');
-            rowDiv.classList.add('displayFlex');
+            rowDiv.classList.add('displayFlex--col');
 
-            if (i === 0)
-                rowDiv.classList.add('tableHeader');
-            else
-                rowDiv.classList.add('tableRow');
+            rowDiv.classList.add('row');
 
             for (let j = 0; j < row.length; j++) {
 
                 const div = document.createElement('div');
 
-                if (i !== 0) {
-                    div.classList.add('block');
-                    div.id = `block-${i}-${j}`;
-                } else {
-                    div.id = `header-${i}-${j}`;
-                    div.classList.add('header');
-                }
+                div.classList.add('block');
+                div.id = `block-${i}-${j}`;
 
                 rowDiv.appendChild(div);
 
@@ -44,6 +38,6 @@ const createMap = () => {
         }
 
         return generalDiv;
-    }
+}
     // const generalDiv = createMap();
     // document.getElementById('container').appendChild(generalDiv);
