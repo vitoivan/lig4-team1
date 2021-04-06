@@ -51,9 +51,9 @@ STRUCTURE:
 :root {
     --alphaChanel-initial: 15%;
     --star-BG-color: #ffffff;
-    --star-color0: #8c00ff;
-    --star-color1: #fffb00;
-    --star-color2: #f700a4;
+    --star-color0: rgba(140, 0, 255, 0.5);
+    --star-color1: rgba(255, 251, 0, 0.5);
+    --star-color2: rgba(247, 0, 164, 0.5);
     --space-heigth: 1000px;
 }
 
@@ -63,20 +63,17 @@ body {
     height: 100vh;
 }
 
-div[data-id="starsWrapper"] {
-    position: relative;
-    z-index: -1;
-}
-
 div.star {
     overflow: hidden;
-    position: absolute;
+    position: relative;
     left: 10px;
     bottom: -300px;
     box-shadow: var(--s);
     animation-delay: var(--d);
     height: var(--h);
     width: var(--w);
+    z-index: -1;
+    border-radius: 50%;
 }
 
 div.star.star__1 {

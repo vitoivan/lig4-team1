@@ -28,12 +28,6 @@ STRUCTURE:
 
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
-@keyframes walk {
-    0% {}
-    50% {}
-    100% {}
-}
-
 
 /* VARABLES DECLARATION: */
 
@@ -98,6 +92,7 @@ body {
     height: fit-content;
     font-family: var(--font-family-Comfortaa);
     color: var(--color-texts);
+    background-color: #252525;
 }
 
 

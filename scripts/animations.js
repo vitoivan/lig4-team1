@@ -27,9 +27,9 @@ const renderStars = () => {
 
         const starEl = document.createElement("div");
         const randomShadows = getStars(getRandomNumberBetween(10, 50));
-        const randomSize = getRandomNumberBetween(6, 60);
-        const delay = getRandomNumber(3);
-        const duration = getRandomNumberBetween(6, 24);
+        const randomSize = getRandomNumberBetween(2, 8);
+        const delay = getRandomNumber(10);
+        const duration = getRandomNumberBetween(15, 120);
 
         starEl.classList.add("star");
         starEl.classList.add(`star__${i}`);
