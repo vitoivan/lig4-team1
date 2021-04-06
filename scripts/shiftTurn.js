@@ -7,7 +7,7 @@ const PLAYER2 = (PLAYER1 === "red") ? "black" : "red";
 /** 
  * GLOBAL VARIABLES:
  */
-let currentPlayer;
+let currentPlayer = undefined;
 
 // let currentPlayer;
 
@@ -26,8 +26,10 @@ function getCurrentPlayer() {
 
     if (currentPlayer === undefined) {
         currentPlayer = PLAYER1;
+        console.log('ok')
     }
     if (currentPlayer === PLAYER1) {
+        console.log('ok')
         currentPlayer = PLAYER2;
     } else {
         currentPlayer = PLAYER1;
