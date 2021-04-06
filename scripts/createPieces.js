@@ -20,26 +20,33 @@ const createPieces = () => {
             }
             const piece = document.createElement('div')
 
-            if (currentPlayer === PLAYER1) {
-                piece.classList.add('black-player')
-            }
-            if (currentPlayer === PLAYER2) {
-                piece.classList.add('red-player')
-            }
 
             let lastBlock = arrayOfEmptyBlocks[arrayOfEmptyBlocks.length - 1]
 
             if (lastBlock) {
 
-                let blockXPosition = parseInt(lastBlock.id.split('-')[1])
-                let blockYPosition = parseInt(lastBlock.id.split('-')[2])
-
-                map[blockYPosition][blockXPosition] = currentPlayer
+             
+                let blockXPosition = parseInt(lastBlock.id.split('-')[2])
+                let blockYPosition = parseInt(lastBlock.id.split('-')[1])
                 
-                getCurrentPlayer()
+          
+             
+                if (currentPlayer === PLAYER1) {   
+                    map[blockYPosition][blockXPosition] = 1
+                }
+                if (currentPlayer === PLAYER2) {
+                    map[blockYPosition][blockXPosition] = 2
+                }
+                if (currentPlayer === 'black') {
+                    piece.classList.add('black-player')
+                }else{
+                    piece.classList.add('red-player')
+                }
               
                 lastBlock.appendChild(piece)
+                getCurrentPlayer()
                 console.log(checkWin(blockXPosition, blockYPosition))
+                console.log(map)
             }
         })
     }
