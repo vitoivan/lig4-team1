@@ -36,22 +36,12 @@ STRUCTURE:
     }
 }
 
-@keyframes bgGradient {
+@keyframes startRising {
     0% {
-        background-size: 400% 400%;
-        background-position: 0% 50%;
-    }
-    25% {
-        background-size: 200% 200%;
-        background-position: 50% 50%;
-    }
-    75% {
-        background-size: 100% 100%;
-        background-position: 100% 100%;
+        transform: translateY(0px);
     }
     100% {
-        background-size: 400% 400%;
-        background-position: 0% 50%;
+        transform: translateY(calc(var(--space-heigth) * -1));
     }
 }
 
@@ -59,17 +49,12 @@ STRUCTURE:
 /*VARABLES DECLARATION:*/
 
 :root {
-    --AlphaChanel-initial: 15%;
-    --Animation-duration0: 4s;
-    --Animation-duration1: 6s;
-    --Animation-duration2: 8s;
-    --Animation-duration3: 10s;
-    --Animation-duration4: 12s;
-    --Animation-delay0: 1s;
-    --Animation-delay1: 2.5s;
-    --Animation-delay2: 4s;
-    --Animation-delay3: 5.5s;
-    --Animation-delay4: 6s;
+    --alphaChanel-initial: 15%;
+    --star-BG-color: #ffffff;
+    --star-color0: #8c00ff;
+    --star-color1: #fffb00;
+    --star-color2: #f700a4;
+    --space-heigth: 1000px;
 }
 
 html,
@@ -78,10 +63,56 @@ body {
     height: 100vh;
 }
 
-body {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(70deg, #fa0001, #f4f1de, #ffede1, #181d27);
-    animation: bgGradient 21s ease-in infinite;
+div[data-id="starsWrapper"] {
+    position: relative;
+    z-index: -1;
+}
+
+div.star {
+    overflow: hidden;
+    position: absolute;
+    left: 10px;
+    bottom: -300px;
+    box-shadow: var(--s);
+    animation-delay: var(--d);
+    height: var(--h);
+    width: var(--w);
+}
+
+div.star.star__1 {
+    animation: startRising var(--ad1) ease-in-out infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+div.star.star__2 {
+    animation: startRising var(--ad2) ease-in-out infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+div.star.star__3 {
+    animation: startRising var(--ad3) ease-in-out infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+div.star.star__4 {
+    animation: startRising var(--ad4) ease-in-out infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+div.star.star__5 {
+    animation: startRising var(--ad5) ease-in-out infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+}
+
+div.star.star__6 {
+    animation: startRising var(--ad6) ease-in-out infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
 }
 
 ul.bg-balls {
@@ -100,44 +131,44 @@ ul.bg-balls>li {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: rgba(255, 0, 0, var(--AlphaChanel-initial));
+    background-color: rgba(255, 0, 0, var(--alphaChanel-initial));
     bottom: -15vh;
     animation: balls var(--Animation-duration4) infinite;
-    transition-timing-function: linear;
+    transition-timing-function: ease-in-out;
 }
 
 ul.bg-balls>li:nth-child(1) {
     left: 10%;
-    animation-delay: var(--Animation-delay0);
-    background-color: rgba(255, 0, 0, calc(var(--AlphaChanel-initial) + 15%));
+    animation-delay: var(--animation-delay0);
+    background-color: rgba(255, 0, 0, calc(var(--alphaChanel-initial) + 15%));
 }
 
 ul.bg-balls>li:nth-child(2) {
     left: 20%;
-    animation-delay: var(--Animation-delay1);
+    animation-delay: var(--animation-delay1);
     animation-duration: var(--Animation-duration3);
-    background-color: rgba(255, 0, 0, calc(var(--AlphaChanel-initial) + 5%));
+    background-color: rgba(255, 0, 0, calc(var(--alphaChanel-initial) + 5%));
 }
 
 ul.bg-balls>li:nth-child(3) {
     left: 25%;
-    animation-delay: var(--Animation-delay2);
+    animation-delay: var(--animation-delay2);
     animation-duration: var(--Animation-duration2);
-    background-color: rgba(255, 0, 0, calc(var(--AlphaChanel-initial) - 5%));
+    background-color: rgba(255, 0, 0, calc(var(--alphaChanel-initial) - 5%));
 }
 
 ul.bg-balls>li:nth-child(4) {
     left: 40%;
     width: 60px;
     height: 60px;
-    animation-delay: var(--Animation-delay3);
+    animation-delay: var(--animation-delay3);
     animation-duration: var(--Animation-duration1);
-    background-color: rgba(0, 0, 0, calc(var(--AlphaChanel-initial) - 5%));
+    background-color: rgba(0, 0, 0, calc(var(--alphaChanel-initial) - 5%));
 }
 
 ul.bg-balls>li:nth-child(5) {
     left: 70%;
-    animation-delay: var(--Animation-delay4);
+    animation-delay: var(--animation-delay4);
     animation-duration: var(--Animation-duration0);
 }
 
@@ -145,16 +176,16 @@ ul.bg-balls>li:nth-child(6) {
     left: 80%;
     width: 50px;
     height: 50px;
-    animation-delay: var(--Animation-delay0);
+    animation-delay: var(--animation-delay0);
     animation-duration: var(--Animation-duration3);
-    background-color: rgba(0, 0, 0, calc(var(--AlphaChanel-initial) + 5%));
+    background-color: rgba(0, 0, 0, calc(var(--alphaChanel-initial) + 5%));
 }
 
 ul.bg-balls>li:nth-child(7) {
     left: 32%;
     width: 80px;
     height: 80px;
-    animation-delay: var(--Animation-delay1);
+    animation-delay: var(--animation-delay1);
     animation-duration: var(--Animation-duration2);
 }
 
@@ -162,26 +193,26 @@ ul.bg-balls>li:nth-child(8) {
     left: 55%;
     width: 70px;
     height: 70px;
-    animation-delay: var(--Animation-delay2);
+    animation-delay: var(--animation-delay2);
     animation-duration: var(--Animation-duration1);
-    background-color: rgba(0, 0, 0, calc(var(--AlphaChanel-initial) + 20%));
+    background-color: rgba(0, 0, 0, calc(var(--alphaChanel-initial) + 20%));
 }
 
 ul.bg-balls>li:nth-child(9) {
     left: 25%;
     width: 90px;
     height: 90px;
-    animation-delay: var(--Animation-delay3);
+    animation-delay: var(--animation-delay3);
     animation-duration: var(--Animation-duration0);
-    background-color: rgba(0, 0, 0, calc(var(--AlphaChanel-initial) + 10%));
+    background-color: rgba(0, 0, 0, calc(var(--alphaChanel-initial) + 10%));
 }
 
 ul.bg-balls>li:nth-child(10) {
     left: 90%;
     width: 100px;
     height: 100px;
-    animation-delay: var(--Animation-delay4);
-    background-color: rgba(0, 0, 0, calc(var(--AlphaChanel-initial) + 25%));
+    animation-delay: var(--animation-delay4);
+    background-color: rgba(0, 0, 0, calc(var(--alphaChanel-initial) + 25%));
 }
 
 

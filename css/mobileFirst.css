@@ -138,24 +138,27 @@ main>div:first-child {
     border: 1px solid black;
 }
 
-.game-wrapper{
+.game-wrapper {
     display: flex;
 }
 
+
 /*PIECES*/
-.red-player{
+
+.red-player {
     width: 100%;
     height: 100%;
     background-color: red;
     border-radius: 50%;
 }
 
-.black-player{
+.black-player {
     width: 100%;
     height: 100%;
     background-color: black;
     border-radius: 50%;
 }
+
 
 /*BUTTONS*/
 
