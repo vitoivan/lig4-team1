@@ -8,7 +8,7 @@ const createPieces = () => {
         const column = columnsList[i];
 
         column.addEventListener('click', function() {
-            getCurrentPlayer()
+            
 
             let arrayOfBlocks = column.childNodes
 
@@ -22,14 +22,18 @@ const createPieces = () => {
             const piece = document.createElement('div')
 
             if (currentPlayer === PLAYER1) {
-                piece.classList.add('red-player')
-            }
-            if (currentPlayer === PLAYER2) {
                 piece.classList.add('black-player')
             }
+            if (currentPlayer === PLAYER2) {
+                piece.classList.add('red-player')
+            }
             let lastBlock = arrayOfEmptyBlocks[arrayOfEmptyBlocks.length - 1]
-            lastBlock.appendChild(piece)
-            console.log(lastBlock)
+
+            if (lastBlock) {
+                getCurrentPlayer()
+                lastBlock.appendChild(piece)
+                console.log(lastBlock)
+            }
         })
     }
 }
