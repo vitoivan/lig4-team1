@@ -12,7 +12,7 @@ const testPlayerSelection = () => {
 }; // testPlayerSelection()
 
 const resultPlayerSelection = testPlayerSelection();
-const expectedPlayerSelection = true
+const expectedPlayerSelection = true;
 
 console.assert(resultPlayerSelection, expectedPlayerSelection, `The "${testPlayerSelection.name}" is returning ${resultPlayerSelection}, but was expecting ${expectedPlayerSelection}.`);
 
