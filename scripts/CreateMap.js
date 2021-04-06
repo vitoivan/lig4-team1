@@ -11,12 +11,13 @@ const map = [
 const createMap = () => {
 
         const generalDiv = document.createElement('div');
+        generalDiv.classList.add('game-wrapper')
 
         for (let i = 0; i < map.length; i++) {
 
             const row = map[i];
             const rowDiv = document.createElement('div');
-            rowDiv.classList.add('displayFlex');
+            rowDiv.classList.add('displayFlex--col');
 
             rowDiv.classList.add('row');
 

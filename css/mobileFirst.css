@@ -138,6 +138,9 @@ main>div:first-child {
     border: 1px solid black;
 }
 
+.game-wrapper{
+    display: flex;
+}
 
 /*PIECES*/
 .player-1{

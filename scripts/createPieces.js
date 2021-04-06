@@ -22,9 +22,8 @@ const createPieces = () => {
     
                 piece.classList.add('piece');
                 block.appendChild(piece);
+                return piece
             } 
         });
     }
-}; // createPieces();
-
-// createPieces();
+};
