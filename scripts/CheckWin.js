@@ -9,6 +9,7 @@
 */
 
 const Side = (i, j, p1, p2, voidblock, dir) => {
+
     let k = 0;
     let acumulator1 = 0;
     let acumulator2 = 0;
@@ -20,9 +21,11 @@ const Side = (i, j, p1, p2, voidblock, dir) => {
 
             if(map[posX][posY] === 1){
                 acumulator1++;
+                acumulator2 = 0;
             }
             if(map[posX][posY] === 2){
                 acumulator2++;
+                acumulator1 = 0;
             }
             if(map[posX][posY] === voidblock){
                 acumulator1 = 0;
@@ -129,7 +132,6 @@ const checkHorizontal = (p1,p2, voidblock) => {
 }
 
 const isDraw = () => {
-
     let counter = 0;
     for(let i = 0; i < map.length; i++){
         const row = map[i]
@@ -176,3 +178,5 @@ const checkWin = (i,j) => {
 
     return false;
 }
+
+// Check win retorna ou falso, ou string
