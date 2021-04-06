@@ -16,7 +16,7 @@ const Side = (i, j, p1, p2, voidblock, dir) => {
     while(k <= 3){
        
         const [posX, posY] = direction(i, j ,k, dir);
-
+        
         if(posX >= 0 && posX < map.length && posY >= 0 && posY < map[i].length){
 
             if(map[posX][posY] === 1){
