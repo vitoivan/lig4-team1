@@ -124,6 +124,7 @@ const checkDiagonal = (i,j, p1, p2, voidblock) => {
     if(dig4 !== false){
         return dig4;
     }
+    return false;
 }
 
 const checkHorizontal = (p1,p2, voidblock) => {
@@ -132,6 +133,7 @@ const checkHorizontal = (p1,p2, voidblock) => {
     for(let i = 0; i < map.length; i++){
         const row = map[i];
         for(let j = 0; j < row.length; j++){
+
             if(map[i][j] === 1){
                 acumulator1++;
                 acumulator2 = 0;
@@ -158,14 +160,37 @@ const checkHorizontal = (p1,p2, voidblock) => {
     return false;
 }
 
+const isDraw = () => {
+    const rowLength = map[0].length;
+    const colLength = map.length;
+    const numberOfElements = rowLength * colLength;
+    let counter = 0;
+
+    for(let i = 0; i < colLength; i++){
+        for(let j = 0; j < rowLength; j++){
+            if(map[i][j] !== 0){
+                counter++;
+            }
+            else{
+                break;
+            }
+        }
+    }
+    if(counter === numberOfElements){
+        return 'Draw!';
+    }else{
+        return false;
+    }
+}
 
 const checkWin = (i,j) => {
-    const voidblock = ' ';
-    const p1 = 'player 1 wins the game';
-    const p2 = 'player 2 wins the game';
+    const voidblock = 0;
+    const p1 = 'black won the game';
+    const p2 = 'red won the game';
     const horizontal = checkHorizontal(p1, p2, voidblock);
     const vertical = checkVertical(i,j, p1, p2, voidblock);
     const diagonal = checkDiagonal(i,j, p1, p2, voidblock);
+    const draw = isDraw();
 
     if(horizontal !== false){
         return horizontal;
@@ -176,5 +201,9 @@ const checkWin = (i,j) => {
     if(diagonal !== false){
         return diagonal;
     }
+    if(draw !== false){   
+        return draw;
+    }
+
     return false;
 }
