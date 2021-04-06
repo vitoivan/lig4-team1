@@ -1,47 +1,34 @@
 // Function to create pieces when individual block is clicked
 const createPieces = () => {
 
-    const blocksListEl = document.getElementsByClassName('block');
+    const columnsList = document.getElementsByClassName('row')
 
-    for (let i = 0; i < blocksListEl.length; i++) {
+    for (let i = 0; i < columnsList.length; i++) {
 
-        const block = blocksListEl[i];
+        const column = columnsList[i];
 
-        block.addEventListener('click', function() {
-            // Get block parent element and store into a variable
-            let currentBlockParentElement = block.parentElement
+        column.addEventListener('click', function(event) {
 
-            // Create array of all currentBlockParentElement childs
-            let arrayOfBlocks = currentBlockParentElement.childNodes
+            let arrayOfBlocks = column.childNodes
 
-            // Create array for empty blocks
             let arrayOfEmptyBlocks = []
 
-            // Iterate over arrayOfBlocks, check if block is empty and push it to array of empty blocks
             for (let i = 0; i < arrayOfBlocks.length; i++) {
                 if (arrayOfBlocks[i].childNodes.length === 0) {
                     arrayOfEmptyBlocks.push(arrayOfBlocks[i])
                 }
             }
+            const piece = document.createElement('div')
 
-            // Check if clicked block is the last element of arrayOfEmptyBlocks and append piece to it
-            if (block === arrayOfEmptyBlocks[arrayOfEmptyBlocks.length - 1]) {
-                if (block.childNodes.length < 1) {
-                    const piece = document.createElement('div');
-
-                    if (currentPlayer === RED_PLAYER) {
-                        piece.classList.add('red-player');
-                    }
-
-                    if (currentPlayer === BLACK_PLAYER) {
-                        piece.classList.add('black-player');
-                    }
-
-                    piece.classList.add('piece');
-                    block.appendChild(piece);
-                    return piece
-                }
+            if (currentPlayer === PLAYER1) {
+                piece.classList.add('red-player')
             }
-        });
+            if (currentPlayer === PLAYER2) {
+                piece.classList.add('black-player')
+            }
+            let lastBlock = arrayOfEmptyBlocks[arrayOfEmptyBlocks.length - 1]
+            lastBlock.appendChild(piece)
+            console.log(lastBlock)
+        })
     }
-};
+}
