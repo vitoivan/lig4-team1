@@ -154,7 +154,6 @@ const isDraw = () => {
 }
 
 const checkWin = (i, j) => {
-    console.log(i, j)
     const voidblock = 0;
     const p1 = 'P1 Won the game';
     const p2 = 'P2 Won the game';
@@ -180,3 +179,14 @@ const checkWin = (i, j) => {
 }
 
 // Check win retorna ou falso, ou string
+
+const mainDiagonal = (i, j, p1, p2, voidblock) => {
+    let k = 0;
+    let counter1 = 0;
+    let counter2 = 0;
+    for(let i = 0; i < map.length; i++){
+        while(k < map[i].length){
+          
+        }
+    }
+}

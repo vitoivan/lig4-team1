@@ -47,7 +47,10 @@ const createPieces = () => {
                 piece.classList.add('falling');
                 lastBlock.appendChild(piece);   
                 getCurrentPlayer()
-                console.log(checkWin(blockXPosition, blockYPosition))
+                const result = checkWin(blockXPosition, blockYPosition);
+                if(result !== false){
+                    console.log(result)
+                }
                 console.log(map)
             }
         })
