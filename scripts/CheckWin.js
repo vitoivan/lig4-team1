@@ -8,7 +8,7 @@
     [(i+3, j-3) (i+3, j-2) (i+3, j-1) (i+3, j) (i+3, j+1) (i+3, j+2) (i+3, j+3)]
 */
 
-const diagonalSide = (i, j, p1, p2, voidblock, dir) => {
+const Side = (i, j, p1, p2, voidblock, dir) => {
     let k = 0;
     let acumulator1 = 0;
     let acumulator2 = 0;
@@ -29,7 +29,6 @@ const diagonalSide = (i, j, p1, p2, voidblock, dir) => {
                 acumulator2 = 0;
             }
             if(acumulator1 === 4){
-               
                 return p1;
             }
             if(acumulator2 === 4){
@@ -40,36 +39,7 @@ const diagonalSide = (i, j, p1, p2, voidblock, dir) => {
     }
     return false;
 }
-const verticalSide = (i, j, p1, p2, voidblock,dir) => {
-    let k = 0;
-    let acumulator1 = 0;
-    let acumulator2 = 0;
 
-    while(k <= 3){
-        const posX = direction(i, j, k, dir);
-        if(posX >= 0 && posX < map.length){
-            if(map[posX][j] === 1){
-                acumulator1++;
-            }
-            if(map[posX][j] === 2){
-                acumulator2++;
-            }
-            if(map[posX][j] === voidblock){
-                acumulator1 = 0;
-                acumulator2 = 0;
-            }
-            
-            if(acumulator1 === 4){
-                return p1;
-            }
-            if(acumulator2 === 4){
-                return p2;
-            }
-        }
-        k++;
-    }
-    return false;
-}
 const direction = (i, j, k, dir) => {
 
     if(dir === 'diag-left-top'){
@@ -85,18 +55,16 @@ const direction = (i, j, k, dir) => {
         return [i+k, j-k];
     }
     if(dir === 'vertical-top'){
-        return i - k;
+        return [i - k, j];
     }
     if(dir === 'vertical-bottom'){
-        return i + k;
+        return [i + k, j];
     }
 }
 
-
 const checkVertical = (i,j, p1, p2, voidblock) => {
-    
-    const vertTop = verticalSide(i, j, p1, p2, voidblock, 'vertical-top');
-    const vertBot = verticalSide(i, j, p1, p2, voidblock, 'vertical-bottom');
+    const vertTop = Side(i, j, p1, p2, voidblock, 'vertical-top');
+    const vertBot = Side(i, j, p1, p2, voidblock, 'vertical-bottom');
     if(vertTop !== false){
         return vertTop;
     }
@@ -107,22 +75,22 @@ const checkVertical = (i,j, p1, p2, voidblock) => {
 }
 
 const checkDiagonal = (i,j, p1, p2, voidblock) => {
-    const dig1 = diagonalSide(i,j, p1, p2, voidblock,'diag-left-top');
-    const dig2 = diagonalSide(i,j, p1, p2, voidblock,'diag-right-top');
-    const dig3 = diagonalSide(i,j, p1, p2, voidblock,'diag-right-bottom');
-    const dig4 = diagonalSide(i,j, p1, p2, voidblock, 'diag-left-bottom');
+    const diag1 = Side(i,j, p1, p2, voidblock,'diag-left-top');
+    const diag2 = Side(i,j, p1, p2, voidblock,'diag-right-top');
+    const diag3 = Side(i,j, p1, p2, voidblock,'diag-right-bottom');
+    const diag4 = Side(i,j, p1, p2, voidblock, 'diag-left-bottom');
 
-    if(dig1 !== false){
-        return dig1;
+    if(diag1 !== false){
+        return diag1;
     }
-    if(dig2 !== false){
-        return dig2;
+    if(diag2 !== false){
+        return diag2;
     }
-    if(dig3 !== false){
-        return dig3;
+    if(diag3 !== false){
+        return diag3;
     }
-    if(dig4 !== false){
-        return dig4;
+    if(diag4 !== false){
+        return diag4;
     }
     return false;
 }
@@ -146,7 +114,7 @@ const checkHorizontal = (p1,p2, voidblock) => {
                 acumulator1 = 0;
                 acumulator2 = 0;
             }
-            
+
             if(acumulator1 === 4){
                 return p1;
             }
@@ -161,26 +129,27 @@ const checkHorizontal = (p1,p2, voidblock) => {
 }
 
 const isDraw = () => {
-    const rowLength = map[0].length;
-    const colLength = map.length;
-    const numberOfElements = rowLength * colLength;
-    let counter = 0;
 
-    for(let i = 0; i < colLength; i++){
-        for(let j = 0; j < rowLength; j++){
-            if(map[i][j] !== 0){
-                counter++;
-            }
-            else{
-                break;
+    let counter = 0;
+    for(let i = 0; i < map.length; i++){
+        const row = map[i]
+        for(let j = 0; j < row.length; j++){
+            if(map[i][j] === 0){
+                return false;
             }
         }
     }
-    if(counter === numberOfElements){
-        return 'Draw!';
-    }else{
-        return false;
-    }
+    return 'Draw!';
+    /*
+        
+        [1,2,1,2,1,2,1],
+        [1,2,1,2,1,2,1],
+        [2,1,2,1,2,1,2],
+        [2,1,2,1,2,1,2],
+        [1,2,1,2,1,2,1],
+        [1,2,1,2,1,2,1],
+        
+    */
 }
 
 const checkWin = (i,j) => {
@@ -190,7 +159,7 @@ const checkWin = (i,j) => {
     const horizontal = checkHorizontal(p1, p2, voidblock);
     const vertical = checkVertical(i,j, p1, p2, voidblock);
     const diagonal = checkDiagonal(i,j, p1, p2, voidblock);
-    const draw = isDraw();
+    const draw = isDraw(map);
 
     if(horizontal !== false){
         return horizontal;
