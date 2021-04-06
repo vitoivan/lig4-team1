@@ -162,10 +162,6 @@ const checkWin = (i, j) => {
     const vertical = checkVertical(i,j, p1, p2, voidblock);
     const diagonal = checkDiagonal(i,j, p1, p2, voidblock);
     const draw = isDraw(map);
-    console.log('horizontal ' + horizontal)
-    console.log('vertical ' + vertical)
-    console.log('diagonal ' + diagonal)
-    console.log('draw ' + draw)
 
     if(horizontal !== false){
         return horizontal;

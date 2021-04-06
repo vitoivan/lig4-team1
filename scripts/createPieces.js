@@ -42,8 +42,10 @@ const createPieces = () => {
                 }else{
                     piece.classList.add('red-player')
                 }
-              
-                lastBlock.appendChild(piece)
+                
+               
+                piece.classList.add('falling');
+                lastBlock.appendChild(piece);   
                 getCurrentPlayer()
                 console.log(checkWin(blockXPosition, blockYPosition))
                 console.log(map)
