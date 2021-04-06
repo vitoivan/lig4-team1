@@ -23,16 +23,25 @@ const createPieces = () => {
 
             if (currentPlayer === PLAYER1) {
                 piece.classList.add('black-player')
+                currentPlayer = 1
             }
             if (currentPlayer === PLAYER2) {
                 piece.classList.add('red-player')
+                currentPlayer = 2
             }
             let lastBlock = arrayOfEmptyBlocks[arrayOfEmptyBlocks.length - 1]
 
             if (lastBlock) {
+
+                let blockXPosition = lastBlock.id.split('-')[1]
+                let blockYPosition = lastBlock.id.split('-')[2]
+
+                map[blockYPosition][blockXPosition] = currentPlayer
+                console.log(map)
+
                 getCurrentPlayer()
                 lastBlock.appendChild(piece)
-                console.log(lastBlock)
+                checkWin(lastBlock)
             }
         })
     }
