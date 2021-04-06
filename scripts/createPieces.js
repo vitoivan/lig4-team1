@@ -23,20 +23,20 @@ const createPieces = () => {
                     arrayOfEmptyBlocks.push(arrayOfBlocks[i])
                 }
             }
-            
+
             // Check if clicked block is the last element of arrayOfEmptyBlocks and append piece to it
             if (block === arrayOfEmptyBlocks[arrayOfEmptyBlocks.length - 1]) {
                 if (block.childNodes.length < 1) {
                     const piece = document.createElement('div');
-    
-                    if (currentPlayer === RED_PLAYER) {
+
+                    if (currentPlayer === PLAYER2) {
                         piece.classList.add('player-1');
                     }
-        
-                    if (currentPlayer === BLACK_PLAYER) {
+
+                    if (currentPlayer === PLAYER1) {
                         piece.classList.add('player-2');
                     }
-        
+
                     piece.classList.add('piece');
                     block.appendChild(piece);
                     return piece
