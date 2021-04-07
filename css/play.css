@@ -115,7 +115,7 @@ h2 {
 }
 
 .scoreTitle {
-    margin: ;
+    /* margin: ; */
 }
 
 scoreTitle header.displayFlex>div {
@@ -163,8 +163,8 @@ div.game-wrapper {
 }
 
 .falling {
-    animation: fallingAnim .5s;
-    /* animation-timing-function: Fast Out, Linear In; */
+    animation: fallingAnim 1s;
+    animation-timing-function: cubic-bezier(0.47, 0.03, 0.89, 0.46)
 }
 
 .header {
