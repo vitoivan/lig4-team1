@@ -60,9 +60,6 @@ const changeStarPattern = () => {
 }; // changeStarPattern()
 
 
-
-
-
 let firstAudioIsPlaying = false;
 let SecondAudioIsPlaying = false;
 
@@ -101,6 +98,106 @@ const fallingBall = (piece) => {
     },555);
 }
 
-const changeNeonColors = () => {
-    getRandomNumber(3);
+const changeNeonColors = (random ='no') => {
+    const allBlocks = document.querySelectorAll('.block , img.logo, header.displayFlex>div');
+    if(random === 'random'){
+        allBlocks.forEach(changeRandomNeon)
+    }else{
+        const number = getRandomNumber(3);
+        allBlocks.forEach( block => {
+            changeNeon(block, number);
+        })
+   
+    }
+}
+const removeAllNeonClasses = (block) => {
+    
+    const blockClass = Array.from(block.classList);
+    if(blockClass.includes('purple-neon')){
+        block.classList.remove('purple-neon');
+        return 2;
+    }
+    if(blockClass.includes('yellow-neon')){
+        block.classList.remove('yellow-neon');
+        return 0;
+    }
+    if(blockClass.includes('white-neon')){
+        block.classList.remove('white-neon');
+        return 3;
+    }
+    if(blockClass.includes('red-neon')){
+        block.classList.remove('red-neon');
+        return 1;
+    }
+   
+  
+    
+
+    
+}
+const returnNewNeonClass = (block,number=null) => {
+    switch(number){
+        case 0:
+            block.classList.add('yellow-neon');
+            break;
+        case 1:
+            block.classList.add('red-neon');
+            break;
+        case 2:
+            block.classList.add('purple-neon');
+            break;
+        case 3:
+            block.classList.add('white-neon');
+            break;
+    }
+}
+const changeRandomNeon = block => {
+    const number = getRandomNumber(3)
+    removeAllNeonClasses(block);
+    returnNewNeonClass(block,number);
+}
+const changeNeon = (block,number) => {
+    const notPickThis = removeAllNeonClasses(block);
+    if(number !== notPickThis){
+        returnNewNeonClass(block,number);
+    }else{
+        if(number + 1 < 4){
+            returnNewNeonClass(block,number + 1 );
+        }else{
+            returnNewNeonClass(block,number - 1 );
+        }
+       
+    }
+    
+}
+const timerToChangeNeon = (number) => {
+    if(number === 0){
+        let time = 0;
+
+        let interval = setInterval(() => {
+            if(time >= 4){    
+                const interval2 = setInterval(() => {
+                    if(time >= 15){
+                        const interval3 = setInterval( () => {
+                            changeNeonColors();
+                            time++;
+                        },650)
+                        clearInterval(interval2);
+                    }
+                    changeNeonColors('random');
+                    time += 0.2;
+                }, 200);
+                clearInterval(interval);
+            }
+            time++;
+        }, 1000);
+    }   
+}
+const counter = () => {
+    let time = 0;
+    setInterval(() => {
+        console.log(time);
+        time++;
+      
+    }, 1000);
 }

@@ -36,7 +36,6 @@ body {
     overflow: hidden;
 }
 
-
 /*HEADER:*/
 
 header.displayFlex {
@@ -64,8 +63,6 @@ header.displayFlex>div {
     justify-content: space-around;
     /* background-color: var(--color-RGBA-white); */
     border-radius: 15px;
-    box-shadow:  var(--box-shadow-neon);
-    
 }
 
 aside[data-id="currentPlayer"],
@@ -115,11 +112,7 @@ div.game-wrapper {
 
 .block {
     border: none;
-    box-shadow: var(--box-shadow-neon);
     margin: .5rem;
-}
-.yellow-neon{
-    box-shadow: var(--yellow-neon);
 }
 .game-wrapper {
     display: flex;
@@ -147,8 +140,7 @@ div.game-wrapper {
     background-color: black;
 }
 
-img.logo{
-    box-shadow: var(--box-shadow-neon);
+.logo{
     border-radius: 15px;
     padding: 15px 30px 5px;
 }
@@ -210,7 +202,6 @@ img.logo{
 .btn--underLineCenter::before {
     transform: scaleX(0);
 }
-
 
 /*@media: */
 

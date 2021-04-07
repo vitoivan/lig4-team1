@@ -42,6 +42,7 @@ const createMap = () => {
             const div = document.createElement('div');
 
             div.classList.add('block');
+            div.classList.add('purple-neon');
             div.id = `block-${i}-${j}`;
 
             rowDiv.appendChild(div);
