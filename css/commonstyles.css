@@ -34,16 +34,33 @@ STRUCTURE:
     --color-RGBA-white: rgba(237, 221, 212, 0.45);
     --font-family-PermanentMarker: "Permanent Marker", cursive;
     --font-family-Comfortaa: "Comfortaa", cursive;
-    --piece-size: 40px;
+    --piece-size: 35px;
     --transition-time: 150ms;
     --border-radius: 10px;
     --button-width: 220px;
     --button-height: 50px;
-    --box-shadow-neon: 0 0 0.1vw 0.4vw #ffffff, 0 0 0.4vw 0.6vw #d572e9, 0 0 4vw 0.4vw #a70be5, inset 0 0 1.5vw 0.4vw #a70be5, inset 0 0 0.4vw 0.2vw #d572e9, inset 0 0 0.5vw 0.2vw #fff7f7;
+    /* --box-shadow-neon: 0 0 0.1vw 0.4vw #ffffff, 0 0 0.4vw 0.6vw #d572e9, 0 0 4vw 0.4vw #a70be5, inset 0 0 1.5vw 0.4vw #a70be5, inset 0 0 0.4vw 0.2vw #d572e9, inset 0 0 0.5vw 0.2vw #fff7f7; */
+    --box-shadow-neon: 0 0 2px 2px #ffffff, 0 0 3px 5px #d572e9, 0 0 22px 5px #a70be5, inset 0 0 4px 2px #A70BE5, inset 0 0 5px 2px #d572e9, inset 0 0 5px 2px #fff7f7;
+    /* --yellow-neon: 0 0 2px 2px #ffffff, 0 0 3px 5px #e1e972, 0 0 22px 5px #e5d60b, inset 0 0 4px 2px #e5d60b, inset 0 0 5px 2px #e1e972, inset 0 0 5px 2px #fff7f7; */
+    --yellow-neon: 0 0 2px 2px #ffffff, 0 0 3px 5px #e7ebb6, 0 0 22px 5px #d4c720, inset 0 0 4px 2px #d4c720, inset 0 0 5px 2px #e7ebb6, inset 0 0 5px 2px #fff7f7;
+    --red-neon: 0 0 2px 2px #ffffff, 0 0 3px 5px #e97272, 0 0 22px 5px #e50b0b, inset 0 0 4px 2px #e50b0b, inset 0 0 5px 2px #e97272, inset 0 0 5px 2px #fff7f7;
+    --white-neon: 0 0 2px 2px #ffffff, 0 0 3px 5px #d4cccc, 0 0 22px 5px #d3d3d3, inset 0 0 4px 2px #d3d3d3, inset 0 0 5px 2px #d4cccc, inset 0 0 5px 2px #fff7f7;
 }
 
 
 /* GENERAL CONFIG: */
+.yellow-neon{
+    box-shadow: var(--yellow-neon);
+}
+.purple-neon{
+    box-shadow: var(--box-shadow-neon);
+}
+.red-neon{
+    box-shadow: var(--red-neon);
+}
+.white-neon{
+    box-shadow: var(--white-neon);
+}
 
 .displayFlex {
     display: flex;

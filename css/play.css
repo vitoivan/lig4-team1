@@ -36,7 +36,6 @@ body {
     overflow: hidden;
 }
 
-
 /*HEADER:*/
 
 header.displayFlex {
@@ -62,9 +61,8 @@ h3.scoreTitle {
 header.displayFlex>div {
     width: 100%;
     justify-content: space-around;
-    background-color: var(--color-RGBA-white);
-    border-radius: 20px;
-    box-shadow: var(--box-shadow-neon);
+    /* background-color: var(--color-RGBA-white); */
+    border-radius: 15px;
 }
 
 aside[data-id="currentPlayer"],
@@ -115,10 +113,12 @@ div.game-wrapper {
 
 .block {
     border: none;
-    box-shadow: var(--box-shadow-neon);
-    margin: 0.6rem 0.3rem;
-
+    margin: .5rem;
 }
+.game-wrapper {
+    display: flex;
+}
+
 
 /*PIECES*/
 
@@ -134,16 +134,19 @@ div.game-wrapper {
 }
 
 .player--red {
-    background-image: url(../assets/img/green-ball.png);
+    background-image: url('/assets/img/green-ball.png');
     background-size: cover;
 }
 
 .player--black {
-    background-image: url(../assets/img/purple-ball.png);
+    background-image: url('/assets/img/purple-ball.png');
     background-size: cover;
 }
 
-
+.logo{
+    border-radius: 15px;
+    padding: 15px 30px 5px;
+}
 /*BUTTONS*/
 
 .btn {
@@ -223,7 +226,6 @@ div.game-wrapper {
 .btn--underLineCenter::before {
     transform: scaleX(0);
 }
-
 
 /*@media: */
 
