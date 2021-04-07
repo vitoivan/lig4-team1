@@ -57,7 +57,6 @@ STRUCTURE:
     align-items: center;
     justify-content: center;
 }
-
 .displayFlex--col {
     flex-flow: column wrap;
 }
@@ -93,7 +92,9 @@ body {
     height: fit-content;
     font-family: var(--font-family-Comfortaa);
     color: var(--color-texts);
-    background-color: #252525;
+    background: #252525 url('https://images.hdqwalls.com/wallpapers/lazy-laser-4k-rd.jpg');
+    background-size: cover;
+    overflow: hidden;
 }
 
 
