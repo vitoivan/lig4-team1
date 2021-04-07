@@ -59,11 +59,11 @@ const changeStarPattern = () => {
 
 }; // changeStarPattern()
 
-const fallingBall = async (piece) => {
-    await piece.classList.add('falling');
+const fallingBall =  (piece) => {
+    piece.classList.add('falling');
     const interval = setTimeout( () => {
         piece.classList.remove('falling');
         piece.style.animation = 'bouncing .54s cubic-bezier(0, 0.99, 1, 0.15)';
-        clearTimeout(interval)
-    },550)
+        clearTimeout(interval);
+    },550);
 }

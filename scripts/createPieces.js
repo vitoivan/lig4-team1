@@ -45,11 +45,11 @@ const createPieces = () => {
                 }
 
                 fallingBall(pieceEl)
-
+                
                 lastBlock.appendChild(pieceEl);
-
+              
                 getCurrentPlayer()
-
+                
                 const result = checkWin(blockXPosition, blockYPosition);
 
                 if (result !== false) {
