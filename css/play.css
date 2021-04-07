@@ -175,14 +175,18 @@ div.game-wrapper {
 
 .ingame-button{
     margin: 0 8px;
-    padding: 8px 16px;
+    padding: 16px 24px;
     font-family: var(--font-family-Comfortaa);
     border-radius: 40px;
+    font-size: 16px;
     border: none;
     outline: none;
     font-weight: bold;
     color: white;
     background: var(--color-purple-buttons);
+    cursor: pointer;
+    display: flex;
+    align-items: center ;
 }
 
 /****** Hover and Focus: */
