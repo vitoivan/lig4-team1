@@ -6,13 +6,13 @@ html {
 }
 
 body {
-    background-image: url('/assets/regras-bg.png');
+    background-image: url('../assets/img/regras-bg.png');
     background-size: cover;
 }
 
 header {
     width: 100%;
-  }
+}
 
 figure {
     margin: 50px 0 0;

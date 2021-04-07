@@ -51,12 +51,12 @@ STRUCTURE:
     }
 }
 
-@keyframes bouncing{
+@keyframes bouncing {
     0% {
         bottom: 60px;
     }
     10% {
-        bottom: 0;
+        bottom: 0px;
     }
     20% {
         bottom: 50px;
@@ -64,27 +64,22 @@ STRUCTURE:
     30% {
         bottom: 0;
     }
-    40%{
+    40% {
         bottom: 40px;
     }
-    50%{
+    50% {
         bottom: 0;
     }
-    60%{
+    60% {
         bottom: 30px;
     }
     70% {
         bottom: 0;
     }
     80% {
-        bottom: 15px;
+        bottom: 20px;
     }
-    90% {
-        bottom: 0px;
-    }
-    95% {
-        bottom: 5px;
-    }
+    90%,
     100% {
         bottom: 0;
     }

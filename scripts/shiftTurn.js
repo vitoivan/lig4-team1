@@ -10,8 +10,6 @@ const PLAYER2 = (PLAYER1 === "red") ? "black" : "red";
  */
 let currentPlayer = PLAYER1;
 
-// let currentPlayer;
-
 function getRandomPlayer() {
 
     const number = Math.round(Math.random() * 1) + 1;
@@ -25,27 +23,11 @@ function getRandomPlayer() {
 
 function getCurrentPlayer() {
 
-    // if (currentPlayer === undefined) {
-    //     currentPlayer = PLAYER1;
-    //     return currentPlayer;
-    // }
-
     if (currentPlayer === PLAYER1) {
         currentPlayer = PLAYER2;
     } else {
         currentPlayer = PLAYER1;
     }
 
-    const strLogMsg = "==\nAgora é a vez da cor ";
-
-    // if (currentPlayer === PLAYER1)
-    //     console.log(`${strLogMsg} PRETA`);
-    // else
-    //     console.log(`${strLogMsg} VERMELHA`);
-
     return currentPlayer;
 }; //getCurrentPlayer()
-
-// getCurrentPlayer()
-
-// document.getElementById('container').addEventListener("click", currentPlayer);
