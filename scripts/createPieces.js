@@ -2,6 +2,14 @@
 const createPieces = () => {
 
     const columnsList = document.getElementsByClassName('row')
+    const currentPLayerEl = document.querySelector(`div[data-id="currentPlayer"]`);
+    const CLASS_PLAYER_BLACK = "player--black";
+    const CLASS_PLAYER_RED = "player--red";
+
+    if (PLAYER1 === "black")
+        currentPLayerEl.classList.add(CLASS_PLAYER_RED);
+    else
+        currentPLayerEl.classList.add(CLASS_PLAYER_BLACK);
 
     for (let i = 0; i < columnsList.length; i++) {
 
@@ -39,17 +47,26 @@ const createPieces = () => {
                 pieceEl.classList.add('falling');
 
                 if (currentPlayer === 'black') {
-                    pieceEl.classList.add('player--black');
+                    pieceEl.classList.add(CLASS_PLAYER_BLACK);
+
+                    currentPLayerEl.classList.add(CLASS_PLAYER_RED); // this player turn.
+                    currentPLayerEl.classList.remove(CLASS_PLAYER_BLACK);
+
                 } else {
-                    pieceEl.classList.add('player--red');
+
+                    pieceEl.classList.add(CLASS_PLAYER_RED);
+
+                    currentPLayerEl.classList.add(CLASS_PLAYER_BLACK); // this player turn.
+                    currentPLayerEl.classList.remove(CLASS_PLAYER_RED);
+
                 }
 
                 fallingBall(pieceEl)
-
+                
                 lastBlock.appendChild(pieceEl);
-
+              
                 getCurrentPlayer()
-
+                
                 const result = checkWin(blockXPosition, blockYPosition);
 
                 if (result !== false) {

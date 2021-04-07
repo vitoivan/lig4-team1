@@ -59,11 +59,18 @@ const changeStarPattern = () => {
 
 }; // changeStarPattern()
 
-const fallingBall = async (piece) => {
-    await piece.classList.add('falling');
-    const interval = setTimeout( () => {
+const fallingBall = (piece) => {
+    const audio = document.getElementById('audioFallingBall');
+    const vol = 1;
+    piece.classList.add('falling');
+    const timeOut = setTimeout(() => {
+        audio.volume = vol;
+        audio.play();
         piece.classList.remove('falling');
         piece.style.animation = 'bouncing .54s cubic-bezier(0, 0.99, 1, 0.15)';
-        clearTimeout(interval)
-    },550)
+
+        clearTimeout(timeOut);
+    }, 550);
+
+
 }
