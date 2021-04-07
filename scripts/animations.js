@@ -67,7 +67,7 @@ const fallingBall =  (piece) => {
         audio.volume = vol;
         audio.play();
         piece.classList.remove('falling');
-        piece.style.animation = 'bouncing 1s cubic-bezier(0.18, 0.18, 0.3, 0.35)';
+        piece.style.animation = 'bouncing 1s cubic-bezier(0, 0.74, 1, 0.24)';
         clearTimeout(timeOut);
     },530);
     let times = 11;

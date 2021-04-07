@@ -53,14 +53,40 @@ STRUCTURE:
 
 @keyframes bouncing{
     0% {
-        bottom: 30px;
+        bottom: 60px;
     }
-    33% {
+    10% {
         bottom: 0px;
     }
-    66% {
-        bottom: 10px;
+    20% {
+        bottom: 50px;
     }
+    30% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 40px;
+    }
+    50% {
+        bottom: 0;
+    }
+
+    60% {
+        bottom: 30px;
+    }
+   
+    70% {
+        bottom: 0;
+    }
+   
+    80% {
+        bottom: 20px;
+    }
+  
+    90% {
+        bottom: 0;
+    }
+
     100% {
         bottom: 0;
     }
