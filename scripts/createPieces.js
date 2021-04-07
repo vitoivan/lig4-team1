@@ -48,7 +48,7 @@ const createPieces = () => {
                 lastBlock.appendChild(piece);   
                 getCurrentPlayer()
                 const result = checkWin(blockXPosition, blockYPosition);
-               
+                
                 if(result !== false){
                     console.log(result)
                 }

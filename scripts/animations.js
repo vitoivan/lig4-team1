@@ -26,10 +26,10 @@ const renderStars = () => {
     for (let i = 1; i <= 6; i++) {
 
         const starEl = document.createElement("div");
-        const randomShadows = getStars(getRandomNumberBetween(10, 50));
+        const randomShadows = getStars(getRandomNumberBetween(100, 200));
         const randomSize = getRandomNumberBetween(2, 8);
         const delay = getRandomNumber(10);
-        const duration = getRandomNumberBetween(15, 120);
+        const duration = getRandomNumberBetween(2, 120);
 
         starEl.classList.add("star");
         starEl.classList.add(`star__${i}`);
