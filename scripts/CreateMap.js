@@ -1,3 +1,20 @@
+/**
+ * GLOBAL CONSTANTS:
+ */
+const map = [
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+];
+const score = { black: 0, red: 0 };
+const BLACK = "black";
+const RED = "red";
+const DRAW = "draw";
+
 const removeChildNodes = (element, qty = 0) => {
 
     if (!qty)
@@ -11,18 +28,6 @@ const removeChildNodes = (element, qty = 0) => {
         }
     }
 }; // removeChildNodes(element, qty = 0)
-
-
-const map = [
-    [0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0],
-];
-
 
 const createMap = () => {
 

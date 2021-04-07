@@ -1,3 +1,17 @@
+const updateScore = (player) => {
+
+    const playerScoreEl = document.querySelector(`h3[data-id="${player}"]`);
+
+    if (player === BLACK)
+        playerScoreEl.innerText = score.black;
+    else
+        playerScoreEl.innerText = score.red;
+
+}; // updateScore()
+
+const resetTable = () => {}; // resetTable()
+
+
 // Function to create pieces when individual block is clicked
 const createPieces = () => {
 
@@ -62,15 +76,27 @@ const createPieces = () => {
                 }
 
                 fallingBall(pieceEl)
-                
-                lastBlock.appendChild(pieceEl);
-              
-                getCurrentPlayer()
-                
-                const result = checkWin(blockXPosition, blockYPosition);
 
-                if (result !== false) {
-                    console.log(result);
+                lastBlock.appendChild(pieceEl);
+
+                getCurrentPlayer();
+
+                const hasWinner = checkWin(blockXPosition, blockYPosition);
+
+                if (hasWinner) {
+                    console.log(hasWinner);
+
+                    if (hasWinner === BLACK) {
+                        score.black += 1;
+                        updateScore(BLACK);
+                        resetTable();
+                    } else if (hasWinner === RED) {
+                        score.red += 1;
+                        updateScore(RED);
+                        resetTable();
+                    }
+
+                    console.dir(score);
                 }
                 console.log(map);
             }
