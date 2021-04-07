@@ -8,7 +8,7 @@ const createPieces = () => {
         const column = columnsList[i];
 
         column.addEventListener('click', function() {
-            
+
             let arrayOfBlocks = column.childNodes
 
             let arrayOfEmptyBlocks = []
@@ -18,41 +18,45 @@ const createPieces = () => {
                     arrayOfEmptyBlocks.push(arrayOfBlocks[i])
                 }
             }
-            const piece = document.createElement('div')
-
+            const pieceEl = document.createElement('div')
 
             let lastBlock = arrayOfEmptyBlocks[arrayOfEmptyBlocks.length - 1]
 
             if (lastBlock) {
 
-             
                 let blockXPosition = parseInt(lastBlock.id.split('-')[1])
                 let blockYPosition = parseInt(lastBlock.id.split('-')[2])
-                
-          
-             
-                if (currentPlayer === PLAYER1) {   
+
+                if (currentPlayer === PLAYER1) {
                     map[blockXPosition][blockYPosition] = 1
                 }
                 if (currentPlayer === PLAYER2) {
                     map[blockXPosition][blockYPosition] = 2
                 }
+
+                pieceEl.classList.add("player");
+                pieceEl.classList.add("player__inGame");
+                pieceEl.classList.add('falling');
+
                 if (currentPlayer === 'black') {
-                    piece.classList.add('black-player')
-                }else{
-                    piece.classList.add('red-player')
+                    pieceEl.classList.add('player--black');
+                } else {
+                    pieceEl.classList.add('player--red');
                 }
-                
-                fallingBall(piece)
-                lastBlock.appendChild(piece);   
+
+                fallingBall(pieceEl)
+
+                lastBlock.appendChild(pieceEl);
+
                 getCurrentPlayer()
+
                 const result = checkWin(blockXPosition, blockYPosition);
-                
-                if(result !== false){
-                    console.log(result)
+
+                if (result !== false) {
+                    console.log(result);
                 }
-                console.log(map)
+                console.log(map);
             }
-        })
+        });
     }
-}
+};

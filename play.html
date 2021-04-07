@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/stylesAnimations.css">
-    <link rel="stylesheet" href="./css/mobileFirst.css" />
+    <link rel="stylesheet" href="./css/play.css" />
 
     <title>Ligue 4</title>
 </head>
@@ -15,10 +15,25 @@
     <!-- BG ANIMATION WRAPPER -->
 
     <!-- HEADER -->
-    <header>
+    <header class="displayFlex">
         <h1>Ligue 4</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor sit nulla corrupti vero perferendis accusamus nostrum, enim aut odit voluptas, laudantium suscipit officia quos ullam quia quam tenetur et laboriosam.
-        </p>
+        <div class="displayFlex">
+            <aside class="displayFlex" data-id="currentPlayer">
+                <h2>Na vez:</h2>
+                <div class="block"></div>
+            </aside>
+            <aside class="displayFlex" data-id="scoreDisplay">
+                <h2>Placar:</h2>
+                <div class="displayFlex">
+                    <div class="block player player--red"></div>
+                    <h3 class="scoreTitle" data-id="scoreTitle">0</h3>
+                </div>
+                <div class="displayFlex">
+                    <div class="block player player--black"></div>
+                    <h3 class="scoreTitle" data-id="scoreTitle">0</h3>
+                </div>
+            </aside>
+        </div>
     </header>
 
     <!-- MAIN -->
