@@ -15,14 +15,14 @@
 
     <audio id="song" src="./assets/playSong.mpeg" loop preload autoplay></audio>
 
-    <button id="btnMuteAudio">Mute / Unmute</button>
-
-    <!-- BG ANIMATION WRAPPER -->
-
     <!-- HEADER -->
     <header class="displayFlex">
         <audio rel="stylesheet" src="./assets/falling.mp3" id="audioFallingBall"></audio>
-        <h1>Ligue 4</h1>
+        <figure>
+            <img src="./assets/logo.svg" alt="Ligue 4">
+            <figcaption class="hidden">Ligue 4</figcaption>
+        </figure>
+        <!-- <h1>Ligue 4</h1> -->
         <div class="displayFlex">
             <aside class="displayFlex">
                 <h2>Na vez:</h2>
@@ -46,6 +46,13 @@
     <main id='container' class="displayFlex">
 
     </main>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <button id="btnMuteAudio">mute / unmute</button>
+        <button id="btnHome">voltar</button>
+        <button class="restart">restart</button>
+    </nav>
 
 
     <!-- BG ANIMATION STARS -->

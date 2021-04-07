@@ -14,7 +14,7 @@ setInterval(() => {
 
 }, 120000); // 120s
 
-document.getElementById("song").volume = 0.2;
+document.getElementById("song").volume = 0.15;
 const btnMuteAudioEl = document.getElementById("btnMuteAudio");
 
 /**
