@@ -165,7 +165,7 @@ div.game-wrapper {
 
 .falling {
     animation: fallingAnim .5s;
-    animation-timing-function: cubic-bezier(0.47, 0.03, 0.89, 0.46)
+    animation-timing-function: ease-out;
 }
 
 .header {
@@ -177,6 +177,7 @@ div.game-wrapper {
     border: none;
     box-shadow: var(--box-shadow-neon);
     margin: 0.6rem 0.3rem;
+
 }
 
 .game-wrapper {
@@ -194,6 +195,7 @@ div.game-wrapper {
 
 .player__inGame {
     position: relative;
+    
 }
 
 .player--red {
