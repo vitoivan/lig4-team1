@@ -134,12 +134,12 @@ div.game-wrapper {
 }
 
 .player--red {
-    background-image: url(../assets/img/green-ball.png);
+    background-image: url('/assets/img/green-ball.png');
     background-size: cover;
 }
 
 .player--black {
-    background-image: url(../assets/img/purple-ball.png);
+    background-image: url('/assets/img/purple-ball.png');
     background-size: cover;
 }
 
