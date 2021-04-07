@@ -51,7 +51,7 @@ STRUCTURE:
     }
 }
 
-@keyframes bouncing{
+@keyframes bouncing {
     0% {
         bottom: 0;
     }
@@ -73,20 +73,17 @@ STRUCTURE:
         bottom: 40px;
        
     }
-
     60% {
         bottom: 0; 
     }
-   
     70% {
         bottom: 30px;
 
     }
-
     80% {
         bottom: 0;
     }
-  
+
     90% {
         bottom: 20px;
     }

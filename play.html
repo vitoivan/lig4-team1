@@ -8,19 +8,23 @@
     <link rel="stylesheet" href="./css/commonstyles.css">
     <link rel="stylesheet" href="./css/stylesAnimations.css">
     <link rel="stylesheet" href="./css/play.css" />
-    <title>Ligue 4</title>
+    <title>LIG 4 || Play </title>
 </head>
 
 <body>
 
-    <audio id="song" src="./assets/playSong.mpeg" loop preload autoplay></audio>
+    <audio id="song" src="./assets/sounds/playSong.mpeg" loop preload autoplay></audio>
 
     <!-- HEADER -->
     <header class="displayFlex">
-        <audio rel="stylesheet" src="./assets/falling.mp3" onended='whenFirstAudioStop()' id="audioFallingBall"></audio>
-        <audio rel="stylesheet" src="./assets/falling.mp3" onended='whenSecondAudioStop()' id="audioFallingBall2"></audio>
+        <audio rel="stylesheet" src="./assets/sounds/falling.mp3" onended='whenFirstAudioStop()' id="audioFallingBall"></audio>
+        <audio rel="stylesheet" src="./assets/sounds/falling.mp3" onended='whenSecondAudioStop()' id="audioFallingBall2"></audio>
         <figure>
+<<<<<<< HEAD
             <img class='logo purple-neon' src="./assets/logo.svg" alt="Ligue 4">
+=======
+            <img src="./assets/img/logo.svg" alt="Ligue 4">
+>>>>>>> 91fb6ed733c5d42308446d002d086f54fb7d3140
             <figcaption class="hidden">Ligue 4</figcaption>
         </figure>
         <!-- <h1>Ligue 4</h1> -->
@@ -32,12 +36,12 @@
             <aside class="displayFlex" data-id="scoreDisplay">
                 <h2>Placar:</h2>
                 <div class="displayFlex">
-                    <div class="block player player--red"></div>
-                    <h3 class="scoreTitle" data-id="scoreTitle">0</h3>
+                    <div class="block player player--black"></div>
+                    <h3 class="scoreTitle" data-id="black">0</h3>
                 </div>
                 <div class="displayFlex">
-                    <div class="block player player--black"></div>
-                    <h3 class="scoreTitle" data-id="scoreTitle">0</h3>
+                    <div class="block player player--red"></div>
+                    <h3 class="scoreTitle" data-id="red">0</h3>
                 </div>
             </aside>
         </div>
@@ -49,12 +53,11 @@
     </main>
 
     <!-- NAVIGATION -->
-    <nav>
-        <button id="btnMuteAudio">mute / unmute</button>
-        <button id="btnHome">voltar</button>
-        <button class="restart">restart</button>
+    <nav class="game-buttons">
+        <button id="btnMuteAudio" class="ingame-button">Mute / Unmute</button>
+        <button id="btnHome" class="ingame-button" >Voltar</button>
+        <button id="restart" class="ingame-button">Restart</button>
     </nav>
-
 
     <!-- BG ANIMATION STARS -->
     <div data-id="starsWrapper">

@@ -23,10 +23,12 @@ const renderStars = () => {
 
     const starsWrapperEl = document.querySelector(`div[data-id="starsWrapper"]`);
 
+    const isMobilie = (window.outerWidth < 800);
+
     for (let i = 1; i <= 6; i++) {
 
         const starEl = document.createElement("div");
-        const randomShadows = getStars(getRandomNumberBetween(50, 150));
+        const randomShadows = (isMobilie) ? getStars(getRandomNumberBetween(25, 75)) : getStars(getRandomNumberBetween(50, 150));
         const randomSize = getRandomNumberBetween(2, 4);
         const delay = getRandomNumber(3);
         const duration = getRandomNumberBetween(10, 15);
@@ -79,12 +81,12 @@ const fallingBall = (piece) => {
     if(firstAudioIsPlaying === false){
         audio = document.getElementById('audioFallingBall');
         firstAudioIsPlaying = true;
-    }else{
+    } else {
         audio = document.getElementById('audioFallingBall2');
         
         SecondAudioIsPlaying = true;
     }
-  
+
     const vol = 1;
     piece.classList.add('falling');
     const timeOut = setTimeout(() => {

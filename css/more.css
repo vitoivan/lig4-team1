@@ -1,41 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&family=Monda&display=swap');
-
-html, body, div, h1, h2, h3, h4, h5, h6, p, div,
-a, abbr, img, dl, dt, dd, ol, ul, li, tr, th, td,
-article, aside, figure, figcaption, footer, header,
-menu, nav, section, summary{
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+a,
+abbr,
+img,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+section,
+summary {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
     font-family: Arial, Helvetica, sans-serif;
 }
-html{
+
+html {
     width: 100vw;
     height: 100vh;
     margin: 0 auto;
 }
+
 body {
-    background-image: url('/assets/contact-bg.png');
+    background-image: url('../assets/img/contact-bg.png');
+    background-size: cover;
 }
+
 header {
     width: 100%;
-  }
-    figure {
-      margin: 50px auto;
-      text-align: center;
-    }
-      img {
-        width: 50%;
-        max-width: 225px;
-      }
+}
+
+figure {
+    margin: 50px auto;
+    text-align: center;
+}
+
+img {
+    width: 50%;
+    max-width: 225px;
+}
+
 h1 {
     margin: 30px 0;
     font-size: 1.8em;
     text-align: center;
-
     font-family: Monda;
     font-style: normal;
     font-weight: bold;
@@ -43,34 +77,45 @@ h1 {
     letter-spacing: 0.05em;
     color: #FFFFFF;
 }
+
 p {
-    text-align: center;
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-family: Monda;
     font-style: normal;
     font-weight: bold;
     line-height: 39px;
     letter-spacing: 0.05em;
     color: #FFFFFF;
+    padding-bottom: 20px;
+}
+
+.information {
+    text-align: end;
+    width: 75%;
+    margin: 60px 0;
+}
+
+.information img {
+    width: 25px;
 }
 
 .buttonBack {
     margin: 20px auto;
     text-align: center;
 }
-    input {
-        width: 111px;
-        height: 64px;
-        background: #BC1BF7;
-        border-radius: 32px;
-        border: none;
-      
-        font-family: Monda;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 29px;
-        letter-spacing: 0.05em;
-        color: #FFFFFF;
-        margin-bottom: 35px;
-    }
+
+input {
+    width: 111px;
+    height: 64px;
+    background: #BC1BF7;
+    border-radius: 32px;
+    border: none;
+    font-family: Monda;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 29px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    margin-bottom: 35px;
+}
