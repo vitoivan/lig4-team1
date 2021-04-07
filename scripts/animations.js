@@ -59,41 +59,48 @@ const changeStarPattern = () => {
 
 }; // changeStarPattern()
 
+
+
+
+
 let firstAudioIsPlaying = false;
 let SecondAudioIsPlaying = false;
+
 const whenFirstAudioStop = () => {
     firstAudioIsPlaying = false;
 }
 const whenSecondAudioStop = () => {
     SecondAudioIsPlaying = false;
 }
+
+
+
 const fallingBall = (piece) => {
+    
     let audio = undefined;
+
     if(firstAudioIsPlaying === false){
         audio = document.getElementById('audioFallingBall');
         firstAudioIsPlaying = true;
     }else{
         audio = document.getElementById('audioFallingBall2');
-        console.log('test')
+        
         SecondAudioIsPlaying = true;
     }
   
     const vol = 1;
     piece.classList.add('falling');
     const timeOut = setTimeout(() => {
+       
         audio.volume = vol;
         audio.play();
         piece.classList.remove('falling');
         piece.style.animation = 'bouncing 1s cubic-bezier(0, 0.74, 1, 0.24)';
+
         clearTimeout(timeOut);
-    },530);
-    // const interval = setInterval( () => {
-    //     audio.play();
-    //     times--;
-    //     console.log(times)
-    //     if(times === 0){
-    //         clearInterval(interval);
-    //     }
-    // }, 54);
-   
+    },555);
+}
+
+const changeNeonColors = () => {
+    getRandomNumber(3);
 }

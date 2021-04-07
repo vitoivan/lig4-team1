@@ -62,9 +62,10 @@ h3.scoreTitle {
 header.displayFlex>div {
     width: 100%;
     justify-content: space-around;
-    background-color: var(--color-RGBA-white);
-    border-radius: 20px;
-    box-shadow: var(--box-shadow-neon);
+    /* background-color: var(--color-RGBA-white); */
+    border-radius: 15px;
+    box-shadow:  var(--box-shadow-neon);
+    
 }
 
 aside[data-id="currentPlayer"],
@@ -115,10 +116,11 @@ div.game-wrapper {
 .block {
     border: none;
     box-shadow: var(--box-shadow-neon);
-    margin: 0.6rem 0.3rem;
-
+    margin: .5rem;
 }
-
+.yellow-neon{
+    box-shadow: var(--yellow-neon);
+}
 .game-wrapper {
     display: flex;
 }
@@ -145,7 +147,11 @@ div.game-wrapper {
     background-color: black;
 }
 
-
+img.logo{
+    box-shadow: var(--box-shadow-neon);
+    border-radius: 15px;
+    padding: 15px 30px 5px;
+}
 /*BUTTONS*/
 
 .btn {

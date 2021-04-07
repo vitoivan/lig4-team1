@@ -13,6 +13,7 @@ const ValiablePosition = (Ipos,Jpos) => {
     }
     return false;
 }
+
 const getNextPosition = (i, j, k, dir) => {
 
     if(dir === 'diag-left-top'){
