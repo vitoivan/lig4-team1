@@ -41,11 +41,12 @@ STRUCTURE:
     --color-RGBA-white: rgba(237, 221, 212, 0.45);
     --font-family-PermanentMarker: "Permanent Marker", cursive;
     --font-family-Comfortaa: "Comfortaa", cursive;
-    --piece-size: 50px;
+    --piece-size: 40px;
     --transition-time: 150ms;
     --border-radius: 10px;
     --button-width: 220px;
     --button-height: 50px;
+    --box-shadow-neon: 0 0 0.1vw 0.4vw #ffffff, 0 0 0.4vw 0.6vw #d572e9, 0 0 4vw 0.4vw #a70be5, inset 0 0 1.5vw 0.4vw #a70be5, inset 0 0 0.4vw 0.2vw #d572e9, inset 0 0 0.5vw 0.2vw #fff7f7;
 }
 
 
@@ -113,16 +114,26 @@ h2 {
     margin-top: 1vh;
 }
 
-header.displayFlex>div {
+.scoreTitle {
+    margin: ;
+}
+
+scoreTitle header.displayFlex>div {
     width: 100%;
     margin-top: 10px;
     justify-content: space-around;
     background-color: var(--color-RGBA-white);
-    border-radius: 15px;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow-neon);
 }
 
 aside[data-id="currentPlayer"],
 aside[data-id="scoreDisplay"] {
+    width: 50%;
+}
+
+aside:nth-child(2)>div:nth-child(2) {
+    justify-content: right;
     width: 50%;
 }
 
@@ -162,10 +173,9 @@ div.game-wrapper {
 }
 
 .block {
-    /* border: 1px dashed var(--color-texts); */
     border: none;
-    box-shadow: 0 0 0.1vw 0.4vw #ffffff, 0 0 0.4vw 0.6vw #d572e9, 0 0 4vw 0.4vw #a70be5, inset 0 0 1.5vw 0.4vw #a70be5, inset 0 0 0.4vw 0.2vw #d572e9, inset 0 0 0.5vw 0.2vw #fff7f7;
-    margin: .8rem;
+    box-shadow: var(--box-shadow-neon);
+    margin: 0.6rem 0.3rem;
 }
 
 .game-wrapper {
