@@ -16,7 +16,6 @@ setInterval(() => {
 
 document.getElementById("song").volume = 0.15;
 timerToChangeNeon(0);
-counter();
 const btnMuteAudioEl = document.getElementById("btnMuteAudio");
 
 /**
@@ -26,5 +25,3 @@ const btnMuteAudioEl = document.getElementById("btnMuteAudio");
  */
 
 btnMuteAudioEl.onclick = () => document.getElementById('song').muted = !document.getElementById('song').muted;
-
-
