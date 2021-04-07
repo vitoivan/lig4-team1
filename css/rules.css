@@ -18,12 +18,13 @@ html{
 }
 body {
     background-image: url('/assets/regras-bg.png');
+    background-size: cover;
 }
 header {
     width: 100%;
   }
     figure {
-      margin: 50px auto;
+      margin: 40px auto;
       text-align: center;
     }
       img {

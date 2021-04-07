@@ -19,6 +19,7 @@ html{
 }
 body {
     background-image: url('/assets/contact-bg.png');
+    background-size: cover;
 }
 header {
     width: 100%;
@@ -44,15 +45,23 @@ h1 {
     color: #FFFFFF;
 }
 p {
-    text-align: center;
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-family: Monda;
     font-style: normal;
     font-weight: bold;
     line-height: 39px;
     letter-spacing: 0.05em;
     color: #FFFFFF;
+    padding-bottom: 20px;
 }
+.information {
+    text-align: end;
+    width: 75%;
+    margin: 60px 0;
+}
+    .information img {
+        width: 25px;
+    }
 
 .buttonBack {
     margin: 20px auto;

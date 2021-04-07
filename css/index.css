@@ -36,6 +36,7 @@
     min-height: 90vh;
     height: fit-content;
     background-image: url("/assets/menu-background.png");
+    background-size: cover;
   }
   
   /*HEADER:*/
