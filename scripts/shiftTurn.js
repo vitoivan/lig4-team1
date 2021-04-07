@@ -2,8 +2,8 @@
  * GLOBAL CONSTANTS:
  */
 
-const PLAYER1 = getRandomPlayer();
-const PLAYER2 = (PLAYER1 === "red") ? "black" : "red";
+const PLAYER1 = BLACK;
+const PLAYER2 = RED;
 
 /** 
  * GLOBAL VARIABLES:
