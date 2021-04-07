@@ -1,45 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/stylesAnimations.css">
-    <link rel="stylesheet" href="./css/mobileFirst.css" />
-
+    <link rel="stylesheet" href="css/index.css">
     <title>Ligue 4</title>
 </head>
 
 <body>
     <!-- BG ANIMATION WRAPPER -->
 
-    <!-- HEADER -->
     <header>
-        <h1>Ligue 4</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor sit nulla corrupti vero perferendis accusamus nostrum, enim aut odit voluptas, laudantium suscipit officia quos ullam quia quam tenetur et laboriosam.
-        </p>
-       
-            
+
+        <h1>LIG 4</h1>
+
     </header>
-    <!-- MAIN -->
-    <main id='container' class="displayFlex">
+
+    <main>
+
+        <div class="divButtons">
+
+            <a href="./play.html"> <input type="button" name="NewGame" id="newGame" value="NEW GAME"></a>
+
+            <a href="./rules.html"> <input type="button" name="rules" id="rules" value="RULES"></a>
+
+            <a href="./more.html"><input type="button" name="more" id="more" value="MORE"></a>
+
+        </div>
 
     </main>
-   
-    <!-- BG ANIMATION STARS -->
-    <div data-id="starsWrapper">
-    </div>
 
-
-    <script src="./scripts/CreateMap.js"></script>
-    <script src="./scripts/CheckWin.js"></script>
-    <script src="./scripts/shiftTurn.js"></script>
-    <script src="./scripts/createPieces.js"></script>
-    <script src="./scripts/animations.js"></script>
-    <script src="./scripts/unitTests/tests.js"></script>
-    <script src="./scripts/play.js"></script>
-    <script src="https://kit.fontawesome.com/23638b2973.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
