@@ -5,7 +5,6 @@
 const PLAYER1 = getRandomPlayer();
 const PLAYER2 = (PLAYER1 === "red") ? "black" : "red";
 
-
 /** 
  * GLOBAL VARIABLES:
  */
@@ -14,7 +13,7 @@ let currentPlayer = PLAYER1;
 // let currentPlayer;
 
 function getRandomPlayer() {
-  
+
     const number = Math.round(Math.random() * 1) + 1;
 
     if (number === 1)
@@ -30,7 +29,7 @@ function getCurrentPlayer() {
     //     currentPlayer = PLAYER1;
     //     return currentPlayer;
     // }
-   
+
     if (currentPlayer === PLAYER1) {
         currentPlayer = PLAYER2;
     } else {

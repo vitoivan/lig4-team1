@@ -11,6 +11,11 @@
 </head>
 
 <body>
+
+    <audio id="song" src="/assets/WhatsApp Audio 2021-04-06 at 23.27.37.mpeg" loop preload autoplay></audio>
+
+    <button onclick="document.getElementById('song').muted = !document.getElementById('song').muted">Mute / Unmute</button>
+
     <!-- BG ANIMATION WRAPPER -->
 
     <!-- HEADER -->
@@ -18,9 +23,9 @@
         <audio rel="stylesheet" src="./assets/falling.mp3" id="audioFallingBall"></audio>
         <h1>Ligue 4</h1>
         <div class="displayFlex">
-            <aside class="displayFlex" data-id="currentPlayer">
+            <aside class="displayFlex">
                 <h2>Na vez:</h2>
-                <div class="block"></div>
+                <div class="block player" data-id="currentPlayer"></div>
             </aside>
             <aside class="displayFlex" data-id="scoreDisplay">
                 <h2>Placar:</h2>
