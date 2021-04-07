@@ -5,8 +5,8 @@ const removeChildNodes = (element, qty = 0) => {
             element.removeChild(element.lastChild);
     else {
         let count = 0
-        while (count < qty) {
-            element.removeChild(element.lastChild);
+        while (count <= qty) {
+            element.removeChild(element.firstChild);
             count++;
         }
     }
