@@ -2,10 +2,10 @@ const updateScore = (player) => {
 
     const playerScoreEl = document.querySelector(`h3[data-id="${player}"]`);
 
-    if (player === BLACK)
-        playerScoreEl.innerText = score.black;
+    if (player === GREEN)
+        playerScoreEl.innerText = score.green;
     else
-        playerScoreEl.innerText = score.red;
+        playerScoreEl.innerText = score.purple;
 
 }; // updateScore()
 
@@ -30,14 +30,14 @@ const createPieces = () => {
 
     const columnsList = document.getElementsByClassName('row')
     const currentPLayerEl = document.querySelector(`div[data-id="currentPlayer"]`);
-    const CLASS_PLAYER_BLACK = "player--black";
-    const CLASS_PLAYER_RED = "player--red";
+    const CLASS_PLAYER_GREEN = "player--green";
+    const CLASS_PLAYER_PURPLE = "player--purple";
     const DELAY = 3000;
 
-    if (PLAYER1 === "black")
-        currentPLayerEl.classList.add(CLASS_PLAYER_RED);
+    if (PLAYER1 === PURPLE)
+        currentPLayerEl.classList.add(CLASS_PLAYER_GREEN);
     else
-        currentPLayerEl.classList.add(CLASS_PLAYER_BLACK);
+        currentPLayerEl.classList.add(CLASS_PLAYER_PURPLE);
 
     for (let i = 0; i < columnsList.length; i++) {
 
@@ -74,18 +74,18 @@ const createPieces = () => {
                 pieceEl.classList.add("player__inGame");
                 pieceEl.classList.add('falling');
 
-                if (currentPlayer === 'black') {
-                    pieceEl.classList.add(CLASS_PLAYER_BLACK);
+                if (currentPlayer === GREEN) {
+                    pieceEl.classList.add(CLASS_PLAYER_GREEN);
 
-                    currentPLayerEl.classList.add(CLASS_PLAYER_RED); // this player turn.
-                    currentPLayerEl.classList.remove(CLASS_PLAYER_BLACK);
+                    currentPLayerEl.classList.add(CLASS_PLAYER_PURPLE); // this player turn.
+                    currentPLayerEl.classList.remove(CLASS_PLAYER_GREEN);
 
                 } else {
 
-                    pieceEl.classList.add(CLASS_PLAYER_RED);
+                    pieceEl.classList.add(CLASS_PLAYER_PURPLE);
 
-                    currentPLayerEl.classList.add(CLASS_PLAYER_BLACK); // this player turn.
-                    currentPLayerEl.classList.remove(CLASS_PLAYER_RED);
+                    currentPLayerEl.classList.add(CLASS_PLAYER_GREEN); // this player turn.
+                    currentPLayerEl.classList.remove(CLASS_PLAYER_PURPLE);
 
                 }
 
@@ -95,20 +95,22 @@ const createPieces = () => {
 
                 getCurrentPlayer();
 
-                const hasWinner = checkWin(blockXPosition, blockYPosition);
+                hasWinner = checkWin(blockXPosition, blockYPosition);
 
                 if (hasWinner) {
                     console.log(hasWinner);
 
-                    if (hasWinner === BLACK) {
-                        score.black += 1;
-                        updateScore(BLACK);
+                    if (hasWinner === GREEN) {
+                        score.green += 1;
+                        updateScore(GREEN);
                         setTimeout(resetTable, DELAY);
-                    } else if (hasWinner === RED) {
-                        score.red += 1;
-                        updateScore(RED);
+                    } else if (hasWinner === PURPLE) {
+                        score.purple += 1;
+                        updateScore(PURPLE);
                         setTimeout(resetTable, DELAY);
                     }
+
+                    hasWinner = undefined; // reset the variable;
                 }
                 console.log(map);
             }

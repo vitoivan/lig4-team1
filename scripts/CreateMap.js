@@ -10,10 +10,21 @@ const map = [
     [0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0],
 ];
-const score = { black: 0, red: 0 };
-const BLACK = "black";
-const RED = "red";
+const score = { green: 0, purple: 0 };
+const GREEN = "green";
+const PURPLE = "purple";
+const PLAYER1 = GREEN;
+const PLAYER2 = PURPLE;
 const DRAW = "draw";
+const DISPLAY_NONE_CLASS = "displayNone";
+const HIDDEN_CLASS = "hidden";
+
+/**
+ * GLOBAL VARIABLES:
+ */
+
+let currentPlayer = PLAYER1;
+let hasWinner;
 
 const removeChildNodes = (element, qty = 0) => {
 

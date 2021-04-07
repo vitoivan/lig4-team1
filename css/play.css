@@ -134,85 +134,58 @@ div.game-wrapper {
     position: relative;
 }
 
-.player--red {
-    background-image: url('../assets/img/green-ball.png');
+.player--purple {
+    background-image: url('../assets/img/purple-ball.png');
     background-size: cover;
 }
 
-.player--black {
-    background-image: url('../assets/img/purple-ball.png');
+.player--green {
+    background-image: url('../assets/img/green-ball.png');
     background-size: cover;
 }
 
 .logo {
     border-radius: 15px;
     padding: 15px 30px 5px;
+    margin-bottom: 5vh;
 }
 
 
-/*BUTTONS*/
+/*RESULT SCREEN*/
 
-.game-buttons {
-    flex-flow: row nowrap;
-    margin-top: 30px;
-}
-
-.btn {
-    height: var(--button-height);
-    width: var(--button-width);
-    font-family: var(--font-family-Comfortaa);
-    margin: 0 10px;
-    border-radius: 40px;
-    font-size: 0.8rem;
-    border: none;
-    font-weight: bold;
-    color: var(--color-white);
-    background: var(--color-purple-buttons);
-    cursor: pointer;
-    text-transform: uppercase;
-}
-
-.btn:active {
-    transform: translateY(2px);
-}
-
-
-/****** Hover and Focus: */
-
-.btn:hover {
-    cursor: pointer;
-    color: var(--color-red0);
-    font-weight: bold;
-    font-style: italic;
-    transition: color var(--transition-time) ease-out;
-}
-
-.btn:hover::before {
-    transform: scaleX(1);
-}
-
-.btn--effect::before {
-    content: "";
-    background: var(--color-texts);
+div[data-id="resultScreen"],
+div[data-id="popUpScreen"] {
+    text-align: center;
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    left: 5vw;
+    width: 90%;
+    background-color: var(--color-RGBA-white);
+    border-radius: 50px;
+    border: 5px outset var(--color-blue-cyan);
+    box-shadow: -8px -8px 20px 10px var(--box-shadow-neon);
+    transition: opacity 250ms ease-in 250ms;
+}
+
+div[data-id="resultScreen"] {
+    bottom: 2vh;
+    height: 15%;
+}
+
+div[data-id="resultScreen"]>h2,
+div[data-id="resultScreen"]>h3,
+div[data-id="popUpScreen"]>h2,
+div[data-id="popUpScreen"]>h3 {
+    margin-top: 30px;
+    color: var(--color-blue-navy);
+}
+
+
+/*POPUP SCREEN*/
+
+div[data-id="popUpScreen"] {
+    top: 40vh;
+    height: 45%;
     z-index: -1;
-    transition: transform var(--transition-time) cubic-bezier(0, 0.79, 1, 1);
-}
-
-
-/****** Underline from center modifier: */
-
-.btn__underLine::before {
-    height: calc(var(--button-height) * 0.15);
-    border-bottom-left-radius: var(--border-radius);
-    border-bottom-right-radius: var(--border-radius);
-}
-
-.btn--underLineCenter::before {
-    transform: scaleX(0);
 }
 
 

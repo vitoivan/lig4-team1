@@ -31,6 +31,7 @@ STRUCTURE:
     --color-yellow: #faa307;
     --color-purple-buttons: #bc1bf7;
     --color-blue-cyan: #00ffff;
+    --color-blue-navy: #1d046d;
     --color-RGBA-white: rgba(237, 221, 212, 0.45);
     --font-family-PermanentMarker: "Permanent Marker", cursive;
     --font-family-Comfortaa: "Comfortaa", cursive;
@@ -49,16 +50,20 @@ STRUCTURE:
 
 
 /* GENERAL CONFIG: */
-.yellow-neon{
+
+.yellow-neon {
     box-shadow: var(--yellow-neon);
 }
-.purple-neon{
+
+.purple-neon {
     box-shadow: var(--box-shadow-neon);
 }
-.red-neon{
+
+.red-neon {
     box-shadow: var(--red-neon);
 }
-.white-neon{
+
+.white-neon {
     box-shadow: var(--white-neon);
 }
 
@@ -101,4 +106,40 @@ html {
     margin: 0 auto;
     font-family: var(--font-family-Comfortaa);
     color: var(--color-white);
+}
+
+
+/*BUTTONS*/
+
+.game-buttons {
+    flex-flow: row nowrap;
+    margin-top: 30px;
+}
+
+.btn {
+    height: var(--button-height);
+    width: var(--button-width);
+    font-family: var(--font-family-Comfortaa);
+    margin: 0 10px;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    border: none;
+    font-weight: bold;
+    color: var(--color-white);
+    background: var(--color-purple-buttons);
+    text-transform: uppercase;
+}
+
+.btn:active {
+    transform: translateY(2px);
+}
+
+
+/****** Hover and Focus: */
+
+.btn:hover {
+    cursor: pointer;
+    color: var(--color-yellow);
+    font-style: italic;
+    transition: color var(--transition-time) ease-out, font-style var(--transition-time) ease-out;
 }

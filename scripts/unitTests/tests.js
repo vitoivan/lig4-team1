@@ -6,11 +6,11 @@ let hasErros = false;
  */
 
 const testPlayerSelection = () => {
-    if (PLAYER1 === "red")
-        return PLAYER2 === 'black';
+    if (PLAYER1 === GREEN)
+        return PLAYER2 === PURPLE;
 
-    if (PLAYER1 === "black")
-        return PLAYER2 === "red";
+    if (PLAYER1 === PURPLE)
+        return PLAYER2 === GREEN;
 
     hasErros = true;
 }; // testPlayerSelection()

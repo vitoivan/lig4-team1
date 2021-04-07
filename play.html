@@ -21,23 +21,23 @@
         <audio rel="stylesheet" src="./assets/sounds/falling.mp3" onended='whenSecondAudioStop()' id="audioFallingBall2"></audio>
         <figure>
             <img class='logo purple-neon' src="./assets/img/logo.svg" alt="Ligue 4">
-            <figcaption class="hidden">Ligue 4</figcaption>
+            <figcaption class="displayNone">Ligue 4</figcaption>
         </figure>
         <!-- <h1>Ligue 4</h1> -->
         <div class="displayFlex purple-neon">
             <aside class="displayFlex">
-                <h2>Na vez:</h2>
+                <h2>Peça da vez</h2>
                 <div class="block player" data-id="currentPlayer"></div>
             </aside>
             <aside class="displayFlex" data-id="scoreDisplay">
-                <h2>Placar:</h2>
+                <h2>Placar</h2>
                 <div class="displayFlex">
-                    <div class="block player player--black"></div>
-                    <h3 class="scoreTitle" data-id="black">0</h3>
+                    <div class="block player player--purple"></div>
+                    <h3 class="scoreTitle" data-id="purple">0</h3>
                 </div>
                 <div class="displayFlex">
-                    <div class="block player player--red"></div>
-                    <h3 class="scoreTitle" data-id="red">0</h3>
+                    <div class="block player player--green"></div>
+                    <h3 class="scoreTitle" data-id="green">0</h3>
                 </div>
             </aside>
         </div>
@@ -54,6 +54,14 @@
         <button id="btnHome" class="btn ingame-button">voltar</button>
         <button id="btnRestart" class="btn ingame-button">reiniciar</button>
     </nav>
+
+    <!-- POP UP -->
+    <div class="hidden" data-id="popUpScreen"></div>
+    <!-- <div data-id="popUpScreen"></div> -->
+    <!-- RESULT SCREEN -->
+    <div class="hidden" data-id="resultScreen"></div>
+    <!-- <div data-id="resultScreen"></div> -->
+
 
     <!-- BG ANIMATION STARS -->
     <div data-id="starsWrapper">
