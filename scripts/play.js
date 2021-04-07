@@ -13,9 +13,9 @@ setInterval(() => {
     changeStarPattern();
 
 }, 120000); // 120s
+playSong();
 
-document.getElementById("song").volume = 0.15;
-timerToChangeNeon(0);
+
 const btnMuteAudioEl = document.getElementById("btnMuteAudio");
 
 /**

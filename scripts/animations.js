@@ -186,7 +186,7 @@ const timerToChangeNeon = (number) => {
                         },650)
                         clearInterval(interval2);
                     }
-                    changeNeonColors('random');
+                    changeNeonColors();
                     time += 0.2;
                 }, 200);
                 clearInterval(interval);
@@ -194,4 +194,9 @@ const timerToChangeNeon = (number) => {
             time++;
         }, 1000);
     }   
+
+    if(number === 1){
+
+    }
 }
+
