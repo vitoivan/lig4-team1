@@ -9,8 +9,8 @@ const getStars = max => {
     result.push(" 0px 0px var(--star-color0)");
 
     for (let i = 0; i < max; i++) {
-        const randomX = getRandomNumber(1000);
-        const randomY = getRandomNumber(1000);
+        const randomX = getRandomNumber(window.outerWidth);
+        const randomY = getRandomNumber(window.outerWidth);
         const randomColor = getRandomNumberBetween(0, 2);
 
         result.push(`${randomX}px ${randomY}px var(--star-color${randomColor})`);
@@ -44,3 +44,17 @@ const renderStars = () => {
 
 
 }; // renderStars()
+
+const changeStarPattern = () => {
+
+    setTimeout(() => {
+
+            const starsWrapperEl = document.querySelector(`div[data-id="starsWrapper"]`);
+
+            renderStars();
+
+            setTimeout(() => removeChildNodes(starsWrapperEl, 6), 20000); // 20s
+
+        }, 100000) // 100s
+
+}; // changeStarPattern()
