@@ -54,5 +54,3 @@ const createMap = () => {
 
     return generalDiv;
 };
-// const generalDiv = createMap();
-// document.getElementById('container').appendChild(generalDiv);

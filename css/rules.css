@@ -6,7 +6,7 @@ html {
 }
 
 body {
-    background-image: url('/assets/regras-bg.png');
+    background-image: url('../assets/img/regras-bg.png');
 }
 
 header {
