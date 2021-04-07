@@ -31,7 +31,7 @@ body {
     height: fit-content;
     font-family: var(--font-family-Comfortaa);
     color: var(--color-texts);
-    background: #252525 url('https://images.hdqwalls.com/wallpapers/lazy-laser-4k-rd.jpg');
+    background-image: url("../assets/img/menu-background.png");
     background-size: cover;
     overflow: hidden;
 }
@@ -88,11 +88,12 @@ main {
 /* MAP */
 
 div.game-wrapper {
-    margin-top: 65px;
+    margin-top: 30px;
     border: none;
     border-bottom: 5px solid var(--color-yellow);
     border-radius: 15px;
     padding-bottom: 5px;
+    display: flex;
 }
 
 .header,
@@ -118,11 +119,6 @@ div.game-wrapper {
     margin: 0.6rem 0.3rem;
 
 }
-
-.game-wrapper {
-    display: flex;
-}
-
 
 /*PIECES*/
 
@@ -166,6 +162,23 @@ div.game-wrapper {
     transform: translateY(2px);
 }
 
+.game-buttons{
+    display: flex;
+    justify-content: center;
+    padding-top: 16px;
+}
+
+.ingame-button{
+    margin: 0 8px;
+    padding: 8px 16px;
+    font-family: var(--font-family-Comfortaa);
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    color: white;
+    background: var(--color-purple-buttons);
+}
 
 /****** Hover and Focus: */
 
