@@ -114,11 +114,12 @@ h2 {
     margin-top: 1vh;
 }
 
-.scoreTitle {
-    /* margin: ; */
+h3.scoreTitle {
+    margin: 0 5px;
+    font-weight: bold;
 }
 
-scoreTitle header.displayFlex>div {
+header.displayFlex>div {
     width: 100%;
     margin-top: 10px;
     justify-content: space-around;
