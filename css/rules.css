@@ -16,6 +16,9 @@ html{
     height: 100vh;
     margin: 0 auto;
 }
+body {
+    background-image: url('/assets/regras-bg.png');
+}
 header {
     width: 100%;
   }
@@ -38,7 +41,7 @@ h1 {
     font-size: 24px;
     line-height: 39px;
     letter-spacing: 0.05em;
-    color: #0c0404;
+    color: #fff;
 
 }
 .rules {
@@ -51,8 +54,8 @@ p {
     font-style: normal;
     font-weight: bold;
     line-height: 39px;
-    letter-spacing: 0.05em;
-    color: #0c0404;
+    letter-spacing: 0.01em;
+    color: #fff;
 }
 .buttonBack {
     margin: 0 auto;
@@ -72,4 +75,5 @@ p {
         line-height: 29px;
         letter-spacing: 0.05em;
         color: #FFFFFF;
+        margin-bottom: 35px;
     }
