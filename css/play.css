@@ -134,11 +134,13 @@ div.game-wrapper {
 }
 
 .player--red {
-    background-color: red;
+    background-image: url(../assets/img/green-ball.png);
+    background-size: cover;
 }
 
 .player--black {
-    background-color: black;
+    background-image: url(../assets/img/purple-ball.png);
+    background-size: cover;
 }
 
 
