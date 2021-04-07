@@ -33,7 +33,7 @@
   body {
     margin: 0;
     width: 100vw;
-    min-height: 100vh;
+    min-height: 90vh;
     height: fit-content;
     background-image: url("/assets/menu-background.png");
   }
@@ -76,17 +76,17 @@
   .polygon {
     width: 0px;
     height: 0px;
-    border-top: 50px solid transparent;
+    border-top: 55px solid transparent;
     border-bottom: 50px solid transparent;
-    border-left: 70px solid #f8f8fa;
+    border-left: 82px solid #f8f8fa;
     background: #00FFFF;
-    margin: 45px auto;
+    margin: 45px 76px;
   }
 
 .box {
   display: flex;
   align-items: flex-end;
-  height: 40vh;
+  height: 35vh;
 }
   .box a {
     margin: auto auto 30px;
