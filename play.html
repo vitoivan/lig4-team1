@@ -17,15 +17,23 @@
     <!-- HEADER -->
     <header class="displayFlex">
         <h1>Ligue 4</h1>
-        <aside data-id="currentPlayer">
-            <h2>Na vez:</h2>
-            <div class="block"></div>
-        </aside>
-        <aside data-id="scoreDisplay">
-            <h2>Placar:</h2>
-            <div class="blck"></div>
-            <div class="blck"></div>
-        </aside>
+        <div class="displayFlex">
+            <aside class="displayFlex" data-id="currentPlayer">
+                <h2>Na vez:</h2>
+                <div class="block"></div>
+            </aside>
+            <aside class="displayFlex" data-id="scoreDisplay">
+                <h2>Placar:</h2>
+                <div class="displayFlex">
+                    <div class="block player player--red"></div>
+                    <h3 class="scoreTitle" data-id="scoreTitle">0</h3>
+                </div>
+                <div class="displayFlex">
+                    <div class="block player player--black"></div>
+                    <h3 class="scoreTitle" data-id="scoreTitle">0</h3>
+                </div>
+            </aside>
+        </div>
     </header>
 
     <!-- MAIN -->

@@ -31,7 +31,8 @@ for (let i = 0; i < blocksListEl.length; i++) {
 
     blockEl.addEventListener('click', testAlternatePlayersTurn);
 }
-const testAlternatePlayersTurn = () => {
+
+function testAlternatePlayersTurn() {
     if (currentPlayer === PLAYER1)
         return getCurrentPlayer() === PLAYER2;
 
