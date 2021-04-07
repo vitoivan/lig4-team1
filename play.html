@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/commonstyles.css">
     <link rel="stylesheet" href="./css/stylesAnimations.css">
     <link rel="stylesheet" href="./css/play.css" />
     <title>Ligue 4</title>
@@ -12,16 +13,17 @@
 
 <body>
 
-    <audio id="song" src="/assets/WhatsApp Audio 2021-04-06 at 23.27.37.mpeg" loop preload autoplay></audio>
-
-    <button onclick="document.getElementById('song').muted = !document.getElementById('song').muted">Mute / Unmute</button>
-
-    <!-- BG ANIMATION WRAPPER -->
+    <audio id="song" src="./assets/playSong.mpeg" loop preload autoplay></audio>
 
     <!-- HEADER -->
     <header class="displayFlex">
-        <audio rel="stylesheet" src="./assets/falling.mp3" id="audioFallingBall"></audio>
-        <h1>Ligue 4</h1>
+        <audio rel="stylesheet" src="./assets/falling.mp3" onended='whenFirstAudioStop()' id="audioFallingBall"></audio>
+        <audio rel="stylesheet" src="./assets/falling.mp3" onended='whenSecondAudioStop()' id="audioFallingBall2"></audio>
+        <figure>
+            <img src="./assets/logo.svg" alt="Ligue 4">
+            <figcaption class="hidden">Ligue 4</figcaption>
+        </figure>
+        <!-- <h1>Ligue 4</h1> -->
         <div class="displayFlex">
             <aside class="displayFlex">
                 <h2>Na vez:</h2>
@@ -45,6 +47,13 @@
     <main id='container' class="displayFlex">
 
     </main>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <button id="btnMuteAudio">mute / unmute</button>
+        <button id="btnHome">voltar</button>
+        <button class="restart">restart</button>
+    </nav>
 
 
     <!-- BG ANIMATION STARS -->
