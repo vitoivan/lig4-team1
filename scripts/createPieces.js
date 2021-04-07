@@ -43,8 +43,7 @@ const createPieces = () => {
                     piece.classList.add('red-player')
                 }
                 
-               
-                piece.classList.add('falling');
+                fallingBall(piece)
                 lastBlock.appendChild(piece);   
                 getCurrentPlayer()
                 const result = checkWin(blockXPosition, blockYPosition);

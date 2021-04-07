@@ -58,3 +58,11 @@ const changeStarPattern = () => {
         }, 100000) // 100s
 
 }; // changeStarPattern()
+
+const fallingBall = async (piece) => {
+    await piece.classList.add('falling');
+    const interval = setInterval( () => {
+        piece.classList.remove('falling');
+        piece.style.animation = 'bouncing .5s cubic-bezier(0, 0.99, 1, 0.15)'
+    },1050)
+}
