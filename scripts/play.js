@@ -17,6 +17,7 @@ setInterval(() => {
 document.getElementById("song").volume = 0.15;
 timerToChangeNeon(0);
 const btnMuteAudioEl = document.getElementById("btnMuteAudio");
+const btnRestart = document.getElementById("btnRestart");
 
 /**
  * 
@@ -25,3 +26,5 @@ const btnMuteAudioEl = document.getElementById("btnMuteAudio");
  */
 
 btnMuteAudioEl.onclick = () => document.getElementById('song').muted = !document.getElementById('song').muted;
+
+btnRestart.onclick = () => resetTable();
