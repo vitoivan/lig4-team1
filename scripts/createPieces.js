@@ -16,8 +16,10 @@ const resetTable = () => {
 
             const element = document.getElementById(`block-${row}-${column}`);
 
-            if (element.lastChild)
+            if (element.lastChild) {
+                map[row][column] = 0;
                 removeChildNodes(element);
+            }
         }
     }
 }; // resetTable()
@@ -107,8 +109,6 @@ const createPieces = () => {
                         updateScore(RED);
                         setTimeout(resetTable, DELAY);
                     }
-
-                    console.dir(score);
                 }
                 console.log(map);
             }
