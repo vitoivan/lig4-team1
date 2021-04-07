@@ -6,11 +6,11 @@ let hasErros = false;
  */
 
 const testPlayerSelection = () => {
-    if (PLAYER1 === 1)
-        return PLAYER2 === 2;
+    if (PLAYER1 === "red")
+        return PLAYER2 === 'black';
 
-    if (PLAYER1 === 2)
-        return PLAYER2 === 1;
+    if (PLAYER1 === "black")
+        return PLAYER2 === "red";
 
     hasErros = true;
 }; // testPlayerSelection()
@@ -32,7 +32,11 @@ for (let i = 0; i < blocksListEl.length; i++) {
     blockEl.addEventListener('click', testAlternatePlayersTurn);
 }
 const testAlternatePlayersTurn = () => {
-    //TODO
+    if (currentPlayer === PLAYER1)
+        return getCurrentPlayer() === PLAYER2;
+
+    if (currentPlayer === PLAYER2)
+        return getCurrentPlayer() === PLAYER1;
 
     hasErros = true;
 }; // testAlternatePlayersTurn()
