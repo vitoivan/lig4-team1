@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&family=Monda&display=swap');
+
 html, body, div, h1, h2, h3, h4, h5, h6, p, div,
 a, abbr, img, dl, dt, dd, ol, ul, li, tr, th, td,
 article, aside, figure, figcaption, footer, header,
@@ -8,33 +10,70 @@ menu, nav, section, summary{
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-    font-family: Arial, Helvetica, sans-serif;
 }
 html{
     width: 100vw;
     height: 100vh;
     margin: 0 auto;
 }
+body {
+    background-image: url('/assets/regras-bg.png');
+}
+header {
+    width: 100%;
+  }
+    figure {
+      margin: 50px auto;
+      text-align: center;
+    }
+      img {
+        width: 50%;
+        max-width: 225px;
+      }
 h1 {
     margin: 30px 0;
     font-size: 3em;
     text-align: center;
+
+    font-family: Monda;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 39px;
+    letter-spacing: 0.05em;
+    color: #fff;
+
 }
 .rules {
-    width: 90%;
+    width: 85%;
     margin: 0 auto 20px;
 }
 p {
-    font-size: 1.5em;
+    font-size: 1em;
+    font-family: Monda;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 39px;
+    letter-spacing: 0.01em;
+    color: #fff;
 }
 .buttonBack {
     margin: 0 auto;
     text-align: center;
 }
     input {
-        width: 50%;
-        height: 40px;
-        margin-bottom: 40px;
-        font-size: 30px;
-        border-radius: 10px;
+        width: 111px;
+        height: 64px;
+        background: #BC1BF7;
+        border-radius: 32px;
+        border: none;
+      
+        font-family: Monda;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 29px;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+        margin-bottom: 35px;
     }
