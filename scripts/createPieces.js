@@ -9,7 +9,18 @@ const updateScore = (player) => {
 
 }; // updateScore()
 
-const resetTable = () => {}; // resetTable()
+const resetTable = () => {
+
+    for (let row = 0; row < 7; row++) {
+        for (let column = 0; column < 6; column++) {
+
+            const element = document.getElementById(`block-${row}-${column}`);
+
+            if (element.lastChild)
+                removeChildNodes(element);
+        }
+    }
+}; // resetTable()
 
 
 // Function to create pieces when individual block is clicked
@@ -19,6 +30,7 @@ const createPieces = () => {
     const currentPLayerEl = document.querySelector(`div[data-id="currentPlayer"]`);
     const CLASS_PLAYER_BLACK = "player--black";
     const CLASS_PLAYER_RED = "player--red";
+    const DELAY = 3000;
 
     if (PLAYER1 === "black")
         currentPLayerEl.classList.add(CLASS_PLAYER_RED);
@@ -89,11 +101,11 @@ const createPieces = () => {
                     if (hasWinner === BLACK) {
                         score.black += 1;
                         updateScore(BLACK);
-                        resetTable();
+                        setTimeout(resetTable, DELAY);
                     } else if (hasWinner === RED) {
                         score.red += 1;
                         updateScore(RED);
-                        resetTable();
+                        setTimeout(resetTable, DELAY);
                     }
 
                     console.dir(score);
