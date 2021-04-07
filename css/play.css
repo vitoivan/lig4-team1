@@ -36,6 +36,7 @@ body {
     overflow: hidden;
 }
 
+
 /*HEADER:*/
 
 header.displayFlex {
@@ -115,6 +116,7 @@ div.game-wrapper {
     border: none;
     margin: .5rem;
 }
+
 .game-wrapper {
     display: flex;
 }
@@ -130,7 +132,6 @@ div.game-wrapper {
 
 .player__inGame {
     position: relative;
-    
 }
 
 .player--red {
@@ -143,51 +144,38 @@ div.game-wrapper {
     background-size: cover;
 }
 
-.logo{
+.logo {
     border-radius: 15px;
     padding: 15px 30px 5px;
 }
+
+
 /*BUTTONS*/
 
+.game-buttons {
+    flex-flow: row nowrap;
+    margin-top: 30px;
+}
+
 .btn {
-    width: var(--button-width);
     height: var(--button-height);
-    position: relative;
-    background: var(--color-red3);
-    border: 2px outset var(--color-yellow);
-    border-radius: var(--border-radius);
-    color: var(--color-texts);
-    z-index: 1;
-    font-size: 1rem;
+    width: var(--button-width);
+    font-family: var(--font-family-Comfortaa);
+    margin: 0 10px;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    border: none;
+    font-weight: bold;
+    color: var(--color-white);
+    background: var(--color-purple-buttons);
+    cursor: pointer;
     text-transform: uppercase;
-    margin-top: 50px;
 }
 
 .btn:active {
     transform: translateY(2px);
 }
 
-.game-buttons{
-    display: flex;
-    justify-content: center;
-    padding-top: 16px;
-}
-
-.ingame-button{
-    margin: 0 8px;
-    padding: 16px 24px;
-    font-family: var(--font-family-Comfortaa);
-    border-radius: 40px;
-    font-size: 16px;
-    border: none;
-    outline: none;
-    font-weight: bold;
-    color: white;
-    background: var(--color-purple-buttons);
-    cursor: pointer;
-    display: flex;
-    align-items: center ;
-}
 
 /****** Hover and Focus: */
 
@@ -226,6 +214,7 @@ div.game-wrapper {
 .btn--underLineCenter::before {
     transform: scaleX(0);
 }
+
 
 /*@media: */
 
