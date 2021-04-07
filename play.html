@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/commonstyles.css">
     <link rel="stylesheet" href="./css/stylesAnimations.css">
     <link rel="stylesheet" href="./css/play.css" />
     <title>Ligue 4</title>
@@ -12,9 +13,9 @@
 
 <body>
 
-    <audio id="song" src="/assets/WhatsApp Audio 2021-04-06 at 23.27.37.mpeg" loop preload autoplay></audio>
+    <audio id="song" src="./assets/playSong.mpeg" loop preload autoplay></audio>
 
-    <button onclick="document.getElementById('song').muted = !document.getElementById('song').muted">Mute / Unmute</button>
+    <button id="btnMuteAudio">Mute / Unmute</button>
 
     <!-- BG ANIMATION WRAPPER -->
 

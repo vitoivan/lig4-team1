@@ -1,79 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&family=Monda&display=swap');
-
-html, body, div, h1, h2, h3, h4, h5, h6, p, div,
-a, abbr, img, dl, dt, dd, ol, ul, li, tr, th, td,
-article, aside, figure, figcaption, footer, header,
-menu, nav, section, summary{
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-html{
+html {
     width: 100vw;
     height: 100vh;
     margin: 0 auto;
 }
+
 body {
     background-image: url('/assets/regras-bg.png');
 }
+
 header {
     width: 100%;
-  }
-    figure {
-      margin: 50px auto;
-      text-align: center;
-    }
-      img {
-        width: 50%;
-        max-width: 225px;
-      }
+}
+
+figure {
+    margin: 50px auto;
+    text-align: center;
+}
+
+img {
+    width: 50%;
+    max-width: 225px;
+}
+
+h1,
+ul.rules>li>h3,
+p,
+input {
+    font-family: var(--font-family-Comfortaa);
+}
+
 h1 {
     margin: 30px 0;
     font-size: 3em;
     text-align: center;
-
-    font-family: Monda;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 39px;
     letter-spacing: 0.05em;
     color: #fff;
-
 }
+
 .rules {
     width: 85%;
     margin: 0 auto 20px;
 }
+
+ul.rules>li>h3 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
 p {
     font-size: 1em;
-    font-family: Monda;
     font-style: normal;
     font-weight: bold;
     line-height: 39px;
     letter-spacing: 0.01em;
     color: #fff;
 }
+
 .buttonBack {
     margin: 0 auto;
     text-align: center;
 }
-    input {
-        width: 111px;
-        height: 64px;
-        background: #BC1BF7;
-        border-radius: 32px;
-        border: none;
-      
-        font-family: Monda;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 29px;
-        letter-spacing: 0.05em;
-        color: #FFFFFF;
-        margin-bottom: 35px;
-    }
+
+input {
+    width: 111px;
+    height: 64px;
+    background: #BC1BF7;
+    border-radius: 32px;
+    border: none;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 29px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    margin-bottom: 35px;
+}

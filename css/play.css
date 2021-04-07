@@ -15,75 +15,12 @@ Version: 1.0
 -----------
 STRUCTURE:
 -----------
-**** @imports
-**** @keyframes
-**** VARABLES DECLARATION
-**** GENREAL CONFIG
 **** BODY
 **** HEADER
 **** HOME PAGE
 **** FOOTER
 **** @media
 */
-
-@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
-
-/* VARABLES DECLARATION: */
-
-:root {
-    --color-red0: #d00000;
-    --color-red1: #dc2f02;
-    --color-red2: #6a040f;
-    --color-red3: #370617;
-    --color-texts: #edddd4;
-    --color-yellow: #faa307;
-    --color-RGBA-white: rgba(237, 221, 212, 0.45);
-    --font-family-PermanentMarker: "Permanent Marker", cursive;
-    --font-family-Comfortaa: "Comfortaa", cursive;
-    --piece-size: 40px;
-    --transition-time: 150ms;
-    --border-radius: 10px;
-    --button-width: 220px;
-    --button-height: 50px;
-    --box-shadow-neon: 0 0 0.1vw 0.4vw #ffffff, 0 0 0.4vw 0.6vw #d572e9, 0 0 4vw 0.4vw #a70be5, inset 0 0 1.5vw 0.4vw #a70be5, inset 0 0 0.4vw 0.2vw #d572e9, inset 0 0 0.5vw 0.2vw #fff7f7;
-}
-
-
-/* GENERAL CONFIG: */
-
-.displayFlex {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-.displayFlex--col {
-    flex-flow: column wrap;
-}
-
-.displayInherit {
-    display: inherit;
-}
-
-.displayGrid {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-}
-
-.italic {
-    font-style: italic;
-}
-
-.hidden {
-    opacity: 0;
-}
-
-.displayNone {
-    display: none;
-}
 
 
 /*BODY: */
