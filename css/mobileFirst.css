@@ -131,7 +131,7 @@ div.game-wrapper {
 
 .falling {
     animation: fallingAnim .5s;
-    animation-timing-function: cubic-bezier(0, 1.11, 0.58, 1);
+    animation-timing-function: Fast Out, Linear In;
 }
 
 .header {
@@ -144,15 +144,14 @@ div.game-wrapper {
     /* border: 1px dashed var(--color-texts); */
     border: none;
     box-shadow:   
-    0 0 0.1vw  0.4vw #fff7f7,   
-    0 0 0.4vw  0.6vw #e97272, 
-    0 0   4vw  0.4vw #e50b0b,
-    inset 0 0 1.5vw  0.4vw #e50b0b,
-    inset 0 0 0.4vw  0.2vw #e97272,
+    0 0 0.1vw  0.4vw #ffffff,   
+    0 0 0.4vw  0.6vw #d572e9, 
+    0 0   4vw  0.4vw #a70be5,
+    inset 0 0 1.5vw  0.4vw #a70be5,
+    inset 0 0 0.4vw  0.2vw #d572e9,
     inset 0 0 0.5vw  0.2vw #fff7f7;
     margin: .8rem;
 }
-
 .game-wrapper {
     display: flex;
 }
