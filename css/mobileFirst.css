@@ -28,12 +28,6 @@ STRUCTURE:
 
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
-@keyframes walk {
-    0% {}
-    50% {}
-    100% {}
-}
-
 
 /* VARABLES DECLARATION: */
 
@@ -47,6 +41,7 @@ STRUCTURE:
     --color-RGBA-white: rgba(237, 221, 212, 0.75);
     --font-family-PermanentMarker: "Permanent Marker", cursive;
     --font-family-Comfortaa: "Comfortaa", cursive;
+    --piece-size: 50px;
     --transition-time: 150ms;
     --border-radius: 10px;
     --button-width: 220px;
@@ -98,6 +93,7 @@ body {
     height: fit-content;
     font-family: var(--font-family-Comfortaa);
     color: var(--color-texts);
+    background-color: #252525;
 }
 
 
@@ -117,16 +113,24 @@ main {
 
 /* MAP */
 
-main>div:first-child {
-    border: 2px solid var(--color-red3);
-    border-top: none;
+div.game-wrapper {
+    margin-top: 65px;
+    border: none;
+    border-bottom: 5px solid var(--color-yellow);
+    border-radius: 15px;
+    padding-bottom: 5px;
 }
 
 .header,
 .block {
-    width: 60px;
-    height: 60px;
+    width: var(--piece-size);
+    height: var(--piece-size);
     border-radius: 50%;
+}
+
+.falling {
+    animation: fallingAnim .5s;
+    animation-timing-function: cubic-bezier(0, 1.11, 0.58, 1);
 }
 
 .header {
@@ -135,27 +139,32 @@ main>div:first-child {
 }
 
 .block {
-    border: 1px solid black;
+    border: 1px dashed var(--color-texts);
 }
 
-.game-wrapper{
+.game-wrapper {
     display: flex;
 }
 
+
 /*PIECES*/
-.red-player{
+
+.red-player {
     width: 100%;
     height: 100%;
     background-color: red;
     border-radius: 50%;
+    position: relative;
 }
 
-.black-player{
+.black-player {
     width: 100%;
     height: 100%;
     background-color: black;
     border-radius: 50%;
+    position: relative;
 }
+
 
 /*BUTTONS*/
 
