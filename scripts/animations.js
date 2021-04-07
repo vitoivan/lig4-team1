@@ -13,7 +13,7 @@ const getStars = max => {
         const randomY = getRandomNumber(window.outerWidth);
         const randomColor = getRandomNumberBetween(0, 2);
 
-        result.push(`${randomX}px ${randomY}px var(--star-color${randomColor})`);
+        result.push(`${randomX}px ${randomY}px 4px var(--star-color${randomColor})`);
     }
 
     return result.join(", ");
@@ -26,10 +26,10 @@ const renderStars = () => {
     for (let i = 1; i <= 6; i++) {
 
         const starEl = document.createElement("div");
-        const randomShadows = getStars(getRandomNumberBetween(100, 200));
-        const randomSize = getRandomNumberBetween(2, 8);
-        const delay = getRandomNumber(10);
-        const duration = getRandomNumberBetween(2, 120);
+        const randomShadows = getStars(getRandomNumberBetween(250, 400));
+        const randomSize = getRandomNumberBetween(2, 4);
+        const delay = getRandomNumber(3);
+        const duration = getRandomNumberBetween(10, 15);
 
         starEl.classList.add("star");
         starEl.classList.add(`star__${i}`);
