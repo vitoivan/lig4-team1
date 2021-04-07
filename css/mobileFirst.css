@@ -129,6 +129,10 @@ main>div:first-child {
     border-radius: 50%;
 }
 
+.falling{
+    animation: fallingAnim .5s;
+    animation-timing-function: cubic-bezier(0, 0, 0, 1.07);
+}
 .header {
     border: 1px solid var(--color-red1);
     border-radius: 15px;
@@ -148,6 +152,7 @@ main>div:first-child {
     height: 100%;
     background-color: red;
     border-radius: 50%;
+    position: relative;
 }
 
 .black-player{
@@ -155,6 +160,7 @@ main>div:first-child {
     height: 100%;
     background-color: black;
     border-radius: 50%;
+    position: relative;
 }
 
 /*BUTTONS*/

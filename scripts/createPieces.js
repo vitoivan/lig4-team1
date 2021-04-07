@@ -20,26 +20,39 @@ const createPieces = () => {
             }
             const piece = document.createElement('div')
 
-            if (currentPlayer === PLAYER1) {
-                piece.classList.add('black-player')
-            }
-            if (currentPlayer === PLAYER2) {
-                piece.classList.add('red-player')
-            }
 
             let lastBlock = arrayOfEmptyBlocks[arrayOfEmptyBlocks.length - 1]
 
             if (lastBlock) {
 
-                let blockXPosition = lastBlock.id.split('-')[1]
-                let blockYPosition = lastBlock.id.split('-')[2]
-
-                map[blockYPosition][blockXPosition] = currentPlayer
+             
+                let blockXPosition = parseInt(lastBlock.id.split('-')[1])
+                let blockYPosition = parseInt(lastBlock.id.split('-')[2])
                 
+          
+             
+                if (currentPlayer === PLAYER1) {   
+                    map[blockXPosition][blockYPosition] = 1
+                }
+                if (currentPlayer === PLAYER2) {
+                    map[blockXPosition][blockYPosition] = 2
+                }
+                if (currentPlayer === 'black') {
+                    piece.classList.add('black-player')
+                }else{
+                    piece.classList.add('red-player')
+                }
+                
+               
+                piece.classList.add('falling');
+                lastBlock.appendChild(piece);   
                 getCurrentPlayer()
-                console.log(currentPlayer)
-                lastBlock.appendChild(piece)
-                checkWin(blockXPosition, blockYPosition)
+                const result = checkWin(blockXPosition, blockYPosition);
+               
+                if(result !== false){
+                    console.log(result)
+                }
+                console.log(map)
             }
         })
     }

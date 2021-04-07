@@ -55,7 +55,14 @@ STRUCTURE:
     }
 }
 
-
+@keyframes fallingAnim {
+    0% {
+        top: -1000px;
+    }
+    100% {
+        top: 0;
+    }
+}
 /*VARABLES DECLARATION:*/
 
 :root {
@@ -77,7 +84,6 @@ body {
     width: 100vw;
     height: 100vh;
 }
-
 body {
     background: rgb(0, 0, 0);
     background: linear-gradient(70deg, #fa0001, #f4f1de, #ffede1, #181d27);
