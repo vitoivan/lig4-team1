@@ -43,7 +43,7 @@ body {
     width: 100vw;
     min-height: 90vh;
     height: fit-content;
-    background-image: url("/assets/menu-background.png");
+    background-image: url("../assets/menu-background.png");
 }
 
 
