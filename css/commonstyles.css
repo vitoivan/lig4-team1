@@ -61,26 +61,27 @@ STRUCTURE:
 
 .yellow-neon {
     box-shadow: var(--yellow-neon);
+    transition: all .1s;
 }
 
 .purple-neon {
     box-shadow: var(--box-shadow-neon);
+    transition: all .1s;
 }
 
 .red-neon {
     box-shadow: var(--red-neon);
+    transition: all .1s;
 }
 
 .white-neon {
     box-shadow: var(--white-neon);
+    transition: all .1s;
 }
 
 .black-neon {
     box-shadow: var(--black-neon);
-}
-
-.black-neon {
-    box-shadow: var(--black-neon);
+    transition: all .1s;
 }
 
 .displayFlex {

@@ -227,7 +227,7 @@ div[data-id="resultScreen"] {
 @media only screen and (min-width: 1600px) {
     /* GENERAL CONFIG: */
     body {
-        width: 90%;
+        width: 32%;
         margin: 15vh auto;
     }
 }
