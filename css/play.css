@@ -62,7 +62,6 @@ h3.scoreTitle {
 header.displayFlex>div {
     width: 100%;
     justify-content: space-around;
-    /* background-color: var(--color-RGBA-white); */
     border-radius: 15px;
 }
 
@@ -151,7 +150,7 @@ div.game-wrapper {
 }
 
 
-/*RESULT SCREEN*/
+/*POPUPS*/
 
 div[data-id="resultScreen"],
 div[data-id="popUpScreen"] {
@@ -163,29 +162,45 @@ div[data-id="popUpScreen"] {
     border-radius: 50px;
     border: 5px outset var(--color-blue-cyan);
     box-shadow: -8px -8px 20px 10px var(--box-shadow-neon);
-    transition: opacity 250ms ease-in 250ms;
+    transition: opacity 500ms ease-in var(--transition-time);
+    justify-content: space-around;
 }
 
-div[data-id="resultScreen"] {
+div[data-id="resultScreen"]>h2,
+div[data-id="popUpScreen"]>h2 {
+    text-transform: uppercase;
+}
+
+div[data-id="resultScreen"]>h2,
+div[data-id="popUpScreen"]>h2,
+div[data-id="resultScreen"]>h3,
+div[data-id="popUpScreen"]>h3 {
+    color: var(--color-blue-navy);
+    font-weight: bold;
+}
+
+div[data-id="resultScreen"]>h2,
+div[data-id="resultScreen"]>h3 {
+    font-size: 1.6rem;
+}
+
+div[data-id="resultScreen"]>button {
+    font-size: 1rem;
+}
+
+div[data-id="popUpScreen"]>h2,
+div[data-id="popUpScreen"]>h3 {
+    margin-top: 15px;
+}
+
+div[data-id="popUpScreen"] {
     bottom: 2vh;
     height: 15%;
 }
 
-div[data-id="resultScreen"]>h2,
-div[data-id="resultScreen"]>h3,
-div[data-id="popUpScreen"]>h2,
-div[data-id="popUpScreen"]>h3 {
-    margin-top: 30px;
-    color: var(--color-blue-navy);
-}
-
-
-/*POPUP SCREEN*/
-
-div[data-id="popUpScreen"] {
+div[data-id="resultScreen"] {
     top: 40vh;
     height: 45%;
-    z-index: -1;
 }
 
 

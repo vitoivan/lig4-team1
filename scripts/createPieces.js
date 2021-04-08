@@ -24,6 +24,63 @@ const resetTable = () => {
     }
 }; // resetTable()
 
+const renderResultScreen = () => {
+    const resultScreenEl = document.querySelector(`div[data-id="resultScreen"]`);
+    const h2El = document.createElement("h2");
+    const h3El = document.createElement("h3");
+    const btnRestart = document.createElement("button");
+
+    if (hasWinner === GREEN)
+        h2El.innerText = "Parabéns, VERDE!!";
+    else
+        h2El.innerText = "Parabéns, ROXO!!";
+
+    h3El.innerText = "Você venceu o jogo!!"
+    btnRestart.dataset.id = "btnRestart";
+    btnRestart.classList.add("btn");
+    btnRestart.classList.add("ingame-button");
+    btnRestart.innerText = "reiniciar";
+
+    removeChildNodes(resultScreenEl);
+
+    resultScreenEl.appendChild(h2El);
+    resultScreenEl.appendChild(h3El);
+    resultScreenEl.appendChild(btnRestart);
+
+    btnRestart.onclick = () => resetTable();
+
+    resultScreenEl.classList.remove(DISPLAY_NONE_CLASS);
+    resultScreenEl.classList.remove(HIDDEN_CLASS);
+
+}; // renderResultScreen()
+
+const renderPopUp = () => {
+    const resultScreenEl = document.querySelector(`div[data-id="popUpScreen"]`);
+    const h2El = document.createElement("h2");
+    const h3El = document.createElement("h3");
+
+    h2El.innerText = "fim da rodada!";
+
+    const str = "venceu esta rodada."
+
+    if (hasWinner === GREEN)
+        h3El.innerText = `VERDE ${str}`;
+    else
+        h3El.innerText = `ROXO ${str}`;
+
+
+    removeChildNodes(resultScreenEl);
+
+    resultScreenEl.appendChild(h2El);
+    resultScreenEl.appendChild(h3El);
+
+    resultScreenEl.classList.remove(HIDDEN_CLASS);
+
+    resultScreenEl.onclick = () => {
+        resultScreenEl.classList.add(HIDDEN_CLASS);
+    };
+
+}; // renderPopUp()
 
 // Function to create pieces when individual block is clicked
 const createPieces = () => {
@@ -32,6 +89,7 @@ const createPieces = () => {
     const currentPLayerEl = document.querySelector(`div[data-id="currentPlayer"]`);
     const CLASS_PLAYER_GREEN = "player--green";
     const CLASS_PLAYER_PURPLE = "player--purple";
+    const MAX_POINTS = 1;
     const DELAY = 3000;
 
     if (PLAYER1 === PURPLE)
@@ -101,13 +159,29 @@ const createPieces = () => {
                     console.log(hasWinner);
 
                     if (hasWinner === GREEN) {
-                        score.green += 1;
-                        updateScore(GREEN);
-                        setTimeout(resetTable, DELAY);
+
+                        if (score.green === (MAX_POINTS - 1)) {
+                            renderResultScreen();
+                        } else {
+
+                            score.green += 1;
+                            updateScore(GREEN);
+                            renderPopUp();
+                            setTimeout(resetTable, DELAY);
+
+                        }
                     } else if (hasWinner === PURPLE) {
-                        score.purple += 1;
-                        updateScore(PURPLE);
-                        setTimeout(resetTable, DELAY);
+
+                        if (score.purple === (MAX_POINTS - 1)) {
+                            renderResultScreen();
+                        } else {
+
+                            score.purple += 1;
+                            updateScore(PURPLE);
+                            renderPopUp();
+                            setTimeout(resetTable, DELAY);
+
+                        }
                     }
 
                     hasWinner = undefined; // reset the variable;
