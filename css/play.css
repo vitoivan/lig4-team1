@@ -53,7 +53,11 @@ h2 {
     text-align: center;
     margin-top: 1vh;
 }
-
+.row:hover{
+    box-shadow: var(--white-neon);
+    border-radius: 15px;
+    padding: 0 5px;
+}
 h3.scoreTitle {
     margin: 0 5px;
     font-weight: bold;
