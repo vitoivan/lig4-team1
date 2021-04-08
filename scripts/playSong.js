@@ -1,5 +1,6 @@
 const playSong = () => {
-    const number = getRandomNumber(1);
+    let number = getRandomNumber(1);
+   
     const id = 'song-' + number;
     removeEventListener();
     const song = document.getElementById(id);
@@ -14,6 +15,7 @@ const playSong = () => {
     if (number === 1) {
         song.volume = 0.15;
     }
+
     song.play();
 }
 const removeEventListener = () => {

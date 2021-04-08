@@ -51,26 +51,27 @@ STRUCTURE:
 
 .yellow-neon {
     box-shadow: var(--yellow-neon);
+    transition: all .1s;
 }
 
 .purple-neon {
     box-shadow: var(--box-shadow-neon);
+    transition: all .1s;
 }
 
 .red-neon {
     box-shadow: var(--red-neon);
+    transition: all .1s;
 }
 
 .white-neon {
     box-shadow: var(--white-neon);
+    transition: all .1s;
 }
 
 .black-neon {
     box-shadow: var(--black-neon);
-}
-
-.black-neon {
-    box-shadow: var(--black-neon);
+    transition: all .1s;
 }
 
 .displayFlex {
@@ -162,6 +163,14 @@ html {
 /****** Hover and Focus: */
 
 .btn:hover {
+    cursor: pointer;
+    color: var(--color-yellow);
+    box-shadow: var(--white-neon);
+    font-style: italic;
+    transition: color var(--transition-time) ease-out, font-style var(--transition-time) ease-out;
+}
+
+.mute:hover {
     cursor: pointer;
     color: var(--color-yellow);
     box-shadow: var(--white-neon);
