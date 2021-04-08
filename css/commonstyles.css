@@ -43,12 +43,6 @@ STRUCTURE:
     --border-radius: 10px;
     --button-width: 220px;
     --button-height: 50px;
-    /* --box-shadow-neon: 0 0 0.1vw 0.4vw #ffffff, 0 0 0.4vw 0.6vw #d572e9, 0 0 4vw 0.4vw #a70be5, inset 0 0 1.5vw 0.4vw #a70be5, inset 0 0 0.4vw 0.2vw #d572e9, inset 0 0 0.5vw 0.2vw #fff7f7; */
-    /* --box-shadow-neon: 0 0 2px 2px #ffffff, 0 0 3px 5px #d572e9, 0 0 22px 5px #a70be5, inset 0 0 4px 2px #A70BE5, inset 0 0 5px 2px #d572e9, inset 0 0 5px 2px #fff7f7; */
-    /* --yellow-neon: 0 0 2px 2px #ffffff, 0 0 3px 5px #e1e972, 0 0 22px 5px #e5d60b, inset 0 0 4px 2px #e5d60b, inset 0 0 5px 2px #e1e972, inset 0 0 5px 2px #fff7f7; */
-    /* --yellow-neon: 0 0 2px 2px #ffffff, 0 0 3px 5px #e7ebb6, 0 0 22px 5px #d4c720, inset 0 0 4px 2px #d4c720, inset 0 0 5px 2px #e7ebb6, inset 0 0 5px 2px #fff7f7; */
-    /* --red-neon: 0 0 2px 2px #ffffff, 0 0 3px 5px #e97272, 0 0 22px 5px #e50b0b, inset 0 0 4px 2px #e50b0b, inset 0 0 5px 2px #e97272, inset 0 0 5px 2px #fff7f7; */
-    /* --white-neon: 0 0 2px 2px #ffffff, 0 0 3px 5px #d4cccc, 0 0 22px 5px #d3d3d3, inset 0 0 4px 2px #d3d3d3, inset 0 0 5px 2px #d4cccc, inset 0 0 5px 2px #fff7f7; */
     --box-shadow-neon: 0 0 1px 2px #ffffff, 0 0 2px 3px #d572e9, 0 0 10px 4px #a70be5, inset 0 0 2px 1px #A70BE5, inset 0 0 5px 2px #d572e9, inset 0 0 5px 1px #fff7f7;
     --yellow-neon: 0 0 1px 2px #ffffff, 0 0 2px 3px #e7ebb6, 0 0 10px 4px #d4c720, inset 0 0 2px 1px #d4c720, inset 0 0 5px 2px #e7ebb6, inset 0 0 5px 1px #fff7f7;
     --red-neon: 0 0 1px 2px #ffffff, 0 0 2px 3px #e97272, 0 0 10px 4px #e50b0b, inset 0 0 2px 1px #e50b0b, inset 0 0 5px 2px #e97272, inset 0 0 5px 1px #fff7f7;
@@ -162,10 +156,12 @@ html {
     right: 4px;
     top: 6px;
 }
+
 .mute:active {
     transform: translateY(2px);
     border: 2px dotted var(--white-neon);
 }
+
 
 /****** Hover and Focus: */
 
