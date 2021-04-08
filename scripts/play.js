@@ -7,7 +7,7 @@
 const generalDivEl = createMap();
 document.getElementById('container').appendChild(generalDivEl);
 createPieces();
-// renderStars();
+renderStars();
 setInterval(() => {
 
     changeStarPattern();

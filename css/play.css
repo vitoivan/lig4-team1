@@ -53,11 +53,13 @@ h2 {
     text-align: center;
     margin-top: 1vh;
 }
-.row:hover{
+
+.row:hover {
     box-shadow: var(--white-neon);
     border-radius: 15px;
     padding: 0 5px;
 }
+
 h3.scoreTitle {
     margin: 0 5px;
     font-weight: bold;
@@ -206,7 +208,6 @@ div[data-id="popUpScreen"] {
 div[data-id="resultScreen"] {
     top: 40vh;
     height: 45%;
-  
 }
 
 
@@ -215,6 +216,7 @@ div[data-id="resultScreen"] {
 @media only screen and (min-width: 800px) {
     /* GENERAL CONFIG: */
     body {
+        width: 65%;
         background-image: url('../assets/img/home-&-game-desktop-bg.jpg');
         background-size: cover;
     }
@@ -227,7 +229,7 @@ div[data-id="resultScreen"] {
 @media only screen and (min-width: 1600px) {
     /* GENERAL CONFIG: */
     body {
-        width: 90%;
+        width: 45%;
         margin: 15vh auto;
     }
 }
