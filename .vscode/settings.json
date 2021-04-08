@@ -1,4 +1,5 @@
 {
     "files.autoSave": "onWindowChange",
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "liveServer.settings.port": 5501
 }
