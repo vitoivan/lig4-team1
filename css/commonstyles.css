@@ -151,10 +151,33 @@ html {
     border: 2px dotted var(--white-neon);
 }
 
+.mute {
+    height: 40px;
+    width: 40px;
+    border-radius: 30%;
+    font-size: 1.5rem;
+    background: var(--color-purple-buttons);
+    color: var(--color-white);
+    position: absolute;
+    right: 4px;
+    top: 6px;
+}
+.mute:active {
+    transform: translateY(2px);
+    border: 2px dotted var(--white-neon);
+}
 
 /****** Hover and Focus: */
 
 .btn:hover {
+    cursor: pointer;
+    color: var(--color-yellow);
+    box-shadow: var(--white-neon);
+    font-style: italic;
+    transition: color var(--transition-time) ease-out, font-style var(--transition-time) ease-out;
+}
+
+.mute:hover {
     cursor: pointer;
     color: var(--color-yellow);
     box-shadow: var(--white-neon);
