@@ -95,7 +95,7 @@ const renderPopUp = () => {
 
     resultScreenEl.classList.remove(DISPLAY_NONE_CLASS);
     resultScreenEl.classList.remove(HIDDEN_CLASS);
-
+    resultScreenEl.style.zIndex = '1';
     resultScreenEl.onclick = () => {
 
         resultScreenEl.classList.add(HIDDEN_CLASS);

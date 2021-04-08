@@ -75,6 +75,10 @@ STRUCTURE:
     box-shadow: var(--white-neon);
 }
 
+.black-neon {
+    box-shadow: var(--black-neon);
+}
+
 .displayFlex {
     display: flex;
     flex-flow: row wrap;

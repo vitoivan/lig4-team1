@@ -14,8 +14,8 @@ setInterval(() => {
 
 }, 120000); // 120s
 
-document.getElementById("song").volume = .015;
-timerToChangeNeon(0);
+playSong();
+
 const btnMuteAudioEl = document.getElementById("btnMuteAudio");
 const btnRestart = document.getElementById("btnRestart");
 const btnHome = document.getElementById("btnHome");
@@ -26,7 +26,13 @@ const btnHome = document.getElementById("btnHome");
  * 
  */
 
-btnMuteAudioEl.onclick = () => document.getElementById('song').muted = !document.getElementById('song').muted;
+btnMuteAudioEl.addEventListener('click', () => {
+
+    const song0 = document.getElementById('song-0');
+    const song1 = document.getElementById('song-1');
+    song0.muted = !song0.muted;
+    song1.muted = !song1.muted;
+})
 
 btnHome.onclick = () => window.location = "./index.html";
 
