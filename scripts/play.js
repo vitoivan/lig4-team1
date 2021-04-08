@@ -17,8 +17,8 @@ setInterval(() => {
 playSong();
 
 const btnMuteAudioEl = document.getElementById("btnMuteAudio");
-const btnRestart = document.getElementById("btnRestart");
-const btnHome = document.getElementById("btnHome");
+const btnRestartEl = document.getElementById("btnRestart");
+const btnHomeEl = document.getElementById("btnHome");
 
 /**
  * 
@@ -34,6 +34,6 @@ btnMuteAudioEl.addEventListener('click', () => {
     song1.muted = !song1.muted;
 })
 
-btnHome.onclick = () => window.location = "./index.html";
+btnHomeEl.onclick = () => window.location = "./index.html";
 
-btnRestart.onclick = () => resetGame();
+btnRestartEl.onclick = () => resetGame();

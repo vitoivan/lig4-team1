@@ -35,7 +35,7 @@ STRUCTURE:
     --color-RGBA-white: rgba(237, 221, 212, 0.86);
     --font-family-Molle: Molle, cursive;
     --font-family-Monda: Monda, monospace;
-    --piece-size: 35px;
+    --piece-size: 32px;
     --transition-time: 150ms;
     --border-radius: 10px;
     --button-width: 220px;
@@ -132,7 +132,6 @@ body {
     margin: 0 10px;
     border-radius: 40px;
     font-size: 0.8rem;
-    /* border: none; */
     font-weight: bold;
     color: var(--color-white);
     background: var(--color-purple-buttons);

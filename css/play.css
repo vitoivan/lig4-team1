@@ -163,7 +163,7 @@ div[data-id="popUpScreen"] {
     background-color: var(--color-RGBA-white);
     border-radius: 50px;
     border: 5px outset var(--color-blue-cyan);
-    box-shadow: -8px -8px 20px 10px var(--box-shadow-neon);
+    box-shadow: var(--box-shadow-neon);
     transition: opacity 500ms ease-in var(--transition-time);
     justify-content: space-around;
 }
@@ -201,6 +201,10 @@ div[data-id="popUpScreen"] {
     z-index: -2;
 }
 
+div[data-id="popUpScreen"]:hover {
+    cursor: pointer;
+}
+
 div[data-id="resultScreen"] {
     top: 40vh;
     height: 45%;
@@ -224,19 +228,19 @@ button.mute {
     body {
         background-image: url('../assets/img/home-&-game-desktop-bg.jpg');
     }
-    /* .game-wrapper .block {
-        width: 50px;
-        height: 50px;
-    } */
-    /* .game-wrapper .player {
-        width: 50px;
-        height: 50px;
-    } */
+    div[data-id="resultScreen"],
+    div[data-id="popUpScreen"] {
+        left: 20vw;
+        width: 60%;
+    }
     header.displayFlex>div {
         width: 450px;
     }
     header.displayFlex {
         flex-direction: column;
+    }
+    .row {
+        padding: 0 5px;
     }
     .logo {
         margin-bottom: 2.5vh;
