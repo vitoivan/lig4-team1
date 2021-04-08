@@ -1,4 +1,4 @@
-const getRandomNumber = max => Math.round(Math.random() * max);
+// const getRandomNumber = max => Math.round(Math.random() * max);
 
 const getRandomNumberBetween = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;;
 
@@ -72,8 +72,6 @@ const whenSecondAudioStop = () => {
     SecondAudioIsPlaying = false;
 }
 
-
-
 const fallingBall = (piece) => {
     
     let audio = undefined;
@@ -100,82 +98,6 @@ const fallingBall = (piece) => {
     },555);
 }
 
-const changeNeonColors = (random ='no') => {
-    const allBlocks = document.querySelectorAll('.block , img.logo, header.displayFlex>div');
-    if(random === 'random'){
-        allBlocks.forEach(changeRandomNeon)
-    }else{
-        const number = getRandomNumber(3);
-        allBlocks.forEach( block => {
-            changeNeon(block, number);
-        })
-   
-    }
-}
-const removeAllNeonClasses = (block) => {
-    
-    const blockClass = Array.from(block.classList);
-    if(blockClass.includes('purple-neon')){
-        block.classList.remove('purple-neon');
-        return 2;
-    }
-    if(blockClass.includes('yellow-neon')){
-        block.classList.remove('yellow-neon');
-        return 0;
-    }
-    if(blockClass.includes('white-neon')){
-        block.classList.remove('white-neon');
-        return 3;
-    }
-    if(blockClass.includes('red-neon')){
-        block.classList.remove('red-neon');
-        return 1;
-    }
-    if(blockClass.includes('black-neon')){
-        block.classList.remove('black-neon');
-        return null;
-    }
-   
-  
-    
-
-    
-}
-const returnNewNeonClass = (block,number=null) => {
-    switch(number){
-        case 0:
-            block.classList.add('yellow-neon');
-            break;
-        case 1:
-            block.classList.add('red-neon');
-            break;
-        case 2:
-            block.classList.add('purple-neon');
-            break;
-        case 3:
-            block.classList.add('white-neon');
-            break;
-    }
-}
-const changeRandomNeon = block => {
-    const number = getRandomNumber(3)
-    removeAllNeonClasses(block);
-    returnNewNeonClass(block,number);
-}
-const changeNeon = (block,number) => {
-    const notPickThis = removeAllNeonClasses(block);
-    if(number !== notPickThis){
-        returnNewNeonClass(block,number);
-    }else{
-        if(number + 1 < 4){
-            returnNewNeonClass(block,number + 1 );
-        }else{
-            returnNewNeonClass(block,number - 1 );
-        }
-       
-    }
-    
-}
 const changeColorWithTimer = (speed, repeatLimit, random='no', timer=-1, timerLimit=0) => {
     let seconds;
     let counter = 0;
@@ -184,25 +106,18 @@ const changeColorWithTimer = (speed, repeatLimit, random='no', timer=-1, timerLi
             timer++;
         }, 1000);    
     }
-   
+
     let interval = setInterval(() => {
         if(counter >= repeatLimit || timer >= timerLimit){
             clearInterval(seconds);
             clearInterval(interval);
         }
-        changeNeonColors(random);
+        applyNormalOrRandomNeon(random);  
         counter++;
     }, speed);
  
 }    
-const allNeonBlack = () => {
-    const blocks = Array.from(document.querySelectorAll('.block'));
-    
-    blocks.forEach( block => {
-        removeAllNeonClasses(block);
-        block.classList.add('black-neon');
-    });
-}
+
 const timerToChangeNeon = (number) => {
 
     if(number === 0){
@@ -210,22 +125,17 @@ const timerToChangeNeon = (number) => {
             changeColorWithTimer(300, 5000, 'no', 0, 5);
         }, 1)
         setTimeout( () => {    
-
             changeColorWithTimer(300, 5, 'random', 0, 11);
         }, 5000)
 
         setTimeout( () => {    
-            changeColorWithTimer(100, 5000, 'random', 0, 8);
+            changeColorWithTimer(100, 5000, 'random', 0, 9);
         }, 7000)
-        setInterval( () => {    
-            changeColorWithTimer(675, 99999999, 'no');
-        }, 15000)
         setTimeout( () => {    
-            changeColorWithTimer(200, 3, 'no');
-        }, 22500)
-        setTimeout( () => {    
-            changeColorWithTimer(200, 2, 'no');
-        }, 25500)
+            changeColorWithTimer(650, 90000, 'no', 0 , 360);
+        }, 15200)
+
+       
     }   
 
     if(number === 1){

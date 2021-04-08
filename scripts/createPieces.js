@@ -93,9 +93,10 @@ const renderPopUp = () => {
     resultScreenEl.appendChild(h3El);
 
     resultScreenEl.classList.remove(HIDDEN_CLASS);
-
+    resultScreenEl.style.zIndex = '1';
     resultScreenEl.onclick = () => {
         resultScreenEl.classList.add(HIDDEN_CLASS);
+        resultScreenEl.style.zIndex = '-2';
     };
 
 }; // renderPopUp()

@@ -1,9 +1,13 @@
 const playSong = () => {
   const number = getRandomNumber(1);
   const id = 'song-' + number;
-  
+  removeEventListener();
   const song = document.getElementById(id);
-
+  
+  song.onplay = () => {
+      timerToChangeNeon(number);
+  }
+  song.onended = playSong;
   if(number === 0){
     song.volume = 0.15;
   }
@@ -11,19 +15,8 @@ const playSong = () => {
     song.volume = 0.25;
   }
   song.play();
-  timerToChangeNeon(number);
-  const int = counter()
-  document.addEventListener('keydown', (e) => {
-    if(e.key === 'z'){
-        clearInterval(int)
-    }
-  })
 }
-function counter(){
-  time = 0;
-  const interval = setInterval( () => {
-    time++;
-    console.log(time);
-  },1000)
-  return interval;
+const removeEventListener = () => {
+    document.getElementById('song-0').removeEventListener('onended', playSong);
+    document.getElementById('song-1').removeEventListener('onended', playSong);
 }

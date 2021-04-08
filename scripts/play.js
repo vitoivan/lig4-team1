@@ -26,9 +26,10 @@ const btnHome = document.getElementById("btnHome");
  * 
  */
 
-btnMuteAudioEl.addEventListener( 'onlick', () => {
-    const song0 =  document.getElementById('song-0')
-    const song1 =  document.getElementById('song-1')
+ btnMuteAudioEl.addEventListener( 'click', () => {
+
+    const song0 =  document.getElementById('song-0');
+    const song1 =  document.getElementById('song-1');
     song0.muted = !song0.muted;
     song1.muted = !song1.muted;
 })
