@@ -64,9 +64,9 @@ Entre em contato:
 
 Entre em contato:
 
-[![GitLab Badge](https://img.shields.io/badge/-Marcone_Melo-black?style=plastic&logo=GitLab&logoColor=yellow&link=https://www.linkedin.com/in/victor-ivan/)](https://github.com/vitoivan)
-[![GitHub Badge](https://img.shields.io/badge/-Marcone_Melo-black?style=plastic&logo=GitHub&logoColor=white&link=https://www.linkedin.com/in/victor-ivan/)](https://gitlab.com/vitoivan)
-[![Linkedin Badge](https://img.shields.io/badge/-Marcone_Melo-blue?style=plastic&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/victor-ivan/)](https://www.linkedin.com/in/victor-ivan/) 
+[![GitLab Badge](https://img.shields.io/badge/-Victor_Ivan-black?style=plastic&logo=GitLab&logoColor=yellow&link=https://www.linkedin.com/in/victor-ivan/)](https://github.com/vitoivan)
+[![GitHub Badge](https://img.shields.io/badge/-Victor_Ivan-black?style=plastic&logo=GitHub&logoColor=white&link=https://www.linkedin.com/in/victor-ivan/)](https://gitlab.com/vitoivan)
+[![Linkedin Badge](https://img.shields.io/badge/-Victor_Ivan-blue?style=plastic&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/victor-ivan/)](https://www.linkedin.com/in/victor-ivan/) 
 
 
 
