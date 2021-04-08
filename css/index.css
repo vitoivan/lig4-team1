@@ -25,12 +25,11 @@ STRUCTURE:
 /*BODY: */
 
 body {
-    margin: 0;
     width: 100vw;
-    min-height: 90vh;
-    height: fit-content;
+    height: 100vh;
     background-image: url("../assets/img/menu-background.png");
     background-size: cover;
+    overflow: hidden;
 }
 
 
@@ -55,26 +54,25 @@ img {
 /*HOME PAGE: */
 
 main {
-    width: 80%;
-    margin: auto;
+    width: 90%;
+    height: inherit;
+    margin: 0 auto;
+}
+
+main>nav.displayFlex {
+    height: 60%;
+    justify-content: space-around;
 }
 
 
 /*BUTTONS*/
 
-.divButtons {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
 #buttonPlay {
-    width: 199px;
-    height: 199px;
-    margin: auto;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
     background: var(--color-blue-cyan);
-    border-radius: 100%;
-    border: none;
+    border-radius: 50%;
 }
 
 .polygon {
@@ -85,6 +83,14 @@ main {
     border-left: 82px solid var(--color-white);
     background: var(--color-blue-cyan);
     margin: 45px 76px;
+}
+
+#buttonPlay:hover {
+    box-shadow: var(--box-shadow-neon);
+}
+
+#buttonPlay:active {
+    transform: translateY(2px);
 }
 
 .box {
@@ -98,21 +104,19 @@ main {
     width: 90%;
 }
 
-#buttonRules {
-    width: 64px;
-    height: 64px;
-    background: var(--color-purple-buttons);
-    border-radius: 100%;
-    border: none;
-    color: var(--color-white);
+button#btnRules {
+    text-transform: none;
     font-family: var(--font-family-Molle);
-    font-style: normal;
-    font-weight: normal;
     font-size: 42px;
-    line-height: 52px;
+    width: 100px;
 }
 
-#buttonContact {
+button#btnRules>span {
+    margin-right: 10px;
+}
+
+
+/* #buttonContact {
     width: 111px;
     height: 64px;
     background: var(--color-purple-buttons);
@@ -125,7 +129,7 @@ main {
     line-height: 29px;
     letter-spacing: 0.05em;
     color: var(--color-white);
-}
+} */
 
 
 /*@medias: */
