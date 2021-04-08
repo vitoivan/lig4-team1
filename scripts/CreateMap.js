@@ -18,6 +18,7 @@ const PLAYER2 = PURPLE;
 const DRAW = "draw";
 const DISPLAY_NONE_CLASS = "displayNone";
 const HIDDEN_CLASS = "hidden";
+const DELAY = 3000;
 
 /**
  * GLOBAL VARIABLES:

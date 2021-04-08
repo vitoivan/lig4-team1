@@ -9,15 +9,7 @@ const updateScore = (player) => {
 
 }; // updateScore(player)
 
-const resetGame = () => {
-    debugger
-    const resultScreenEl = document.querySelector(`div[data-id="resultScreen"]`);
-
-    score.green = 0;
-    score.purple = 0;
-
-    updateScore(GREEN);
-    updateScore(PURPLE);
+const resetTable = () => {
 
     for (let row = 0; row < 7; row++) {
         for (let column = 0; column < 6; column++) {
@@ -31,8 +23,22 @@ const resetGame = () => {
         }
     }
 
-    resultScreenEl.classList.add(DISPLAY_NONE_CLASS);
+}; //resetTable()
+
+const resetGame = () => {
+
+    const resultScreenEl = document.querySelector(`div[data-id="resultScreen"]`);
+
+    score.green = 0;
+    score.purple = 0;
+
+    updateScore(GREEN);
+    updateScore(PURPLE);
+
+    resetTable();
+
     resultScreenEl.classList.add(HIDDEN_CLASS);
+    setTimeout(() => resultScreenEl.classList.add(DISPLAY_NONE_CLASS), DELAY);
 
 }; // resetGame()
 
@@ -94,7 +100,6 @@ const renderPopUp = () => {
 
 }; // renderPopUp()
 
-// Function to create pieces when individual block is clicked
 const createPieces = () => {
 
     const columnsList = document.getElementsByClassName('row')
@@ -102,7 +107,6 @@ const createPieces = () => {
     const CLASS_PLAYER_GREEN = "player--green";
     const CLASS_PLAYER_PURPLE = "player--purple";
     const MAX_POINTS = 3;
-    const DELAY = 3000;
 
     if (PLAYER1 === PURPLE)
         currentPLayerEl.classList.add(CLASS_PLAYER_GREEN);
@@ -179,7 +183,7 @@ const createPieces = () => {
                             score.green += 1;
                             updateScore(GREEN);
                             renderPopUp();
-                            setTimeout(resetGame, DELAY);
+                            setTimeout(resetTable, DELAY);
 
                         }
                     } else if (hasWinner === PURPLE) {
@@ -191,7 +195,7 @@ const createPieces = () => {
                             score.purple += 1;
                             updateScore(PURPLE);
                             renderPopUp();
-                            setTimeout(resetGame, DELAY);
+                            setTimeout(resetTable, DELAY);
 
                         }
                     }
