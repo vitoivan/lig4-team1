@@ -119,3 +119,11 @@ input {
     color: #FFFFFF;
     margin-bottom: 35px;
 }
+
+@media only screen and (min-width: 800px) {
+    /* GENERAL CONFIG: */
+    body {
+        background-image: url('../assets/img/contact-desktop-bg.jpg');
+        background-size: cover;
+    }
+}

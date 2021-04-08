@@ -83,3 +83,11 @@ input {
     color: #FFFFFF;
     margin-bottom: 20px;
 }
+
+@media only screen and (min-width: 800px) {
+    /* GENERAL CONFIG: */
+    body {
+        background-image: url('../assets/img/rules-desktop-bg.jpg');
+        background-size: cover;
+    }
+}
