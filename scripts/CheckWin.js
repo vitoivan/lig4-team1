@@ -166,9 +166,9 @@ const checkVertical = (j, p1, p2, voidblock) => {
 }
 const checkWin = (i, j) => {
         const voidblock = 0;
-        const horizontal = checkHorizontal(BLACK, RED, voidblock);
-        const vertical = checkVertical(j, BLACK, RED, voidblock);
-        const diagonal = checkDiagonal(BLACK, RED, voidblock);
+        const horizontal = checkHorizontal(GREEN, PURPLE, voidblock);
+        const vertical = checkVertical(j, GREEN, PURPLE, voidblock);
+        const diagonal = checkDiagonal(GREEN, PURPLE, voidblock);
         const draw = isDraw(map);
 
         if (horizontal !== false) {

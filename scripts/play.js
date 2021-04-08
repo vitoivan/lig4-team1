@@ -17,6 +17,8 @@ playSong();
 
 
 const btnMuteAudioEl = document.getElementById("btnMuteAudio");
+const btnRestart = document.getElementById("btnRestart");
+const btnHome = document.getElementById("btnHome");
 
 /**
  * 
@@ -24,7 +26,13 @@ const btnMuteAudioEl = document.getElementById("btnMuteAudio");
  * 
  */
 
-btnMuteAudioEl.onclick = () => {
-    document.getElementById('song-0').muted = !document.getElementById('song-0').muted;
-    document.getElementById('song-1').muted = !document.getElementById('song-1').muted;
-}
+btnMuteAudioEl.addEventListener( 'onlick', () => {
+    const song0 =  document.getElementById('song-0')
+    const song1 =  document.getElementById('song-1')
+    song0.muted = !song0.muted;
+    song1.muted = !song1.muted;
+})
+
+btnHome.onclick = () => window.location = "./index.html";
+
+btnRestart.onclick = () => resetGame();
