@@ -19,6 +19,7 @@ STRUCTURE:
 **** @keyframes
 **** VARABLES DECLARATION
 **** GENREAL CONFIG
+**** @medias
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&family=Monda&display=swap');
@@ -107,7 +108,8 @@ STRUCTURE:
     display: none;
 }
 
-html {
+html,
+body {
     width: 100vw;
     height: 100vh;
     margin: 0 auto;
@@ -142,23 +144,6 @@ html {
     border: 2px dotted var(--white-neon);
 }
 
-.mute {
-    height: 40px;
-    width: 40px;
-    border-radius: 30%;
-    font-size: 1.5rem;
-    background: var(--color-purple-buttons);
-    color: var(--color-white);
-    position: absolute;
-    right: 4px;
-    top: 6px;
-}
-
-.mute:active {
-    transform: translateY(2px);
-    border: 2px dotted var(--white-neon);
-}
-
 
 /****** Hover and Focus: */
 
@@ -170,10 +155,29 @@ html {
     transition: color var(--transition-time) ease-out, font-style var(--transition-time) ease-out;
 }
 
-.mute:hover {
-    cursor: pointer;
-    color: var(--color-yellow);
-    box-shadow: var(--white-neon);
-    font-style: italic;
-    transition: color var(--transition-time) ease-out, font-style var(--transition-time) ease-out;
+
+/*@media: */
+
+@media only screen and (min-width: 800px) {
+    /*VARIABLE DECLARATIONS: */
+     :root {
+        --piece-size: 50px;
+    }
+    /* GENERAL CONFIG: */
+    body {
+        width: 80%;
+        margin: 0 auto;
+    }
+    /*MAIN*/
+}
+
+
+/*WIDE*/
+
+@media only screen and (min-width: 1600px) {
+    /* GENERAL CONFIG: */
+    body {
+        width: 90%;
+        margin: 15vh auto;
+    }
 }
