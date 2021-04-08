@@ -26,12 +26,8 @@ STRUCTURE:
 /*BODY: */
 
 body {
-    width: 100vw;
-    min-height: 100vh;
-    height: fit-content;
-    font-family: var(--font-family-Monda);
-    color: var(--color-texts);
-    background-image: url("../assets/img/menu-background.png");
+    margin-top: 1vh;
+    background-image: url(../assets/img/menu-background.png);
     background-size: cover;
     overflow: hidden;
 }
@@ -210,48 +206,48 @@ div[data-id="resultScreen"] {
     height: 45%;
 }
 
+button.mute {
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    /* font-size: 1.5rem; */
+    position: absolute;
+    left: 0;
+    top: 1vh;
+}
+
 
 /*@media: */
 
 @media only screen and (min-width: 800px) {
     /* GENERAL CONFIG: */
     body {
-        width: 65%;
         background-image: url('../assets/img/home-&-game-desktop-bg.jpg');
-        background-size: cover;
     }
-
-    .game-wrapper .block{
-        width: 45px;
-        height: 45px;
-    }
-
-    .game-wrapper .player{
-        width: 45px;
-        height: 45px;
-    }
-
-    header.displayFlex > div{
+    /* .game-wrapper .block {
+        width: 50px;
+        height: 50px;
+    } */
+    /* .game-wrapper .player {
+        width: 50px;
+        height: 50px;
+    } */
+    header.displayFlex>div {
         width: 450px;
     }
-
-    header.displayFlex{
+    header.displayFlex {
         flex-direction: column;
     }
-
-    .logo{
+    .logo {
         margin-bottom: 2.5vh;
     }
     /*MAIN*/
-
-    .game-wrapper{
-        margin-top: 16px;
+    button.mute {
+        height: 40px;
+        width: 40px;
+        font-size: 1.5rem;
+        left: 1vw;
     }
-
-    .game-buttons{
-        margin-top: 16px;
-    }
-
 }
 
 
@@ -259,8 +255,8 @@ div[data-id="resultScreen"] {
 
 @media only screen and (min-width: 1600px) {
     /* GENERAL CONFIG: */
-    body {
+    /* body {
         width: 45%;
         margin: 15vh auto;
-    }
+    } */
 }
