@@ -49,15 +49,12 @@ input {
 }
 
 h1 {
-    margin-bottom: 10px;
-    font-size: 3em;
     text-align: center;
-    font-style: normal;
+    text-transform: uppercase;
     font-weight: bold;
-    font-size: 24px;
-    line-height: 39px;
-    letter-spacing: 0.05em;
-    color: #fff;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    color: var(--color-white);
 }
 
 .rules {
@@ -75,30 +72,14 @@ ul.rules>li>h3 {
 p {
     font-size: 1.2em;
     font-style: normal;
-    font-weight: bold;
     line-height: 25px;
     letter-spacing: 0.01em;
-    color: #fff;
+    color: var(--color-white);
 }
 
 .buttonBack {
     margin: 0 auto;
     text-align: center;
-}
-
-input {
-    width: 111px;
-    height: 64px;
-    background: #BC1BF7;
-    border-radius: 32px;
-    border: none;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 29px;
-    letter-spacing: 0.05em;
-    color: #FFFFFF;
-    margin-bottom: 20px;
 }
 
 

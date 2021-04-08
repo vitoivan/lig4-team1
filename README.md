@@ -3,14 +3,14 @@
 #### *Status do Projeto:* 🚧 **Aceitando Contribuições...**  🚧
 
 ## Apresentação:
+* ### Descrição: o ***Lig 4*** é um jogo baseado em que os jogadores devem colocar as bolas estrategicamente na base, revezando um de cada vez, com o objetivo de formar uma sequência com os 4 discos da sua cor, ao mesmo tempo em que devem prestar atenção para bloquear as tentativas do oponente.
 * Este projeto é o resultado do **desafio de final da Sprint** do curso de ***#fullStack*** da [Kenzie Academy Brasil](https://kenzie.com.br/).
 * * ### Detalhes: 
       * Desenvolvido no final da *Sprint 5*; e
       * Linguagem aplicada: ***javaSpript*** *puro*.
 
 ### Recursos:
-- [ ] Desenvolvido com *MobileFirst*; ( ✔ 🆗 )
-- [ ] (editar...); ( 👷 🔧 em andamento... 🔨  👷‍♀️)
+- [x] Desenvolvido com *MobileFirst*; ( ✔ 🆗 )
 
 ### Demonstração:
 Via GitLab pages, clique [aqui](https://marconemm.gitlab.io/lig4-team1).
