@@ -1,9 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&family=Monda&display=swap');
-html {
-    width: 100vw;
-    height: 100vh;
-    margin: 0 auto;
-}
+/*
+Theme Name: Connect 4
+Author: Kenzie Academy
+Author URI: https://www.kenzie.com.br;
+Co-Author: Marcone Melo Mendonça
+Co-Author URI: https://www.linkedin.com/in/marconemm/
+Co-Author: Victor Ivan
+Co-Author URI: 
+Co-Author: 
+Co-Author URI: 
+Co-Author: 
+Co-Author URI:
+Version: 1.0
+ 
+-----------
+STRUCTURE:
+-----------
+**** VARABLES DECLARATION
+**** GENREAL CONFIG
+*/
+
+
+/*GENERAL CONFIG: */
 
 body {
     background-image: url('../assets/img/regras-bg.png');
@@ -28,7 +45,7 @@ h1,
 ul.rules>li>h3,
 p,
 input {
-    font-family: var(--font-family-Comfortaa);
+    font-family: var(--font-family-Monda);
 }
 
 h1 {
@@ -83,6 +100,9 @@ input {
     color: #FFFFFF;
     margin-bottom: 20px;
 }
+
+
+/*@medias: */
 
 @media only screen and (min-width: 800px) {
     /* GENERAL CONFIG: */

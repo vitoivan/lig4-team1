@@ -1,39 +1,25 @@
-/* GENERAL CONFIG: */
-
-@import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&family=Monda&display=swap');
-.displayFlex {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-.displayFlex--col {
-    flex-flow: column wrap;
-}
-
-.displayInherit {
-    display: inherit;
-}
-
-.displayGrid {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-}
-
-.italic {
-    font-style: italic;
-}
-
-.hidden {
-    opacity: 0;
-}
-
-.displayNone {
-    display: none;
-}
+/*
+Theme Name: Connect 4
+Author: Kenzie Academy
+Author URI: https://www.kenzie.com.br;
+Co-Author: Marcone Melo Mendonça
+Co-Author URI: https://www.linkedin.com/in/marconemm/
+Co-Author: 
+Co-Author URI: 
+Co-Author: 
+Co-Author URI: 
+Co-Author: 
+Co-Author URI:
+Version: 1.0
+ 
+-----------
+STRUCTURE:
+-----------
+**** BODY
+**** HEADER
+**** HOME PAGE
+**** @media
+*/
 
 
 /*BODY: */
@@ -51,14 +37,8 @@ body {
 /*HEADER:*/
 
 header {
-    background-image: url("../assets/img/menu-background.png");
-}
-
-
-/*HEADER:*/
-
-header {
     width: 100%;
+    background-image: url("../assets/img/menu-background.png");
 }
 
 figure {
@@ -72,7 +52,7 @@ img {
 }
 
 
-/*MAIN PAGE: */
+/*HOME PAGE: */
 
 main {
     width: 80%;
@@ -125,7 +105,7 @@ main {
     border-radius: 100%;
     border: none;
     color: var(--color-white);
-    font-family: Molle;
+    font-family: var(--font-family-Molle);
     font-style: normal;
     font-weight: normal;
     font-size: 42px;
@@ -138,7 +118,7 @@ main {
     background: var(--color-purple-buttons);
     border-radius: 32px;
     border: none;
-    font-family: Monda;
+    font-family: var(--font-family-Monda);
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -146,6 +126,9 @@ main {
     letter-spacing: 0.05em;
     color: var(--color-white);
 }
+
+
+/*@medias: */
 
 @media only screen and (min-width: 800px) {
     /* GENERAL CONFIG: */
