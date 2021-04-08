@@ -92,10 +92,15 @@ const renderPopUp = () => {
     resultScreenEl.appendChild(h2El);
     resultScreenEl.appendChild(h3El);
 
+
+    resultScreenEl.classList.remove(DISPLAY_NONE_CLASS);
     resultScreenEl.classList.remove(HIDDEN_CLASS);
 
     resultScreenEl.onclick = () => {
+
         resultScreenEl.classList.add(HIDDEN_CLASS);
+        setTimeout(() => resultScreenEl.classList.add(DISPLAY_NONE_CLASS), DELAY / 2);
+
     };
 
 }; // renderPopUp()

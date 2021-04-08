@@ -75,70 +75,70 @@ const whenSecondAudioStop = () => {
 
 
 const fallingBall = (piece) => {
-    
+
     let audio = undefined;
 
-    if(firstAudioIsPlaying === false){
+    if (firstAudioIsPlaying === false) {
         audio = document.getElementById('audioFallingBall');
         firstAudioIsPlaying = true;
     } else {
         audio = document.getElementById('audioFallingBall2');
-        
+
         SecondAudioIsPlaying = true;
     }
 
     const vol = 1;
     piece.classList.add('falling');
     const timeOut = setTimeout(() => {
-       
+
         audio.volume = vol;
         audio.play();
         piece.classList.remove('falling');
         piece.style.animation = 'bouncing 1s cubic-bezier(0, 0.74, 1, 0.24)';
 
         clearTimeout(timeOut);
-    },555);
+    }, 555);
 }
 
-const changeNeonColors = (random ='no') => {
+const changeNeonColors = (random = 'no') => {
     const allBlocks = document.querySelectorAll('.block , img.logo, header.displayFlex>div');
-    if(random === 'random'){
+    if (random === 'random') {
         allBlocks.forEach(changeRandomNeon)
-    }else{
+    } else {
         const number = getRandomNumber(3);
-        allBlocks.forEach( block => {
+        allBlocks.forEach(block => {
             changeNeon(block, number);
         })
-   
+
     }
 }
 const removeAllNeonClasses = (block) => {
-    
+
     const blockClass = Array.from(block.classList);
-    if(blockClass.includes('purple-neon')){
+    if (blockClass.includes('purple-neon')) {
         block.classList.remove('purple-neon');
         return 2;
     }
-    if(blockClass.includes('yellow-neon')){
+    if (blockClass.includes('yellow-neon')) {
         block.classList.remove('yellow-neon');
         return 0;
     }
-    if(blockClass.includes('white-neon')){
+    if (blockClass.includes('white-neon')) {
         block.classList.remove('white-neon');
         return 3;
     }
-    if(blockClass.includes('red-neon')){
+    if (blockClass.includes('red-neon')) {
         block.classList.remove('red-neon');
         return 1;
     }
-   
-  
-    
 
-    
+
+
+
+
 }
-const returnNewNeonClass = (block,number=null) => {
-    switch(number){
+const returnNewNeonClass = (block, number = null) => {
+    switch (number) {
         case 0:
             block.classList.add('yellow-neon');
             break;
@@ -156,34 +156,34 @@ const returnNewNeonClass = (block,number=null) => {
 const changeRandomNeon = block => {
     const number = getRandomNumber(3)
     removeAllNeonClasses(block);
-    returnNewNeonClass(block,number);
+    returnNewNeonClass(block, number);
 }
-const changeNeon = (block,number) => {
+const changeNeon = (block, number) => {
     const notPickThis = removeAllNeonClasses(block);
-    if(number !== notPickThis){
-        returnNewNeonClass(block,number);
-    }else{
-        if(number + 1 < 4){
-            returnNewNeonClass(block,number + 1 );
-        }else{
-            returnNewNeonClass(block,number - 1 );
+    if (number !== notPickThis) {
+        returnNewNeonClass(block, number);
+    } else {
+        if (number + 1 < 4) {
+            returnNewNeonClass(block, number + 1);
+        } else {
+            returnNewNeonClass(block, number - 1);
         }
-       
+
     }
-    
+
 }
 const timerToChangeNeon = (number) => {
-    if(number === 0){
+    if (number === 0) {
         let time = 0;
 
         let interval = setInterval(() => {
-            if(time >= 4){    
+            if (time >= 4) {
                 const interval2 = setInterval(() => {
-                    if(time >= 15){
-                        const interval3 = setInterval( () => {
+                    if (time >= 15) {
+                        const interval3 = setInterval(() => {
                             changeNeonColors();
                             time++;
-                        },650)
+                        }, 650)
                         clearInterval(interval2);
                     }
                     changeNeonColors('random');
@@ -193,5 +193,5 @@ const timerToChangeNeon = (number) => {
             }
             time++;
         }, 1000);
-    }   
+    }
 }
