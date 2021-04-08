@@ -131,6 +131,10 @@ const removeAllNeonClasses = (block) => {
         block.classList.remove('red-neon');
         return 1;
     }
+    if(blockClass.includes('black-neon')){
+        block.classList.remove('black-neon');
+        return null;
+    }
    
   
     
@@ -172,31 +176,162 @@ const changeNeon = (block,number) => {
     }
     
 }
+const changeColorWithTimer = (speed, repeatLimit, random='no', timer=-1, timerLimit=0) => {
+    let seconds;
+    let counter = 0;
+    if(timer !== -1){
+      seconds = setInterval(() => {
+            timer++;
+        }, 1000);    
+    }
+   
+    let interval = setInterval(() => {
+        if(counter >= repeatLimit || timer >= timerLimit){
+            clearInterval(seconds);
+            clearInterval(interval);
+        }
+        changeNeonColors(random);
+        counter++;
+    }, speed);
+ 
+}    
+const allNeonBlack = () => {
+    const blocks = Array.from(document.querySelectorAll('.block'));
+    
+    blocks.forEach( block => {
+        removeAllNeonClasses(block);
+        block.classList.add('black-neon');
+    });
+}
 const timerToChangeNeon = (number) => {
-    if(number === 0){
-        let time = 0;
 
-        let interval = setInterval(() => {
-            if(time >= 4){    
-                const interval2 = setInterval(() => {
-                    if(time >= 15){
-                        const interval3 = setInterval( () => {
-                            changeNeonColors();
-                            time++;
-                        },650)
-                        clearInterval(interval2);
-                    }
-                    changeNeonColors();
-                    time += 0.2;
-                }, 200);
-                clearInterval(interval);
-            }
-            time++;
-        }, 1000);
+    if(number === 0){
+        setTimeout( () => {    
+            changeColorWithTimer(300, 5000, 'no', 0, 5);
+        }, 1)
+        setTimeout( () => {    
+            console.log('x')
+            changeColorWithTimer(300, 5, 'random', 0, 11);
+        }, 5000)
+
+        setTimeout( () => {    
+            changeColorWithTimer(100, 5000, 'random', 0, 8);
+        }, 7000)
+        setInterval( () => {    
+            changeColorWithTimer(675, 99999999, 'no');
+        }, 15000)
+        setTimeout( () => {    
+            changeColorWithTimer(200, 3, 'no');
+        }, 22500)
+        setTimeout( () => {    
+            changeColorWithTimer(200, 2, 'no');
+        }, 25500)
     }   
 
     if(number === 1){
+        //changeColorWithTimer (speed, repeatLimit, random='no', timer=-1, timerLimit=0)
+        setTimeout( () => {
+            allNeonBlack()
+            changeColorWithTimer(400, 300, 'no', 0, 8);
+        }, 1200);
+        //double
+        setTimeout( () => {    
+            allNeonBlack()
+        }, 4700);
+        
+        setTimeout( () => {    
+            allNeonBlack()
+        }, 7000);
+        setTimeout( () => {    
+            changeColorWithTimer(50, 5000, 'random', 0, 3);
+        }, 8100);
+       
+        setTimeout( () => {    
+            changeColorWithTimer(50, 5000, 'random', 0, 2);
+        }, 12000);
+        setTimeout( () => {    
+            changeColorWithTimer(1, 1, 'no');
+        }, 15800);
+        setTimeout( () => {    
+            changeColorWithTimer(1, 1, 'no');
+        }, 17500);
+        setTimeout( () => {    
+            changeColorWithTimer(50, 50000, 'no', 0, 3);
+        }, 19600);
+
+        setTimeout( () => {    
+            changeColorWithTimer(150, 5, 'no');
+        }, 24200);
+        setTimeout( () => {    
+            changeColorWithTimer(150, 5, 'no');
+        }, 27200);
+        setTimeout( () => {    
+            changeColorWithTimer(150, 5, 'no');
+        }, 30400);
+        setTimeout( () => {    
+            changeColorWithTimer(50, 5000, 'no', 0, 2);
+        }, 33600);
+        setTimeout( () => {    
+            changeColorWithTimer(150, 5, 'no');
+        }, 37000);
+        setTimeout( () => {    
+            changeColorWithTimer(150, 5, 'no');
+        }, 40000);
+        setTimeout( () => {    
+            changeColorWithTimer(150, 5, 'no');
+        }, 43500);
+        setTimeout( () => {    
+            changeColorWithTimer(400, 50000, 'no', 0, 32);
+        }, 62600);
+        setTimeout( () => {    
+            changeColorWithTimer(50, 5000, 'no', 0, 2);
+        }, 95000);
+
+        setTimeout( () => {    
+            changeColorWithTimer(100, 3, 'no');
+        }, 98000);
+        setTimeout( () => {    
+            changeColorWithTimer(150, 5, 'no');
+        }, 98500);
+        setTimeout( () => {    
+            changeColorWithTimer(150, 5, 'no');
+        }, 102000);
+        setTimeout( () => {    
+            changeColorWithTimer(150, 5, 'no');
+        }, 105200);
+        setTimeout( () => {    
+            changeColorWithTimer(50, 50000, 'no', 0, 9);
+        }, 125000);
+        setTimeout( () => {    
+            allNeonBlack();
+            changeColorWithTimer(150, 5, 'no');
+        }, 137500);
+        setTimeout( () => {
+            changeColorWithTimer(150, 5, 'no');
+        }, 140500);
+        setTimeout( () => {
+            changeColorWithTimer(150, 5, 'no');
+        }, 144000);
+        setTimeout( () => {
+            changeColorWithTimer(50, 5000, 'no', 0, 2);
+        }, 147000);
+        setTimeout( () => {
+            changeColorWithTimer(150, 5, 'no');
+        }, 150500);
+        setTimeout( () => {
+            changeColorWithTimer(150, 5, 'no');
+        }, 153500);
+        setTimeout( () => {
+            changeColorWithTimer(150, 5, 'no');
+        }, 156500);
+        setTimeout( () => {
+            changeColorWithTimer(50, 5000, 'random', 0, 3);
+        }, 160000);
+        setTimeout( () => {
+            changeColorWithTimer(50, 5000, 'no', 0, 3)
+        }, 163300);
+
+
 
     }
 }
-

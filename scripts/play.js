@@ -24,4 +24,7 @@ const btnMuteAudioEl = document.getElementById("btnMuteAudio");
  * 
  */
 
-btnMuteAudioEl.onclick = () => document.getElementById('song').muted = !document.getElementById('song').muted;
+btnMuteAudioEl.onclick = () => {
+    document.getElementById('song-0').muted = !document.getElementById('song-0').muted;
+    document.getElementById('song-1').muted = !document.getElementById('song-1').muted;
+}

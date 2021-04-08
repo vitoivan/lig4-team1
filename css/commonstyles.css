@@ -45,6 +45,7 @@ STRUCTURE:
     --yellow-neon: 0 0 2px 2px #ffffff, 0 0 3px 5px #e7ebb6, 0 0 22px 5px #d4c720, inset 0 0 4px 2px #d4c720, inset 0 0 5px 2px #e7ebb6, inset 0 0 5px 2px #fff7f7;
     --red-neon: 0 0 2px 2px #ffffff, 0 0 3px 5px #e97272, 0 0 22px 5px #e50b0b, inset 0 0 4px 2px #e50b0b, inset 0 0 5px 2px #e97272, inset 0 0 5px 2px #fff7f7;
     --white-neon: 0 0 2px 2px #ffffff, 0 0 3px 5px #d4cccc, 0 0 22px 5px #d3d3d3, inset 0 0 4px 2px #d3d3d3, inset 0 0 5px 2px #d4cccc, inset 0 0 5px 2px #fff7f7;
+    --black-neon: 0 0 2px 2px #000000, 0 0 3px 5px #959595, 0 0 22px 5px #414141, inset 0 0 4px 2px #414141, inset 0 0 5px 2px #959595, inset 0 0 5px 2px #000;
 }
 
 
@@ -60,6 +61,9 @@ STRUCTURE:
 }
 .white-neon{
     box-shadow: var(--white-neon);
+}
+.black-neon{
+    box-shadow: var(--black-neon);
 }
 
 .displayFlex {

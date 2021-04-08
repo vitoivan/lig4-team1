@@ -1,9 +1,9 @@
 const playSong = () => {
   const number = getRandomNumber(1);
   const id = 'song-' + number;
-
+  
   const song = document.getElementById(id);
-  console.log(song)
+
   if(number === 0){
     song.volume = 0.15;
   }
@@ -12,4 +12,18 @@ const playSong = () => {
   }
   song.play();
   timerToChangeNeon(number);
+  const int = counter()
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'z'){
+        clearInterval(int)
+    }
+  })
+}
+function counter(){
+  time = 0;
+  const interval = setInterval( () => {
+    time++;
+    console.log(time);
+  },1000)
+  return interval;
 }
