@@ -210,7 +210,7 @@ const timerToChangeNeon = (number) => {
             changeColorWithTimer(300, 5000, 'no', 0, 5);
         }, 1)
         setTimeout( () => {    
-            console.log('x')
+
             changeColorWithTimer(300, 5, 'random', 0, 11);
         }, 5000)
 
