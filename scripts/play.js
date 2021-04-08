@@ -14,7 +14,7 @@ setInterval(() => {
 
 }, 120000); // 120s
 
-document.getElementById("song").volume = 0;
+document.getElementById("song").volume = .05;
 timerToChangeNeon(0);
 const btnMuteAudioEl = document.getElementById("btnMuteAudio");
 const btnRestart = document.getElementById("btnRestart");
