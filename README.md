@@ -10,7 +10,12 @@
       * Linguagem aplicada: ***javaSpript*** *puro*.
 
 ### Recursos:
-- [x] Desenvolvido com *MobileFirst*; ( ✔ 🆗 )
+- [x] Desenvolvido com *MobileFirst*; ( ✔ 🆗 );
+
+### Músicas utilizadas:
+ 1. [Blues Saraceno - Evil Ways (Glitch Hop Remix)](https://youtu.be/5r9P5GrZM-A)
+ 2. []()
+
 
 ### Demonstração:
 Via GitLab pages, clique [aqui](https://marconemm.gitlab.io/lig4-team1).
