@@ -146,3 +146,12 @@ main {
     letter-spacing: 0.05em;
     color: var(--color-white);
 }
+
+@media only screen and (min-width: 800px) {
+    /* GENERAL CONFIG: */
+    body {
+        background-image: url('../assets/img/home-&-game-desktop-bg.jpg');
+        background-size: cover;
+    }
+    /*MAIN*/
+}
