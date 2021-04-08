@@ -81,11 +81,14 @@ const renderPopUp = () => {
 
     const str = "venceu esta rodada."
 
-    if (hasWinner === GREEN)
+    if (hasWinner === GREEN){
         h3El.innerText = `VERDE ${str}`;
-    else
+    }
+    else if(hasWinner === PURPLE){
         h3El.innerText = `ROXO ${str}`;
-
+    }else if(hasWinner === DRAW){
+        h3El.innerText = `EMPATE! Ninguém venceu...`;
+    }
 
     removeChildNodes(resultScreenEl);
 
@@ -176,7 +179,7 @@ const createPieces = () => {
 
                 hasWinner = checkWin(blockXPosition, blockYPosition);
 
-                if (hasWinner) {
+                if (hasWinner !== false) {
                     console.log(hasWinner);
 
                     if (hasWinner === GREEN) {
@@ -203,6 +206,9 @@ const createPieces = () => {
                             setTimeout(resetTable, DELAY);
 
                         }
+                    }else if(hasWinner === DRAW){
+                        renderPopUp();
+                        setTimeout(resetTable, DELAY);
                     }
 
                     hasWinner = undefined; // reset the variable;
