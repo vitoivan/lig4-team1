@@ -68,11 +68,13 @@ main>nav.displayFlex {
 /*BUTTONS*/
 
 #buttonPlay {
+    will-change: transform;
     width: 200px;
     height: 200px;
     margin: 0 auto;
     background: var(--color-blue-cyan);
     border-radius: 50%;
+    transition: transform 50ms ease-out;
 }
 
 .polygon {
@@ -83,10 +85,6 @@ main>nav.displayFlex {
     border-left: 82px solid var(--color-white);
     background: var(--color-blue-cyan);
     margin: 45px 76px;
-}
-
-#buttonPlay:hover {
-    box-shadow: var(--box-shadow-neon);
 }
 
 #buttonPlay:active {
@@ -123,5 +121,9 @@ button#btnRules>span {
     body {
         background-image: url('../assets/img/home-&-game-desktop-bg.jpg');
         background-size: cover;
+    }
+    #buttonPlay:hover {
+        box-shadow: var(--box-shadow-neon);
+        transform: scale(1.3, 1.3);
     }
 }
