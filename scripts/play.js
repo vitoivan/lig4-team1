@@ -30,4 +30,4 @@ btnMuteAudioEl.onclick = () => document.getElementById('song').muted = !document
 
 btnHome.onclick = () => window.location = "./index.html";
 
-btnRestart.onclick = () => resetTable();
+btnRestart.onclick = () => resetGame();

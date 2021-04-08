@@ -7,9 +7,17 @@ const updateScore = (player) => {
     else
         playerScoreEl.innerText = score.purple;
 
-}; // updateScore()
+}; // updateScore(player)
 
-const resetTable = () => {
+const resetGame = () => {
+    debugger
+    const resultScreenEl = document.querySelector(`div[data-id="resultScreen"]`);
+
+    score.green = 0;
+    score.purple = 0;
+
+    updateScore(GREEN);
+    updateScore(PURPLE);
 
     for (let row = 0; row < 7; row++) {
         for (let column = 0; column < 6; column++) {
@@ -22,7 +30,11 @@ const resetTable = () => {
             }
         }
     }
-}; // resetTable()
+
+    resultScreenEl.classList.add(DISPLAY_NONE_CLASS);
+    resultScreenEl.classList.add(HIDDEN_CLASS);
+
+}; // resetGame()
 
 const renderResultScreen = () => {
     const resultScreenEl = document.querySelector(`div[data-id="resultScreen"]`);
@@ -47,7 +59,7 @@ const renderResultScreen = () => {
     resultScreenEl.appendChild(h3El);
     resultScreenEl.appendChild(btnRestart);
 
-    btnRestart.onclick = () => resetTable();
+    btnRestart.onclick = resetGame;
 
     resultScreenEl.classList.remove(DISPLAY_NONE_CLASS);
     resultScreenEl.classList.remove(HIDDEN_CLASS);
@@ -89,7 +101,7 @@ const createPieces = () => {
     const currentPLayerEl = document.querySelector(`div[data-id="currentPlayer"]`);
     const CLASS_PLAYER_GREEN = "player--green";
     const CLASS_PLAYER_PURPLE = "player--purple";
-    const MAX_POINTS = 1;
+    const MAX_POINTS = 3;
     const DELAY = 3000;
 
     if (PLAYER1 === PURPLE)
@@ -167,7 +179,7 @@ const createPieces = () => {
                             score.green += 1;
                             updateScore(GREEN);
                             renderPopUp();
-                            setTimeout(resetTable, DELAY);
+                            setTimeout(resetGame, DELAY);
 
                         }
                     } else if (hasWinner === PURPLE) {
@@ -179,7 +191,7 @@ const createPieces = () => {
                             score.purple += 1;
                             updateScore(PURPLE);
                             renderPopUp();
-                            setTimeout(resetTable, DELAY);
+                            setTimeout(resetGame, DELAY);
 
                         }
                     }
@@ -190,4 +202,4 @@ const createPieces = () => {
             }
         });
     }
-};
+}; // createPieces()
