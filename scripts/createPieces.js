@@ -92,11 +92,15 @@ const renderPopUp = () => {
     resultScreenEl.appendChild(h2El);
     resultScreenEl.appendChild(h3El);
 
+
+    resultScreenEl.classList.remove(DISPLAY_NONE_CLASS);
     resultScreenEl.classList.remove(HIDDEN_CLASS);
     resultScreenEl.style.zIndex = '1';
     resultScreenEl.onclick = () => {
+
         resultScreenEl.classList.add(HIDDEN_CLASS);
-        resultScreenEl.style.zIndex = '-2';
+        setTimeout(() => resultScreenEl.classList.add(DISPLAY_NONE_CLASS), DELAY / 2);
+
     };
 
 }; // renderPopUp()

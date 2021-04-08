@@ -13,8 +13,8 @@ setInterval(() => {
     changeStarPattern();
 
 }, 120000); // 120s
-playSong();
 
+playSong();
 
 const btnMuteAudioEl = document.getElementById("btnMuteAudio");
 const btnRestart = document.getElementById("btnRestart");
@@ -26,10 +26,10 @@ const btnHome = document.getElementById("btnHome");
  * 
  */
 
- btnMuteAudioEl.addEventListener( 'click', () => {
+btnMuteAudioEl.addEventListener('click', () => {
 
-    const song0 =  document.getElementById('song-0');
-    const song1 =  document.getElementById('song-1');
+    const song0 = document.getElementById('song-0');
+    const song1 = document.getElementById('song-1');
     song0.muted = !song0.muted;
     song1.muted = !song1.muted;
 })

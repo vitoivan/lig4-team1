@@ -73,171 +73,171 @@ const whenSecondAudioStop = () => {
 }
 
 const fallingBall = (piece) => {
-    
+
     let audio = undefined;
 
-    if(firstAudioIsPlaying === false){
+    if (firstAudioIsPlaying === false) {
         audio = document.getElementById('audioFallingBall');
         firstAudioIsPlaying = true;
     } else {
         audio = document.getElementById('audioFallingBall2');
-        
+
         SecondAudioIsPlaying = true;
     }
 
     const vol = 1;
     piece.classList.add('falling');
     const timeOut = setTimeout(() => {
-       
+
         audio.volume = vol;
         audio.play();
         piece.classList.remove('falling');
         piece.style.animation = 'bouncing 1s cubic-bezier(0, 0.74, 1, 0.24)';
 
         clearTimeout(timeOut);
-    },555);
+    }, 555);
 }
 
-const changeColorWithTimer = (speed, repeatLimit, random='no', timer=-1, timerLimit=0) => {
+const changeColorWithTimer = (speed, repeatLimit, random = 'no', timer = -1, timerLimit = 0) => {
     let seconds;
     let counter = 0;
-    if(timer !== -1){
-      seconds = setInterval(() => {
+    if (timer !== -1) {
+        seconds = setInterval(() => {
             timer++;
-        }, 1000);    
+        }, 1000);
     }
 
     let interval = setInterval(() => {
-        if(counter >= repeatLimit || timer >= timerLimit){
+        if (counter >= repeatLimit || timer >= timerLimit) {
             clearInterval(seconds);
             clearInterval(interval);
         }
-        applyNormalOrRandomNeon(random);  
+        applyNormalOrRandomNeon(random);
         counter++;
     }, speed);
- 
-}    
+
+}
 
 const timerToChangeNeon = (number) => {
 
-    if(number === 0){
-        setTimeout( () => {    
+    if (number === 0) {
+        setTimeout(() => {
             changeColorWithTimer(300, 5000, 'no', 0, 5);
         }, 1)
-        setTimeout( () => {    
+        setTimeout(() => {
             changeColorWithTimer(300, 5, 'random', 0, 11);
         }, 5000)
 
-        setTimeout( () => {    
+        setTimeout(() => {
             changeColorWithTimer(100, 5000, 'random', 0, 9);
         }, 7000)
-        setTimeout( () => {    
-            changeColorWithTimer(650, 90000, 'no', 0 , 360);
+        setTimeout(() => {
+            changeColorWithTimer(650, 90000, 'no', 0, 360);
         }, 15200)
 
-       
-    }   
 
-    if(number === 1){
+    }
+
+    if (number === 1) {
         //changeColorWithTimer (speed, repeatLimit, random='no', timer=-1, timerLimit=0)
-        setTimeout( () => {
+        setTimeout(() => {
             allNeonBlack()
             changeColorWithTimer(400, 300, 'no', 0, 8);
         }, 1200);
         //double
-        setTimeout( () => {    
+        setTimeout(() => {
             allNeonBlack()
         }, 4700);
-        
-        setTimeout( () => {    
+
+        setTimeout(() => {
             allNeonBlack()
         }, 7000);
-        setTimeout( () => {    
+        setTimeout(() => {
             changeColorWithTimer(50, 5000, 'random', 0, 3);
         }, 8100);
-       
-        setTimeout( () => {    
+
+        setTimeout(() => {
             changeColorWithTimer(50, 5000, 'random', 0, 2);
         }, 12000);
-        setTimeout( () => {    
+        setTimeout(() => {
             changeColorWithTimer(1, 1, 'no');
         }, 15800);
-        setTimeout( () => {    
+        setTimeout(() => {
             changeColorWithTimer(1, 1, 'no');
         }, 17500);
-        setTimeout( () => {    
+        setTimeout(() => {
             changeColorWithTimer(50, 50000, 'no', 0, 3);
         }, 19600);
 
-        setTimeout( () => {    
+        setTimeout(() => {
             changeColorWithTimer(150, 5, 'no');
         }, 24200);
-        setTimeout( () => {    
+        setTimeout(() => {
             changeColorWithTimer(150, 5, 'no');
         }, 27200);
-        setTimeout( () => {    
+        setTimeout(() => {
             changeColorWithTimer(150, 5, 'no');
         }, 30400);
-        setTimeout( () => {    
+        setTimeout(() => {
             changeColorWithTimer(50, 5000, 'no', 0, 2);
         }, 33600);
-        setTimeout( () => {    
+        setTimeout(() => {
             changeColorWithTimer(150, 5, 'no');
         }, 37000);
-        setTimeout( () => {    
+        setTimeout(() => {
             changeColorWithTimer(150, 5, 'no');
         }, 40000);
-        setTimeout( () => {    
+        setTimeout(() => {
             changeColorWithTimer(150, 5, 'no');
         }, 43500);
-        setTimeout( () => {    
+        setTimeout(() => {
             changeColorWithTimer(400, 50000, 'no', 0, 32);
         }, 62600);
-        setTimeout( () => {    
+        setTimeout(() => {
             changeColorWithTimer(50, 5000, 'no', 0, 2);
         }, 95000);
 
-        setTimeout( () => {    
+        setTimeout(() => {
             changeColorWithTimer(100, 3, 'no');
         }, 98000);
-        setTimeout( () => {    
+        setTimeout(() => {
             changeColorWithTimer(150, 5, 'no');
         }, 98500);
-        setTimeout( () => {    
+        setTimeout(() => {
             changeColorWithTimer(150, 5, 'no');
         }, 102000);
-        setTimeout( () => {    
+        setTimeout(() => {
             changeColorWithTimer(150, 5, 'no');
         }, 105200);
-        setTimeout( () => {    
+        setTimeout(() => {
             changeColorWithTimer(50, 50000, 'no', 0, 9);
         }, 125000);
-        setTimeout( () => {    
+        setTimeout(() => {
             allNeonBlack();
             changeColorWithTimer(150, 5, 'no');
         }, 137500);
-        setTimeout( () => {
+        setTimeout(() => {
             changeColorWithTimer(150, 5, 'no');
         }, 140500);
-        setTimeout( () => {
+        setTimeout(() => {
             changeColorWithTimer(150, 5, 'no');
         }, 144000);
-        setTimeout( () => {
+        setTimeout(() => {
             changeColorWithTimer(50, 5000, 'no', 0, 2);
         }, 147000);
-        setTimeout( () => {
+        setTimeout(() => {
             changeColorWithTimer(150, 5, 'no');
         }, 150500);
-        setTimeout( () => {
+        setTimeout(() => {
             changeColorWithTimer(150, 5, 'no');
         }, 153500);
-        setTimeout( () => {
+        setTimeout(() => {
             changeColorWithTimer(150, 5, 'no');
         }, 156500);
-        setTimeout( () => {
+        setTimeout(() => {
             changeColorWithTimer(50, 5000, 'random', 0, 3);
         }, 160000);
-        setTimeout( () => {
+        setTimeout(() => {
             changeColorWithTimer(50, 5000, 'no', 0, 3)
         }, 163300);
 

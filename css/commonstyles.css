@@ -26,6 +26,9 @@ STRUCTURE:
 
 /* VARABLES DECLARATION: */
 
+
+/*0 0 1px 1px #ffffff, 0 0 2px 3px #d572e9, 0 0 10px 4px #a70be5, inset 0 0 2px 1px #A70BE5, inset 0 0 5px 2px #d572e9, inset 0 0 5px 1px #fff7f7*/
+
 :root {
     --color-white: #f8f8fa;
     --color-yellow: #faa307;
@@ -41,12 +44,16 @@ STRUCTURE:
     --button-width: 220px;
     --button-height: 50px;
     /* --box-shadow-neon: 0 0 0.1vw 0.4vw #ffffff, 0 0 0.4vw 0.6vw #d572e9, 0 0 4vw 0.4vw #a70be5, inset 0 0 1.5vw 0.4vw #a70be5, inset 0 0 0.4vw 0.2vw #d572e9, inset 0 0 0.5vw 0.2vw #fff7f7; */
-    --box-shadow-neon: 0 0 2px 2px #ffffff, 0 0 3px 5px #d572e9, 0 0 22px 5px #a70be5, inset 0 0 4px 2px #A70BE5, inset 0 0 5px 2px #d572e9, inset 0 0 5px 2px #fff7f7;
+    /* --box-shadow-neon: 0 0 2px 2px #ffffff, 0 0 3px 5px #d572e9, 0 0 22px 5px #a70be5, inset 0 0 4px 2px #A70BE5, inset 0 0 5px 2px #d572e9, inset 0 0 5px 2px #fff7f7; */
     /* --yellow-neon: 0 0 2px 2px #ffffff, 0 0 3px 5px #e1e972, 0 0 22px 5px #e5d60b, inset 0 0 4px 2px #e5d60b, inset 0 0 5px 2px #e1e972, inset 0 0 5px 2px #fff7f7; */
-    --yellow-neon: 0 0 2px 2px #ffffff, 0 0 3px 5px #e7ebb6, 0 0 22px 5px #d4c720, inset 0 0 4px 2px #d4c720, inset 0 0 5px 2px #e7ebb6, inset 0 0 5px 2px #fff7f7;
-    --red-neon: 0 0 2px 2px #ffffff, 0 0 3px 5px #e97272, 0 0 22px 5px #e50b0b, inset 0 0 4px 2px #e50b0b, inset 0 0 5px 2px #e97272, inset 0 0 5px 2px #fff7f7;
-    --white-neon: 0 0 2px 2px #ffffff, 0 0 3px 5px #d4cccc, 0 0 22px 5px #d3d3d3, inset 0 0 4px 2px #d3d3d3, inset 0 0 5px 2px #d4cccc, inset 0 0 5px 2px #fff7f7;
-    --black-neon: 0 0 2px 2px #000000, 0 0 3px 5px #959595, 0 0 22px 5px #414141, inset 0 0 4px 2px #414141, inset 0 0 5px 2px #959595, inset 0 0 5px 2px #000;
+    /* --yellow-neon: 0 0 2px 2px #ffffff, 0 0 3px 5px #e7ebb6, 0 0 22px 5px #d4c720, inset 0 0 4px 2px #d4c720, inset 0 0 5px 2px #e7ebb6, inset 0 0 5px 2px #fff7f7; */
+    /* --red-neon: 0 0 2px 2px #ffffff, 0 0 3px 5px #e97272, 0 0 22px 5px #e50b0b, inset 0 0 4px 2px #e50b0b, inset 0 0 5px 2px #e97272, inset 0 0 5px 2px #fff7f7; */
+    /* --white-neon: 0 0 2px 2px #ffffff, 0 0 3px 5px #d4cccc, 0 0 22px 5px #d3d3d3, inset 0 0 4px 2px #d3d3d3, inset 0 0 5px 2px #d4cccc, inset 0 0 5px 2px #fff7f7; */
+    --box-shadow-neon: 0 0 1px 2px #ffffff, 0 0 2px 3px #d572e9, 0 0 10px 4px #a70be5, inset 0 0 2px 1px #A70BE5, inset 0 0 5px 2px #d572e9, inset 0 0 5px 1px #fff7f7;
+    --yellow-neon: 0 0 1px 2px #ffffff, 0 0 2px 3px #e7ebb6, 0 0 10px 4px #d4c720, inset 0 0 2px 1px #d4c720, inset 0 0 5px 2px #e7ebb6, inset 0 0 5px 1px #fff7f7;
+    --red-neon: 0 0 1px 2px #ffffff, 0 0 2px 3px #e97272, 0 0 10px 4px #e50b0b, inset 0 0 2px 1px #e50b0b, inset 0 0 5px 2px #e97272, inset 0 0 5px 1px #fff7f7;
+    --white-neon: 0 0 1px 2px #ffffff, 0 0 2px 3px #d4cccc, 0 0 10px 4px #d3d3d3, inset 0 0 2px 1px #d3d3d3, inset 0 0 5px 2px #d4cccc, inset 0 0 5px 1px #fff7f7;
+    --black-neon: 0 0 2px 2px #000000, 0 0 3px 5px #959595, 0 0 22px 5px #414141, inset 0 0 4px 2px #414141, inset 0 0 5px 2px #959595, inset 0 0 5px 2px #000000;
 }
 
 
@@ -67,7 +74,12 @@ STRUCTURE:
 .white-neon {
     box-shadow: var(--white-neon);
 }
-.black-neon{
+
+.black-neon {
+    box-shadow: var(--black-neon);
+}
+
+.black-neon {
     box-shadow: var(--black-neon);
 }
 
@@ -127,7 +139,7 @@ html {
     margin: 0 10px;
     border-radius: 40px;
     font-size: 0.8rem;
-    border: none;
+    /* border: none; */
     font-weight: bold;
     color: var(--color-white);
     background: var(--color-purple-buttons);
@@ -136,6 +148,7 @@ html {
 
 .btn:active {
     transform: translateY(2px);
+    border: 2px dotted var(--white-neon);
 }
 
 
@@ -144,6 +157,7 @@ html {
 .btn:hover {
     cursor: pointer;
     color: var(--color-yellow);
+    box-shadow: var(--white-neon);
     font-style: italic;
     transition: color var(--transition-time) ease-out, font-style var(--transition-time) ease-out;
 }
