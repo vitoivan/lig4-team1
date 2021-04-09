@@ -18,7 +18,7 @@ playSong();
 
 const btnMuteAudioEl = document.getElementById("btnMuteAudio");
 const btnRestartEl = document.getElementById("btnRestart");
-const buttonBackEl = document.getElementById("btnHome");
+const buttonBackEl = document.getElementById("buttonBack");
 
 /**
  * 
