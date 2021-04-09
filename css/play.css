@@ -33,7 +33,7 @@ body {
     color: var(--color-texts);
     background-image: url("../assets/img/menu-background.png");
     background-size: cover;
-    overflow: hidden;
+
 }
 
 
