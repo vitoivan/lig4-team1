@@ -39,10 +39,10 @@ Via GitLab pages, clique [aqui](https://marconemm.gitlab.io/lig4-team1).
  <br />
  <sub><b>Ioane Faumui</b></sub></a>
 
-[![GitLab Badge](https://img.shields.io/badge/-Marcone_Melo-black?style=plastic&logo=GitLab&logoColor=yellow&link=https://gitlab.com/marconemm)](https://gitlab.com/ioanefaumui)
-[![GitHub Badge](https://img.shields.io/badge/-Marcone_Melo-black?style=plastic&logo=GitHub&logoColor=white&link=https://github.com/marconemm)](https://github.com/ioanefaumui)
-[![Linkedin Badge](https://img.shields.io/badge/-Marcone_Melo-blue?style=plastic&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/marconemm/)](https://www.linkedin.com/in/ioanefaumui/) 
-[![Yahoo Badge](https://img.shields.io/badge/-marconemendonca@ymail.com-c14438?style=plastic&logo=Yahoo!&logoColor=white&link=mailto:marconemendonca@ymail.com)](mailto:ioanefaumui@gmail.com)
+[![GitLab Badge](https://img.shields.io/badge/-Ioane_Faumui-black?style=plastic&logo=GitLab&logoColor=yellow&link=https://gitlab.com/ioanefaumui)](https://gitlab.com/ioanefaumui)
+[![GitHub Badge](https://img.shields.io/badge/-Ioane_Faumui-black?style=plastic&logo=GitHub&logoColor=white&link=https://github.com/ioanefaumui)](https://github.com/ioanefaumui)
+[![Linkedin Badge](https://img.shields.io/badge/-Ioane_Faumui-blue?style=plastic&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/ioanefaumui/)](https://www.linkedin.com/in/ioanefaumui) 
+[![Gmail Badge](https://img.shields.io/badge/-ioanefaumui@gmail.com-c14438?style=plastic&logo=gmail!&logoColor=white&link=mailto:ioanefaumui@gmail.com)](mailto:ioanefaumui@gmail.com)
 
 
 <a href="https://www.linkedin.com/in/marconemm/">
