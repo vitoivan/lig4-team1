@@ -118,6 +118,33 @@ body {
 }
 
 
+/*TEXTS: */
+
+h1,
+ul.rules>li>h3,
+p,
+input {
+    font-family: var(--font-family-Monda);
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    color: var(--color-white);
+}
+
+p {
+    font-size: 1.2em;
+    font-style: normal;
+    line-height: 25px;
+    letter-spacing: 0.01em;
+    color: var(--color-white);
+}
+
+
 /*BUTTONS*/
 
 .game-buttons {

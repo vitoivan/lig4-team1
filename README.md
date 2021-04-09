@@ -28,12 +28,10 @@ Via GitLab pages, clique [aqui](https://marconemm.gitlab.io/lig4-team1).
  <br />
  <sub><b>Marcone Melo</b></sub></a>
 
-Entre em contato:
-
 [![GitLab Badge](https://img.shields.io/badge/-Marcone_Melo-black?style=plastic&logo=GitLab&logoColor=yellow&link=https://gitlab.com/marconemm)](https://gitlab.com/marconemm)
 [![GitHub Badge](https://img.shields.io/badge/-Marcone_Melo-black?style=plastic&logo=GitHub&logoColor=white&link=https://github.com/marconemm)](https://github.com/marconemm)
 [![Linkedin Badge](https://img.shields.io/badge/-Marcone_Melo-blue?style=plastic&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/marconemm/)](https://www.linkedin.com/in/marconemm/) 
-[![Yahoo Badge](https://img.shields.io/badge/-marocnemendonca@ymial.com-c14438?style=plastic&logo=Yahoo!&logoColor=white&link=mailto:marocnemendonca@ymial.com)](mailto:marocnemendonca@ymial.com)
+[![Yahoo Badge](https://img.shields.io/badge/-marconemendonca@ymail.com-c14438?style=plastic&logo=Yahoo!&logoColor=white&link=mailto:marconemendonca@ymail.com)](mailto:marconemendonca@ymail.com)
 
 
 <a href="https://www.linkedin.com/in/marconemm/">
@@ -41,12 +39,10 @@ Entre em contato:
  <br />
  <sub><b>Marcone Melo</b></sub></a>
 
-Entre em contato:
-
 [![GitLab Badge](https://img.shields.io/badge/-Marcone_Melo-black?style=plastic&logo=GitLab&logoColor=yellow&link=https://gitlab.com/marconemm)](https://gitlab.com/marconemm)
 [![GitHub Badge](https://img.shields.io/badge/-Marcone_Melo-black?style=plastic&logo=GitHub&logoColor=white&link=https://github.com/marconemm)](https://github.com/marconemm)
 [![Linkedin Badge](https://img.shields.io/badge/-Marcone_Melo-blue?style=plastic&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/marconemm/)](https://www.linkedin.com/in/marconemm/) 
-[![Yahoo Badge](https://img.shields.io/badge/-marocnemendonca@ymial.com-c14438?style=plastic&logo=Yahoo!&logoColor=white&link=mailto:marocnemendonca@ymial.com)](mailto:marocnemendonca@ymial.com)
+[![Yahoo Badge](https://img.shields.io/badge/-marconemendonca@ymail.com-c14438?style=plastic&logo=Yahoo!&logoColor=white&link=mailto:marconemendonca@ymail.com)](mailto:marconemendonca@ymail.com)
 
 
 <a href="https://www.linkedin.com/in/marconemm/">
@@ -54,20 +50,16 @@ Entre em contato:
  <br />
  <sub><b>Marcone Melo</b></sub></a>
 
-Entre em contato:
-
 [![GitLab Badge](https://img.shields.io/badge/-Marcone_Melo-black?style=plastic&logo=GitLab&logoColor=yellow&link=https://gitlab.com/marconemm)](https://gitlab.com/marconemm)
 [![GitHub Badge](https://img.shields.io/badge/-Marcone_Melo-black?style=plastic&logo=GitHub&logoColor=white&link=https://github.com/marconemm)](https://github.com/marconemm)
 [![Linkedin Badge](https://img.shields.io/badge/-Marcone_Melo-blue?style=plastic&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/marconemm/)](https://www.linkedin.com/in/marconemm/) 
-[![Yahoo Badge](https://img.shields.io/badge/-marocnemendonca@ymial.com-c14438?style=plastic&logo=Yahoo!&logoColor=white&link=mailto:marocnemendonca@ymial.com)](mailto:marocnemendonca@ymial.com)
+[![Yahoo Badge](https://img.shields.io/badge/-marconemendonca@ymail.com-c14438?style=plastic&logo=Yahoo!&logoColor=white&link=mailto:marconemendonca@ymail.com)](mailto:marconemendonca@ymail.com)
 
 
 <a href="https://www.linkedin.com/in/victor-ivan/">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/17788366?v=4" width="100px;" alt=""/>
  <br />
  <sub><b>Victor Ivan</b></sub></a>
-
-Entre em contato:
 
 [![GitLab Badge](https://img.shields.io/badge/-Victor_Ivan-black?style=plastic&logo=GitLab&logoColor=yellow&link=https://www.linkedin.com/in/victor-ivan/)](https://github.com/vitoivan)
 [![GitHub Badge](https://img.shields.io/badge/-Victor_Ivan-black?style=plastic&logo=GitHub&logoColor=white&link=https://www.linkedin.com/in/victor-ivan/)](https://gitlab.com/vitoivan)

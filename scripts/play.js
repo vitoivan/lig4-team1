@@ -18,7 +18,7 @@ playSong();
 
 const btnMuteAudioEl = document.getElementById("btnMuteAudio");
 const btnRestartEl = document.getElementById("btnRestart");
-const btnHomeEl = document.getElementById("btnHome");
+const buttonBackEl = document.getElementById("btnHome");
 
 /**
  * 
@@ -34,6 +34,6 @@ btnMuteAudioEl.addEventListener('click', () => {
     song1.muted = !song1.muted;
 })
 
-btnHomeEl.onclick = () => window.location = "./index.html";
+buttonBackEl.addEventListener("click", () => window.location = "./index.html");
 
 btnRestartEl.onclick = () => resetGame();

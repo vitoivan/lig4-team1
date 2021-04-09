@@ -41,22 +41,6 @@ img {
     max-width: 225px;
 }
 
-h1,
-ul.rules>li>h3,
-p,
-input {
-    font-family: var(--font-family-Monda);
-}
-
-h1 {
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1.8rem;
-    letter-spacing: 0.1rem;
-    color: var(--color-white);
-}
-
 .rules {
     width: 85%;
     margin: 0 auto 10px;
@@ -67,14 +51,6 @@ ul.rules>li>h3 {
     font-size: 1.5rem;
     text-decoration: underline;
     margin-top: 10px;
-}
-
-p {
-    font-size: 1.2em;
-    font-style: normal;
-    line-height: 25px;
-    letter-spacing: 0.01em;
-    color: var(--color-white);
 }
 
 .buttonBack {
