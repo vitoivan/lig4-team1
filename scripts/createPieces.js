@@ -50,6 +50,7 @@ const resetGame = () => {
 }; // resetGame()
 
 const renderResultScreen = () => {
+    removeEvtListeners()
     const resultScreenEl = document.querySelector(`div[data-id="resultScreen"]`);
     const h2El = document.createElement("h2");
     const h3El = document.createElement("h3");
