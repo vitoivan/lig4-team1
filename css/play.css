@@ -252,6 +252,19 @@ button.mute {
         font-size: 1.5rem;
         left: 1vw;
     }
+
+    div.game-wrapper{
+        margin-top: 10px;
+    }
+
+    .game-buttons{
+        margin-top: 10px;
+    }
+
+    .displayFlex > .block{
+        width: 30px;
+        height: 30px;
+    }
 }
 
 
