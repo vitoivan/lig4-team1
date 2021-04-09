@@ -19,6 +19,7 @@ STRUCTURE:
 **** @keyframes
 **** VARABLES DECLARATION
 **** GENREAL CONFIG
+**** @medias
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&family=Monda&display=swap');
@@ -34,7 +35,7 @@ STRUCTURE:
     --color-RGBA-white: rgba(237, 221, 212, 0.86);
     --font-family-Molle: Molle, cursive;
     --font-family-Monda: Monda, monospace;
-    --piece-size: 35px;
+    --piece-size: 32px;
     --transition-time: 150ms;
     --border-radius: 10px;
     --button-width: 220px;
@@ -107,11 +108,39 @@ STRUCTURE:
     display: none;
 }
 
-html {
+html,
+body {
     width: 100vw;
     height: 100vh;
     margin: 0 auto;
     font-family: var(--font-family-Monda);
+    color: var(--color-white);
+}
+
+
+/*TEXTS: */
+
+h1,
+ul.rules>li>h3,
+p,
+input {
+    font-family: var(--font-family-Monda);
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    color: var(--color-white);
+}
+
+p {
+    font-size: 1.2em;
+    font-style: normal;
+    line-height: 25px;
+    letter-spacing: 0.01em;
     color: var(--color-white);
 }
 
@@ -130,7 +159,6 @@ html {
     margin: 0 10px;
     border-radius: 40px;
     font-size: 0.8rem;
-    /* border: none; */
     font-weight: bold;
     color: var(--color-white);
     background: var(--color-purple-buttons);
@@ -138,23 +166,6 @@ html {
 }
 
 .btn:active {
-    transform: translateY(2px);
-    border: 2px dotted var(--white-neon);
-}
-
-.mute {
-    height: 40px;
-    width: 40px;
-    border-radius: 30%;
-    font-size: 1.5rem;
-    background: var(--color-purple-buttons);
-    color: var(--color-white);
-    position: absolute;
-    right: 4px;
-    top: 6px;
-}
-
-.mute:active {
     transform: translateY(2px);
     border: 2px dotted var(--white-neon);
 }
@@ -170,10 +181,12 @@ html {
     transition: color var(--transition-time) ease-out, font-style var(--transition-time) ease-out;
 }
 
-.mute:hover {
-    cursor: pointer;
-    color: var(--color-yellow);
-    box-shadow: var(--white-neon);
-    font-style: italic;
-    transition: color var(--transition-time) ease-out, font-style var(--transition-time) ease-out;
+
+/*@media: */
+
+@media only screen and (min-width: 800px) {
+    /*VARIABLE DECLARATIONS: */
+     :root {
+        --piece-size: 50px;
+    }
 }

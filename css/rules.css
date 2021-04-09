@@ -41,25 +41,6 @@ img {
     max-width: 225px;
 }
 
-h1,
-ul.rules>li>h3,
-p,
-input {
-    font-family: var(--font-family-Monda);
-}
-
-h1 {
-    margin-bottom: 10px;
-    font-size: 3em;
-    text-align: center;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 39px;
-    letter-spacing: 0.05em;
-    color: #fff;
-}
-
 .rules {
     width: 85%;
     margin: 0 auto 10px;
@@ -72,33 +53,9 @@ ul.rules>li>h3 {
     margin-top: 10px;
 }
 
-p {
-    font-size: 1.2em;
-    font-style: normal;
-    font-weight: bold;
-    line-height: 25px;
-    letter-spacing: 0.01em;
-    color: #fff;
-}
-
 .buttonBack {
     margin: 0 auto;
     text-align: center;
-}
-
-input {
-    width: 111px;
-    height: 64px;
-    background: #BC1BF7;
-    border-radius: 32px;
-    border: none;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 29px;
-    letter-spacing: 0.05em;
-    color: #FFFFFF;
-    margin-bottom: 20px;
 }
 
 

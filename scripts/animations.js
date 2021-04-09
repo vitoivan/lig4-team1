@@ -1,5 +1,3 @@
-// const getRandomNumber = max => Math.round(Math.random() * max);
-
 const getRandomNumberBetween = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;;
 
 const getStars = max => {
@@ -33,6 +31,7 @@ const renderStars = () => {
         const delay = getRandomNumber(3);
         const duration = getRandomNumberBetween(10, 15);
 
+        starEl.style.setProperty("will-change", "transform");
         starEl.classList.add("star");
         starEl.classList.add(`star__${i}`);
         starEl.style.setProperty("--d", `${delay}s`);
@@ -171,16 +170,16 @@ const timerToChangeNeon = (number) => {
             changeColorWithTimer(70, 3, 'no');
         }, 14800)
         setTimeout(() => {
-            allNeonBlack()
-        }, 15400)
-        //pa ra ran
+                allNeonBlack()
+            }, 15400)
+            //pa ra ran
         setTimeout(() => {
             changeColorWithTimer(625, 500, 'no', 0, 6);
         }, 15800)
         setTimeout(() => {
             changeColorWithTimer(200, 5, 'no');
         }, 22200)
-        
+
         setTimeout(() => {
             changeColorWithTimer(650, 2, 'no');
         }, 23600)
@@ -200,13 +199,13 @@ const timerToChangeNeon = (number) => {
         setTimeout(() => {
             changeColorWithTimer(200, 4, 'no');
         }, 35700)
-        
+
         setTimeout(() => {
             changeColorWithTimer(650, 900000, 'no');
         }, 36500)
 
-        
-        
+
+
 
 
 

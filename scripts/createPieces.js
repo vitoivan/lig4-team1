@@ -89,12 +89,11 @@ const renderPopUp = () => {
 
     const str = "venceu esta rodada."
 
-    if (hasWinner === GREEN){
+    if (hasWinner === GREEN) {
         h3El.innerText = `VERDE ${str}`;
-    }
-    else if(hasWinner === PURPLE){
+    } else if (hasWinner === PURPLE) {
         h3El.innerText = `ROXO ${str}`;
-    }else if(hasWinner === DRAW){
+    } else if (hasWinner === DRAW) {
         h3El.innerText = `EMPATE! Ninguém venceu...`;
     }
 
@@ -123,7 +122,7 @@ const createPieces = () => {
     else
         currentPLayerEl.classList.add(CLASS_PLAYER_PURPLE);
 
-        
+
     for (let i = 0; i < columnsList.length; i++) {
 
         column = columnsList[i];
@@ -134,9 +133,9 @@ const createPieces = () => {
 
 const appendPiece = (e) => {
     column = e.currentTarget;
-    let arrayOfBlocks = column.childNodes;
-   
-    let arrayOfEmptyBlocks = [];
+    const arrayOfBlocks = column.childNodes;
+
+    const arrayOfEmptyBlocks = [];
 
     for (let i = 0; i < arrayOfBlocks.length; i++) {
         if (arrayOfBlocks[i].childNodes.length === 0) {
@@ -145,12 +144,12 @@ const appendPiece = (e) => {
     }
     const pieceEl = document.createElement('div');
 
-    let lastBlock = arrayOfEmptyBlocks[arrayOfEmptyBlocks.length - 1]
+    const lastBlock = arrayOfEmptyBlocks[arrayOfEmptyBlocks.length - 1]
 
     if (lastBlock) {
 
-        let blockXPosition = parseInt(lastBlock.id.split('-')[1]);
-        let blockYPosition = parseInt(lastBlock.id.split('-')[2]);
+        const blockXPosition = parseInt(lastBlock.id.split('-')[1]);
+        const blockYPosition = parseInt(lastBlock.id.split('-')[2]);
 
         if (currentPlayer === PLAYER1) {
             map[blockXPosition][blockYPosition] = 1;
@@ -213,7 +212,7 @@ const appendPiece = (e) => {
                     setTimeout(resetTable, DELAY);
 
                 }
-            }else if(hasWinner === DRAW){
+            } else if (hasWinner === DRAW) {
                 renderPopUp();
                 setTimeout(resetTable, DELAY);
             }
@@ -225,12 +224,12 @@ const appendPiece = (e) => {
 }
 
 const removeEvtListeners = () => {
-    for(let i = 0; i < columnsList.length; i++){
-        columnsList[i].removeEventListener('click',appendPiece);
+    for (let i = 0; i < columnsList.length; i++) {
+        columnsList[i].removeEventListener('click', appendPiece);
     }
 }
 const addEvtListeners = () => {
-    for(let i = 0; i < columnsList.length; i++){
-        columnsList[i].addEventListener('click',appendPiece);
+    for (let i = 0; i < columnsList.length; i++) {
+        columnsList[i].addEventListener('click', appendPiece);
     }
 }

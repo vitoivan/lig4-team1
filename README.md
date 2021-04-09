@@ -3,14 +3,19 @@
 #### *Status do Projeto:* 🚧 **Aceitando Contribuições...**  🚧
 
 ## Apresentação:
+* ### Descrição: o ***Lig 4*** é um jogo baseado em que os jogadores devem colocar as bolas estrategicamente na base, revezando um de cada vez, com o objetivo de formar uma sequência com os 4 discos da sua cor, ao mesmo tempo em que devem prestar atenção para bloquear as tentativas do oponente.
 * Este projeto é o resultado do **desafio de final da Sprint** do curso de ***#fullStack*** da [Kenzie Academy Brasil](https://kenzie.com.br/).
 * * ### Detalhes: 
       * Desenvolvido no final da *Sprint 5*; e
       * Linguagem aplicada: ***javaSpript*** *puro*.
 
 ### Recursos:
-- [ ] Desenvolvido com *MobileFirst*; ( ✔ 🆗 )
-- [ ] (editar...); ( 👷 🔧 em andamento... 🔨  👷‍♀️)
+- [x] Desenvolvido com *MobileFirst*; ( ✔ 🆗 );
+
+### Músicas utilizadas:
+ 1. [Blues Saraceno - Evil Ways (Glitch Hop Remix)](https://youtu.be/5r9P5GrZM-A)
+ 2. [Lazy Laser - 02 Ride On Cyborg Horse](https://www.youtube.com/watch?v=6xsVh-UvWDc&list=RDMM6xsVh-UvWDc&start_radio=1)
+
 
 ### Demonstração:
 Via GitLab pages, clique [aqui](https://marconemm.gitlab.io/lig4-team1).
@@ -23,12 +28,10 @@ Via GitLab pages, clique [aqui](https://marconemm.gitlab.io/lig4-team1).
  <br />
  <sub><b>Marcone Melo</b></sub></a>
 
-Entre em contato:
-
 [![GitLab Badge](https://img.shields.io/badge/-Marcone_Melo-black?style=plastic&logo=GitLab&logoColor=yellow&link=https://gitlab.com/marconemm)](https://gitlab.com/marconemm)
 [![GitHub Badge](https://img.shields.io/badge/-Marcone_Melo-black?style=plastic&logo=GitHub&logoColor=white&link=https://github.com/marconemm)](https://github.com/marconemm)
 [![Linkedin Badge](https://img.shields.io/badge/-Marcone_Melo-blue?style=plastic&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/marconemm/)](https://www.linkedin.com/in/marconemm/) 
-[![Yahoo Badge](https://img.shields.io/badge/-marocnemendonca@ymial.com-c14438?style=plastic&logo=Yahoo!&logoColor=white&link=mailto:marocnemendonca@ymial.com)](mailto:marocnemendonca@ymial.com)
+[![Yahoo Badge](https://img.shields.io/badge/-marconemendonca@ymail.com-c14438?style=plastic&logo=Yahoo!&logoColor=white&link=mailto:marconemendonca@ymail.com)](mailto:marconemendonca@ymail.com)
 
 
 <a href="https://www.linkedin.com/in/marconemm/">
@@ -36,33 +39,25 @@ Entre em contato:
  <br />
  <sub><b>Marcone Melo</b></sub></a>
 
-Entre em contato:
-
 [![GitLab Badge](https://img.shields.io/badge/-Marcone_Melo-black?style=plastic&logo=GitLab&logoColor=yellow&link=https://gitlab.com/marconemm)](https://gitlab.com/marconemm)
 [![GitHub Badge](https://img.shields.io/badge/-Marcone_Melo-black?style=plastic&logo=GitHub&logoColor=white&link=https://github.com/marconemm)](https://github.com/marconemm)
 [![Linkedin Badge](https://img.shields.io/badge/-Marcone_Melo-blue?style=plastic&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/marconemm/)](https://www.linkedin.com/in/marconemm/) 
-[![Yahoo Badge](https://img.shields.io/badge/-marocnemendonca@ymial.com-c14438?style=plastic&logo=Yahoo!&logoColor=white&link=mailto:marocnemendonca@ymial.com)](mailto:marocnemendonca@ymial.com)
+[![Yahoo Badge](https://img.shields.io/badge/-marconemendonca@ymail.com-c14438?style=plastic&logo=Yahoo!&logoColor=white&link=mailto:marconemendonca@ymail.com)](mailto:marconemendonca@ymail.com)
 
 
 <a href="https://www.linkedin.com/in/marconemm/">
- <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/15804964?s=400&amp;u=60f45399d863c1410217fc6666bc628c43f554dd&amp;v=4" width="100px;" alt=""/>
+ <img style="border-radius: 50%;" src="https://gitlab.com/uploads/-/system/user/avatar/8114198/avatar.png?width=400" width="100px;" alt=""/>
  <br />
- <sub><b>Marcone Melo</b></sub></a>
+ <sub><b>Matheus Humberto</b></sub></a>
 
-Entre em contato:
+[![GitLab Badge](https://img.shields.io/badge/-Matheus_Humberto-black?style=plastic&logo=GitLab&logoColor=yellow&link=https://gitlab.com/marconemm)](https://gitlab.com/Humberto16)
 
-[![GitLab Badge](https://img.shields.io/badge/-Marcone_Melo-black?style=plastic&logo=GitLab&logoColor=yellow&link=https://gitlab.com/marconemm)](https://gitlab.com/marconemm)
-[![GitHub Badge](https://img.shields.io/badge/-Marcone_Melo-black?style=plastic&logo=GitHub&logoColor=white&link=https://github.com/marconemm)](https://github.com/marconemm)
-[![Linkedin Badge](https://img.shields.io/badge/-Marcone_Melo-blue?style=plastic&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/marconemm/)](https://www.linkedin.com/in/marconemm/) 
-[![Yahoo Badge](https://img.shields.io/badge/-marocnemendonca@ymial.com-c14438?style=plastic&logo=Yahoo!&logoColor=white&link=mailto:marocnemendonca@ymial.com)](mailto:marocnemendonca@ymial.com)
 
 
 <a href="https://www.linkedin.com/in/victor-ivan/">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/17788366?v=4" width="100px;" alt=""/>
  <br />
  <sub><b>Victor Ivan</b></sub></a>
-
-Entre em contato:
 
 [![GitLab Badge](https://img.shields.io/badge/-Victor_Ivan-black?style=plastic&logo=GitLab&logoColor=yellow&link=https://www.linkedin.com/in/victor-ivan/)](https://github.com/vitoivan)
 [![GitHub Badge](https://img.shields.io/badge/-Victor_Ivan-black?style=plastic&logo=GitHub&logoColor=white&link=https://www.linkedin.com/in/victor-ivan/)](https://gitlab.com/vitoivan)
