@@ -18,7 +18,7 @@
 
 
 ### Demonstração:
-Via GitLab pages, clique [aqui](https://marconemm.gitlab.io/lig4-team1).
+Via GitLab pages, clique [aqui](https://vitoivan.github.io/lig4-team1/).
 
 ### Team
 ---
